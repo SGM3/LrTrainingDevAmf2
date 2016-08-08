@@ -1,0 +1,368 @@
+16:01:26,173 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+16:01:26,177 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+16:01:26,209 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+16:01:52,042 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+16:01:52,775 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+16:01:53,185 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+16:01:53,186 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+16:01:53,209 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+16:01:53,209 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+16:01:53,210 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+16:01:53,211 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+16:01:53,211 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+16:01:53,228 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+16:01:53,984 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+16:01:54,016 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+16:01:54,017 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+16:01:54,020 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+16:01:54,022 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+16:01:54,027 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+16:01:54,032 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+16:01:54,038 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+16:01:54,042 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+16:01:54,160 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+16:01:54,164 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+16:01:54,168 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+16:01:54,181 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+16:01:54,192 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+16:01:54,201 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+16:01:54,208 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+16:01:54,209 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+16:01:54,223 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+16:01:54,224 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+16:01:54,224 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+16:01:54,230 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+16:01:54,233 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+16:01:54,282 INFO  [localhost-startStop-1][ServerDetector:140] Server supports hot deploy
+16:01:54,286 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+16:02:02,727 INFO  [localhost-startStop-1][AutoDeployDir:116] Creating missing directory C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-6.2-ce-ga5\deploy
+16:02:02,728 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-6.2-ce-ga5\deploy
+16:14:31,099 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+16:14:31,103 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+16:14:31,136 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+16:14:52,106 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+16:14:52,585 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+16:14:52,940 INFO  [localhost-startStop-1][ServerDetector:140] Server supports hot deploy
+16:14:52,945 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+16:14:59,148 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+16:17:28,877 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+16:17:28,880 INFO  [http-bio-8080-exec-2][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+16:17:29,099 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+16:17:29,100 INFO  [http-bio-8080-exec-2][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+16:17:29,152 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying marketplace-portlet from queue
+16:17:29,155 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+16:17:29,351 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running Marketplace SQL scripts
+16:17:30,014 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for marketplace-portlet
+16:17:30,056 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.UpgradeProcess_1_0_0
+16:17:30,059 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.v1_0_0.UpgradeExpando
+16:17:30,114 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+16:17:30,118 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+16:17:30,409 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+16:17:30,411 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying calendar-portlet from queue
+16:17:30,411 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+16:17:30,520 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running Calendar SQL scripts
+16:17:31,605 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for calendar-portlet
+16:17:31,616 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.UpgradeProcess_1_0_2
+16:17:31,619 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.v1_0_2.UpgradePortletPreferences
+16:17:32,418 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+16:17:32,438 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+16:17:34,157 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+16:17:34,158 INFO  [http-bio-8080-exec-2][SocialHotDeployListener:94] Registering social for calendar-portlet
+16:17:34,160 INFO  [http-bio-8080-exec-2][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+16:17:34,160 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying kaleo-web from queue
+16:17:34,160 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+16:17:34,289 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running Kaleo SQL scripts
+16:17:36,876 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for kaleo-web
+16:17:36,888 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_0_0
+16:17:36,890 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_0_0.UpgradeKaleoTaskInstanceToken
+16:17:36,895 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_1_0
+16:17:36,898 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_1_0.UpgradeWorkflowContext
+16:17:36,936 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_2_0
+16:17:36,938 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoLog
+16:17:36,948 INFO  [http-bio-8080-exec-2][Table:157] Starting backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470327456948
+16:17:36,951 INFO  [http-bio-8080-exec-2][Table:191] Finished backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470327456948 in 3 ms
+16:17:36,958 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoNotificationRecipient
+16:17:36,984 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for kaleo-web is available for use
+16:17:37,162 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+16:17:37,163 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying notifications-portlet from queue
+16:17:37,163 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+16:17:37,268 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running Notification SQL scripts
+16:17:37,618 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for notifications-portlet
+16:17:37,629 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_0_0
+16:17:37,631 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_0_0.UpgradeUserNotificationEvent
+16:17:37,638 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_1_0
+16:17:37,643 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_1_0.UpgradeUserNotificationEvent
+16:17:37,940 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+16:17:37,943 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+16:17:38,156 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+16:17:38,180 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+16:17:38,181 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying opensocial-portlet from queue
+16:17:38,181 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+16:17:38,290 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running OpenSocial SQL scripts
+16:17:39,489 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for opensocial-portlet
+16:17:39,591 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+16:17:39,597 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+16:17:40,155 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+16:17:40,687 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+16:17:40,688 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying resources-importer-web from queue
+16:17:40,688 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+16:17:40,922 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for resources-importer-web
+16:17:40,999 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+16:17:41,024 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+16:17:41,025 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying sync-web from queue
+16:17:41,025 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for sync-web
+16:17:41,057 INFO  [http-bio-8080-exec-2][ServiceComponentLocalServiceImpl:323] Running Sync SQL scripts
+16:17:41,771 INFO  [http-bio-8080-exec-2][HookHotDeployListener:709] Registering hook for sync-web
+16:17:41,789 INFO  [http-bio-8080-exec-2][UpgradeProcess:164] Upgrading com.liferay.sync.hook.upgrade.v1_0_0.UpgradeIndex
+16:17:42,123 INFO  [http-bio-8080-exec-2][HookHotDeployListener:851] Hook for sync-web is available for use
+16:17:42,253 INFO  [http-bio-8080-exec-2][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+16:17:42,253 INFO  [http-bio-8080-exec-2][HotDeployImpl:217] Deploying web-form-portlet from queue
+16:17:42,253 INFO  [http-bio-8080-exec-2][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+16:17:42,460 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+16:17:42,629 INFO  [http-bio-8080-exec-2][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+16:28:14,801 WARN  [http-bio-8080-exec-10][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+16:28:14,803 WARN  [http-bio-8080-exec-4][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+16:28:14,804 WARN  [http-bio-8080-exec-9][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+16:28:14,806 WARN  [http-bio-8080-exec-3][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+16:28:14,809 WARN  [http-bio-8080-exec-7][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+16:36:50,972 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+16:36:50,976 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for web-form-portlet
+16:36:50,980 INFO  [localhost-startStop-2][PortletHotDeployListener:560] 1 portlet for web-form-portlet was unregistered
+16:36:50,983 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+16:36:50,988 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+16:36:50,990 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for sync-web was unregistered
+16:36:50,998 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for sync-web
+16:36:51,015 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+16:36:51,060 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for resources-importer-web was unregistered
+16:36:51,062 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+16:36:51,065 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+16:36:51,066 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for opensocial-portlet
+16:36:51,068 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 4 portlets for opensocial-portlet were unregistered
+16:36:51,126 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for opensocial-portlet was unregistered
+16:36:51,137 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+16:36:51,144 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+16:36:51,144 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for notifications-portlet
+16:36:51,146 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 2 portlets for notifications-portlet were unregistered
+16:36:51,232 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for notifications-portlet was unregistered
+16:36:51,237 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+16:36:51,243 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for marketplace-portlet
+16:36:51,245 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 3 portlets for marketplace-portlet were unregistered
+16:36:51,246 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for marketplace-portlet was unregistered
+16:36:51,250 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+16:36:51,257 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+16:36:51,258 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for kaleo-web was unregistered
+16:36:51,276 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+16:36:51,283 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+16:36:51,283 INFO  [localhost-startStop-2][SocialHotDeployListener:159] Social for calendar-portlet was unregistered
+16:36:51,284 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for calendar-portlet
+16:36:51,287 INFO  [localhost-startStop-2][PortletHotDeployListener:560] 1 portlet for calendar-portlet was unregistered
+16:36:51,337 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for calendar-portlet was unregistered
+16:36:51,344 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+18:52:53,871 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+18:52:53,875 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+18:52:53,907 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+18:53:15,129 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+18:53:15,650 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+18:53:16,003 INFO  [localhost-startStop-1][ServerDetector:140] Server supports hot deploy
+18:53:16,008 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+18:53:22,306 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+18:53:31,252 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+18:53:31,295 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+18:53:37,833 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+18:53:37,833 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+18:53:40,444 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+18:53:40,446 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+18:53:41,193 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for marketplace-portlet
+18:53:41,287 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+18:53:41,294 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+18:53:41,579 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+18:53:41,581 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+18:53:41,581 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+18:53:42,615 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for calendar-portlet
+18:53:43,617 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+18:53:43,636 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+18:53:43,884 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+18:53:43,884 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+18:53:43,886 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+18:53:43,886 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+18:53:43,886 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+18:53:47,310 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for kaleo-web
+18:53:47,334 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for kaleo-web is available for use
+18:53:49,902 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+18:53:49,902 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+18:53:49,903 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+18:53:50,259 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for notifications-portlet
+18:53:50,499 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+18:53:50,501 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+18:53:50,647 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+18:53:58,014 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+18:53:58,014 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+18:53:58,014 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+18:53:59,189 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for opensocial-portlet
+18:53:59,249 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+18:53:59,253 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+18:53:59,646 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+18:54:01,221 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+18:54:01,221 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+18:54:01,221 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+18:54:01,375 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for resources-importer-web
+18:54:01,420 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+18:54:04,073 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+18:54:04,073 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+18:54:04,073 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+18:54:04,718 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for sync-web
+18:54:05,031 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for sync-web is available for use
+18:54:06,945 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+18:54:06,946 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+18:54:06,946 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+18:54:07,148 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+18:54:07,249 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+19:28:15,834 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+19:28:15,906 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+19:28:16,050 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+19:28:16,051 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+19:28:16,053 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+19:28:24,583 INFO  [localhost-startStop-3][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+19:28:24,584 INFO  [localhost-startStop-3][HotDeployImpl:217] Deploying custom-signup-hook from queue
+19:28:24,584 INFO  [localhost-startStop-3][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+19:28:24,840 INFO  [localhost-startStop-3][HookHotDeployListener:709] Registering hook for custom-signup-hook
+19:28:24,985 INFO  [localhost-startStop-3][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+19:28:28,172 INFO  [http-bio-8080-exec-69][CaptchaImpl:139] Initializing com.liferay.portal.captcha.simplecaptcha.SimpleCaptchaImpl
+19:42:43,557 WARN  [http-bio-8080-exec-144][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:42:44,540 WARN  [http-bio-8080-exec-145][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:42:46,770 WARN  [http-bio-8080-exec-143][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:43:07,342 WARN  [http-bio-8080-exec-142][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:43:09,245 WARN  [http-bio-8080-exec-149][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:43:20,526 WARN  [http-bio-8080-exec-148][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:43:23,204 WARN  [http-bio-8080-exec-150][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+19:43:36,624 WARN  [http-bio-8080-exec-142][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:09:39,413 WARN  [http-bio-8080-exec-145][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:09:39,413 WARN  [http-bio-8080-exec-151][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:09:39,414 WARN  [http-bio-8080-exec-148][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:09:39,414 WARN  [http-bio-8080-exec-142][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:09:39,418 WARN  [http-bio-8080-exec-144][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:19:55,915 WARN  [http-bio-8080-exec-148][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:19:55,916 WARN  [http-bio-8080-exec-147][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:19:55,916 WARN  [http-bio-8080-exec-149][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:19:55,917 WARN  [http-bio-8080-exec-143][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:19:55,917 WARN  [http-bio-8080-exec-151][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:27:19,952 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+20:27:20,020 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+20:27:20,060 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+20:27:20,060 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+20:27:20,060 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+20:27:21,980 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:27:22,063 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:27:22,067 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:27:23,050 INFO  [localhost-startStop-4][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:27:23,050 INFO  [localhost-startStop-4][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:27:23,050 INFO  [localhost-startStop-4][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:27:23,265 INFO  [localhost-startStop-4][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:27:23,389 INFO  [localhost-startStop-4][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+20:27:29,569 WARN  [http-bio-8080-exec-153][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:27:29,570 WARN  [http-bio-8080-exec-146][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:27:29,571 WARN  [http-bio-8080-exec-150][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:27:29,571 WARN  [http-bio-8080-exec-144][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:27:29,571 WARN  [http-bio-8080-exec-152][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+20:30:32,137 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+20:30:32,142 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+20:30:32,200 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+20:30:32,200 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+20:30:32,200 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+20:30:33,782 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:30:33,864 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:30:33,866 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:30:34,806 INFO  [localhost-startStop-5][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:30:34,807 INFO  [localhost-startStop-5][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:30:34,807 INFO  [localhost-startStop-5][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:30:35,018 INFO  [localhost-startStop-5][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:30:35,144 INFO  [localhost-startStop-5][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+20:32:45,406 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:32:45,469 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:32:45,471 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:32:46,258 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+20:32:46,261 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+20:32:46,301 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+20:32:46,302 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+20:32:46,302 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+20:32:47,349 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:32:47,349 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:32:47,350 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:32:47,560 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:32:47,684 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+20:32:57,715 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:32:57,801 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:32:57,802 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:32:58,731 INFO  [localhost-startStop-6][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:32:58,731 INFO  [localhost-startStop-6][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:32:58,732 INFO  [localhost-startStop-6][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:32:58,945 INFO  [localhost-startStop-6][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:32:59,068 INFO  [localhost-startStop-6][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+20:34:37,347 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+20:34:37,353 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+20:34:37,410 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+20:34:37,411 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+20:34:37,411 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+20:34:39,297 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:34:39,381 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:34:39,383 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:34:40,301 INFO  [localhost-startStop-7][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:34:40,302 INFO  [localhost-startStop-7][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:34:40,302 INFO  [localhost-startStop-7][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:34:40,508 INFO  [localhost-startStop-7][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:34:40,632 INFO  [localhost-startStop-7][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+20:59:34,986 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+20:59:34,996 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+20:59:35,050 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+20:59:35,050 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+20:59:35,050 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+20:59:43,652 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:59:43,734 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+20:59:43,735 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:59:44,734 INFO  [localhost-startStop-8][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+20:59:44,735 INFO  [localhost-startStop-8][HotDeployImpl:217] Deploying custom-signup-hook from queue
+20:59:44,735 INFO  [localhost-startStop-8][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+20:59:44,971 INFO  [localhost-startStop-8][HookHotDeployListener:709] Registering hook for custom-signup-hook
+20:59:45,122 INFO  [localhost-startStop-8][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+21:03:03,828 WARN  [http-bio-8080-exec-193][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:03:03,828 WARN  [http-bio-8080-exec-206][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:03:03,829 WARN  [http-bio-8080-exec-209][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:03:03,832 WARN  [http-bio-8080-exec-207][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:03:03,838 WARN  [http-bio-8080-exec-193][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:37:27,285 WARN  [http-bio-8080-exec-211][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:37:27,285 WARN  [http-bio-8080-exec-204][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:37:27,286 WARN  [http-bio-8080-exec-206][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:37:27,286 WARN  [http-bio-8080-exec-199][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:37:27,288 WARN  [http-bio-8080-exec-207][PortalImpl:7503] Unable to impersonate F9Jo4aK9A anw4WMAjyONA== because the string cannot be decrypted
+21:41:21,923 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook-6.2.0.1.war
+21:41:21,925 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook-6.2.0.1.war
+21:41:22,008 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-hook-6.2.0.1.war
+21:41:22,009 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.4 to version 6.2.0.1
+21:41:22,009 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:975] Not updating Custom Signup because version 6.2.4 is newer than version 6.2.0.1
+21:48:51,540 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-hook.xml
+21:48:51,550 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:54] Modifying hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml
+21:48:51,630 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-hook\WEB-INF\web.xml
+21:48:51,631 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookExplodedTomcatListener:60] Hook for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml modified successfully
+21:48:51,631 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-hook.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+21:49:00,846 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+21:49:00,907 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+21:49:00,909 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+21:49:02,545 INFO  [localhost-startStop-9][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+21:49:02,546 INFO  [localhost-startStop-9][HotDeployImpl:217] Deploying custom-signup-hook from queue
+21:49:02,546 INFO  [localhost-startStop-9][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+21:49:02,768 INFO  [localhost-startStop-9][HookHotDeployListener:709] Registering hook for custom-signup-hook
+21:49:02,890 INFO  [localhost-startStop-9][HookHotDeployListener:851] Hook for custom-signup-hook is available for use
+21:52:33,825 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-hook requires marketplace-portlet
+21:52:33,916 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-hook was unregistered
+21:52:33,918 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-hook
+21:52:33,919 WARN  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1114] Plugin package on context custom-signup-hook cannot be tracked because this WAR does not contain a liferay-plugin-package.xml file
+22:10:26,863 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet.xml
+22:10:26,868 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletExplodedTomcatListener:61] Modifying portlets for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet.xml
+22:10:27,014 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\webapps\custom-signup-portlet\WEB-INF\web.xml
+22:10:27,014 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletExplodedTomcatListener:67] Portlets for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet.xml modified successfully
+22:10:27,014 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseExplodedTomcatListener:49] Copying file C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet.xml to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\conf\Catalina\localhost
+22:10:35,538 INFO  [localhost-startStop-10][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+22:10:35,539 INFO  [localhost-startStop-10][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+22:10:35,539 INFO  [localhost-startStop-10][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+22:10:35,758 INFO  [localhost-startStop-10][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+22:10:35,878 INFO  [localhost-startStop-10][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
