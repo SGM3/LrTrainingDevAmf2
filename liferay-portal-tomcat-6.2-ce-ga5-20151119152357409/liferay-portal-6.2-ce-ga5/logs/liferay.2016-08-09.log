@@ -1,0 +1,309 @@
+16:03:11,471 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+16:03:11,474 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+16:03:11,511 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+16:03:31,515 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+16:03:32,015 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+16:03:32,343 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+16:03:32,349 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+16:03:41,116 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+16:03:43,122 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:03:43,125 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing custom-signup-portlet for deploy because it is missing marketplace-portlet
+16:03:51,813 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+16:03:51,813 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+16:04:01,075 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+16:04:01,075 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+16:04:05,245 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+16:04:05,289 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+16:04:05,976 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for marketplace-portlet
+16:04:06,054 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+16:04:06,059 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+16:04:06,305 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+16:04:06,307 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:04:06,307 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:04:06,605 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:04:06,663 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:04:06,663 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+16:04:06,663 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+16:04:07,656 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for calendar-portlet
+16:04:08,646 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+16:04:08,666 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+16:04:08,868 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+16:04:08,869 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+16:04:08,870 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+16:04:08,871 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+16:04:08,871 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+16:04:11,096 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for kaleo-web
+16:04:11,119 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for kaleo-web is available for use
+16:04:14,244 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+16:04:14,245 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+16:04:14,245 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+16:04:14,601 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for notifications-portlet
+16:04:14,801 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+16:04:14,804 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+16:04:14,971 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+16:04:24,922 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+16:04:24,923 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+16:04:24,923 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+16:04:26,133 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for opensocial-portlet
+16:04:26,204 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+16:04:26,208 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+16:04:26,623 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+16:04:28,952 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+16:04:28,952 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+16:04:28,952 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+16:04:29,123 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for resources-importer-web
+16:04:29,130 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+16:04:32,608 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+16:04:32,609 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+16:04:32,609 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+16:04:33,202 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for sync-web
+16:04:33,490 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for sync-web is available for use
+16:04:35,542 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+16:04:35,542 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+16:04:35,542 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+16:04:35,747 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+16:04:35,858 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+16:04:48,049 WARN  [http-bio-8080-exec-2][code_jsp:?] {code="404", msg="", uri=/WEB-INF/classes/com/liferay/training/amf2/MySignupPortlet.java}
+16:05:56,036 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:05:56,038 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:05:56,046 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:05:56,050 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:05:57,382 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:05:57,382 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:05:57,382 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:05:57,632 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:05:57,686 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:06:27,795 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:06:27,796 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:06:27,800 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:06:27,801 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:06:28,789 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:06:28,789 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:06:28,789 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:06:29,035 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:06:29,090 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:08:59,439 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:08:59,440 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:08:59,442 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:08:59,444 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:09:00,482 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:09:00,482 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:09:00,482 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:09:00,724 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:09:00,773 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:15:11,564 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:15:11,565 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:15:11,567 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:15:11,568 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:15:12,554 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:15:12,554 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:15:12,555 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:15:12,791 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:15:12,844 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:16:13,030 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:16:13,031 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:16:13,032 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:16:13,033 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:16:14,034 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:16:14,034 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:16:14,034 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:16:14,266 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:16:14,320 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:16:54,445 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:16:54,445 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:16:54,447 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:16:54,449 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:16:55,454 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:16:55,455 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:16:55,455 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:16:55,695 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:16:55,747 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:17:25,838 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:17:25,839 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:17:25,840 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:17:25,841 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:17:26,853 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:17:26,853 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:17:26,853 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:17:27,090 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:17:27,145 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:17:37,202 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:17:37,203 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:17:37,206 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:17:37,207 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:17:38,193 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:17:38,193 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:17:38,193 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:17:38,429 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:17:38,484 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:19:38,736 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:19:38,737 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:19:38,738 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:19:38,739 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:19:39,741 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:19:39,741 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:19:39,741 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:19:39,977 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:19:40,027 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:24:00,624 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:24:00,624 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:24:00,625 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:24:00,626 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:24:01,576 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:24:01,577 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:24:01,577 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:24:01,810 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:24:01,865 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:26:02,153 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:26:02,154 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:26:02,155 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:26:02,156 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:26:03,131 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:26:03,132 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:26:03,132 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:26:03,372 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:26:03,430 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:32:04,155 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:32:04,155 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:32:04,156 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:32:04,157 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:32:05,224 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:32:05,224 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:32:05,224 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:32:05,458 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:32:05,515 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:44:17,032 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:44:17,033 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:44:17,034 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:44:17,035 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:44:18,051 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:44:18,051 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:44:18,051 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:44:18,296 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:44:18,385 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:45:28,553 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:45:28,553 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:45:28,554 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:45:28,555 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:45:29,539 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:45:29,539 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:45:29,539 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:45:29,809 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:45:29,861 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:47:20,121 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:47:20,121 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:47:20,122 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:47:20,123 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:47:21,087 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:47:21,087 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:47:21,087 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:47:21,317 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:47:21,368 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:48:01,486 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:48:01,487 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:48:01,489 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:48:01,490 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:48:02,480 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:48:02,481 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:48:02,481 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:48:02,724 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:48:02,787 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:48:32,890 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:48:32,890 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:48:32,892 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:48:32,894 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:48:33,901 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:48:33,901 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:48:33,901 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:48:34,136 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:48:34,193 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:50:34,456 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:50:34,457 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:50:34,460 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:50:34,461 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:50:35,481 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:50:35,481 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:50:35,481 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:50:35,727 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:50:35,782 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:50:45,835 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:50:45,835 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:50:45,836 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:50:45,837 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:50:46,825 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:50:46,826 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:50:46,826 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:50:47,057 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:50:47,111 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:51:07,186 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:51:07,186 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:51:07,188 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:51:07,190 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:51:08,167 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:51:08,167 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:51:08,167 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:51:08,399 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:51:08,453 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:51:18,505 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:51:18,505 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:51:18,506 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:51:18,507 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:51:19,475 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:51:19,475 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:51:19,476 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:51:19,739 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:51:19,790 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:53:30,057 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:53:30,057 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:53:30,058 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:53:30,059 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:53:30,998 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:53:30,998 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:53:30,998 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:53:31,233 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:53:31,287 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:54:51,467 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:54:51,468 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:54:51,470 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:54:51,471 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:54:52,488 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:54:52,488 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:54:52,488 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:54:52,731 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:54:52,783 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:55:12,859 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:55:12,859 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:55:12,862 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:55:12,863 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:55:13,848 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:55:13,848 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:55:13,849 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:55:14,084 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:55:14,138 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:55:44,219 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:55:44,220 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:55:44,222 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:55:44,223 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:55:45,200 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:55:45,200 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:55:45,200 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:55:45,433 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:55:45,486 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+16:57:55,787 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:57:55,788 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+16:57:55,790 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+16:57:55,791 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:57:56,739 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+16:57:56,739 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+16:57:56,739 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+16:57:56,973 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+16:57:57,049 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+17:02:47,627 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:02:47,627 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+17:02:47,629 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+17:02:47,630 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:02:48,634 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:02:48,635 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+17:02:48,635 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:02:48,877 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+17:02:48,931 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use

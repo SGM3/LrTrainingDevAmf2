@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-<%-- <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %> --%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/security" prefix="liferay-security" %>
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
@@ -13,7 +13,8 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.liferay.portlet.journal.service.JournalArticleLocalServiceUtil" %>
 <%@ page import="com.liferay.portlet.journal.model.JournalArticle" %>
-		
+<%@ page import="com.liferay.portal.kernel.util.Validator" %>
+<%@ page import="com.liferay.training.amf2.constants.MySignupConstants" %>
 
 <liferay-theme:defineObjects />
 
