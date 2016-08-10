@@ -307,3 +307,1217 @@
 17:02:48,635 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
 17:02:48,877 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
 17:02:48,931 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+17:07:00,396 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:07:00,396 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+17:07:00,398 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+17:07:00,400 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:07:01,365 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:07:01,366 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+17:07:01,366 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:07:01,600 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+17:07:01,656 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+17:07:11,713 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:07:11,713 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+17:07:11,715 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+17:07:11,717 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:07:12,743 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:07:12,743 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+17:07:12,744 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:07:12,993 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+17:07:13,045 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+17:11:03,519 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:11:03,520 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+17:11:03,522 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+17:11:03,523 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:11:04,496 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+17:11:04,496 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+17:11:04,496 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+17:11:04,733 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+17:11:04,787 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:11:26,346 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:11:26,346 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:11:26,348 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:11:26,349 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:11:27,317 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:11:27,318 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:11:27,318 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:11:27,555 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:11:27,642 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:12:27,753 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:12:27,754 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:12:27,755 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:12:27,756 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:12:28,763 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:12:28,763 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:12:28,763 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:12:29,005 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:12:29,059 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:18:29,815 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:18:29,816 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:18:29,818 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:18:29,820 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:18:30,767 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:18:30,767 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:18:30,767 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:18:31,006 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:18:31,056 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:36:43,250 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:36:43,250 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:36:43,251 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:36:43,252 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:36:44,262 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:36:44,263 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:36:44,263 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:36:44,504 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:36:44,627 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:39:14,972 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:39:14,972 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:39:14,973 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:39:14,974 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:39:15,948 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:39:15,949 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:39:15,949 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:39:16,180 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:39:16,233 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:49:47,484 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:49:47,484 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:49:47,487 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:49:47,489 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:49:48,441 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:49:48,441 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:49:48,441 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:49:48,675 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:49:48,763 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:56:59,594 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:56:59,595 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:56:59,597 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:56:59,598 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:57:00,558 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:57:00,558 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:57:00,558 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:57:00,788 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:57:00,839 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+19:16:33,204 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:16:33,205 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+19:16:33,208 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+19:16:33,209 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:16:34,190 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:16:34,190 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+19:16:34,190 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:16:34,431 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+19:16:34,519 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+19:17:54,701 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:17:54,701 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+19:17:54,704 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+19:17:54,705 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:17:55,708 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:17:55,709 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+19:17:55,709 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:17:55,946 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+19:17:55,998 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+19:19:16,190 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:19:16,191 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+19:19:16,193 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+19:19:16,194 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:19:17,151 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:19:17,151 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+19:19:17,151 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:19:17,388 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+19:19:17,438 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+19:20:17,577 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:20:17,577 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+19:20:17,579 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+19:20:17,581 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:20:18,526 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:20:18,526 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+19:20:18,526 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:20:18,786 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+19:20:18,840 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+19:20:28,884 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:20:28,885 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+19:20:28,887 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+19:20:28,888 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:20:29,896 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+19:20:29,896 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+19:20:29,897 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+19:20:30,132 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+19:20:30,184 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:20:47,862 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:20:47,863 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+20:20:47,866 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+20:20:47,868 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:20:48,855 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:20:48,855 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+20:20:48,855 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:20:49,088 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+20:20:49,170 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:23:59,570 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:23:59,571 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+20:23:59,573 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+20:23:59,575 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:24:00,544 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:24:00,545 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+20:24:00,545 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:24:00,784 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+20:24:00,835 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:39:24,151 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:39:24,152 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+20:39:24,153 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+20:39:24,154 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:39:25,127 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:39:25,128 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+20:39:25,128 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:39:25,364 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+20:39:25,446 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:50:46,800 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:50:46,800 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+20:50:46,801 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+20:50:46,802 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:50:47,754 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:50:47,755 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+20:50:47,755 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:50:47,990 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+20:50:48,077 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:00:39,279 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:00:39,279 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:00:39,281 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:00:39,281 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:00:40,249 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:00:40,249 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:00:40,249 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:00:40,483 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:00:40,535 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:03:00,824 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:03:00,825 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:03:00,827 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:03:00,828 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:03:01,771 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:03:01,771 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:03:01,771 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:03:02,025 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:03:02,079 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:05:22,380 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:05:22,381 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:05:22,381 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:05:22,382 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:05:23,340 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:05:23,340 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:05:23,340 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:05:23,578 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:05:23,630 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:10:04,232 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:10:04,232 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:10:04,233 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:10:04,234 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:10:05,207 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:10:05,208 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:10:05,208 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:10:05,455 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:10:05,511 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:10:35,590 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:10:35,591 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:10:35,593 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:10:35,594 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:10:36,592 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:10:36,592 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:10:36,592 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:10:36,827 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:10:36,880 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:28:19,024 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:28:19,024 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:28:19,026 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:28:19,028 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:28:19,997 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:28:19,997 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:28:19,997 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:28:20,229 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:28:20,310 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:40:21,769 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:40:21,770 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+21:40:21,772 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+21:40:21,774 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:40:22,720 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:40:22,720 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:40:22,720 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:40:22,962 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:40:23,041 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:47:40,952 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+21:47:40,955 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+21:47:40,988 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+21:48:00,607 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+21:48:00,702 ERROR [localhost-startStop-1][JDBCExceptionReporter:82] user lacks privilege or object not found: LOCK_
+21:48:00,706 WARN  [localhost-startStop-1][StartupAction:147] Unable to clear locks because Lock table does not exist
+21:48:01,095 WARN  [localhost-startStop-1][ReleaseLocalServiceImpl:171] user lacks privilege or object not found: RELEASE_
+21:48:01,096 INFO  [localhost-startStop-1][ReleaseLocalServiceImpl:84] Create tables and populate with default data
+21:48:01,687 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+21:48:02,136 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+21:48:02,136 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+21:48:02,158 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+21:48:02,159 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+21:48:02,159 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+21:48:02,160 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+21:48:02,160 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+21:48:02,180 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+21:48:02,907 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+21:48:02,938 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+21:48:02,939 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+21:48:02,942 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+21:48:02,943 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+21:48:02,947 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+21:48:02,951 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+21:48:02,956 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+21:48:02,960 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+21:48:03,081 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+21:48:03,086 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+21:48:03,090 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+21:48:03,102 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+21:48:03,113 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+21:48:03,123 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+21:48:03,129 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+21:48:03,130 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+21:48:03,145 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+21:48:03,147 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+21:48:03,147 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+21:48:03,152 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+21:48:03,155 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+21:48:03,204 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+21:48:03,209 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+21:48:11,477 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+21:48:18,390 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+21:48:18,391 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing custom-signup-portlet for deploy because it is missing marketplace-portlet
+21:48:28,135 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+21:48:28,135 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+21:48:39,434 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+21:48:39,435 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+21:48:42,763 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+21:48:43,253 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+21:48:43,373 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running Marketplace SQL scripts
+21:48:43,914 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for marketplace-portlet
+21:48:43,959 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.UpgradeProcess_1_0_0
+21:48:43,961 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.v1_0_0.UpgradeExpando
+21:48:44,006 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+21:48:44,010 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+21:48:44,235 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+21:48:44,237 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+21:48:44,237 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+21:48:45,633 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+21:48:45,721 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+21:48:45,721 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+21:48:45,721 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+21:48:45,944 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running Calendar SQL scripts
+21:48:47,170 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for calendar-portlet
+21:48:47,184 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.UpgradeProcess_1_0_2
+21:48:47,189 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.v1_0_2.UpgradePortletPreferences
+21:48:48,053 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+21:48:48,071 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+21:48:48,366 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+21:48:48,366 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+21:48:48,368 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+21:48:48,368 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+21:48:48,368 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+21:48:48,475 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running Kaleo SQL scripts
+21:48:50,621 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for kaleo-web
+21:48:50,630 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_0_0
+21:48:50,632 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_0_0.UpgradeKaleoTaskInstanceToken
+21:48:50,636 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_1_0
+21:48:50,638 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_1_0.UpgradeWorkflowContext
+21:48:50,663 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_2_0
+21:48:50,664 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoLog
+21:48:50,672 INFO  [localhost-startStop-1][Table:157] Starting backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470779330672
+21:48:50,675 INFO  [localhost-startStop-1][Table:191] Finished backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470779330672 in 3 ms
+21:48:50,680 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoNotificationRecipient
+21:48:50,699 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for kaleo-web is available for use
+21:48:53,923 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+21:48:53,923 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+21:48:53,923 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+21:48:53,989 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running Notification SQL scripts
+21:48:54,252 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for notifications-portlet
+21:48:54,260 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_0_0
+21:48:54,261 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_0_0.UpgradeUserNotificationEvent
+21:48:54,266 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_1_0
+21:48:54,269 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_1_0.UpgradeUserNotificationEvent
+21:48:54,469 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+21:48:54,471 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+21:48:54,651 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+21:49:10,275 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+21:49:10,275 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+21:49:10,276 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+21:49:10,381 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running OpenSocial SQL scripts
+21:49:11,582 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for opensocial-portlet
+21:49:11,686 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+21:49:11,692 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+21:49:12,175 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+21:49:13,925 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+21:49:13,926 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+21:49:13,926 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+21:49:14,087 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for resources-importer-web
+21:49:14,093 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+21:49:18,622 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+21:49:18,622 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+21:49:18,622 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+21:49:18,693 INFO  [localhost-startStop-1][ServiceComponentLocalServiceImpl:323] Running Sync SQL scripts
+21:49:19,208 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for sync-web
+21:49:19,218 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.sync.hook.upgrade.v1_0_0.UpgradeIndex
+21:49:19,433 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for sync-web is available for use
+21:49:21,806 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+21:49:21,807 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+21:49:21,807 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+21:49:21,987 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+21:49:22,102 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+21:49:22,538 ERROR [RuntimePageImpl-3][JDBCExceptionReporter:82] integrity constraint violation: unique constraint or index violation: IX_8D83D0CE
+21:49:22,541 ERROR [RuntimePageImpl-1][JDBCExceptionReporter:82] integrity constraint violation: unique constraint or index violation: IX_8D83D0CE
+21:49:31,380 ERROR [http-bio-8080-exec-1][JDBCExceptionReporter:82] integrity constraint violation: unique constraint or index violation: IX_8D83D0CE
+21:49:31,383 ERROR [http-bio-8080-exec-1][LiferayMethodExceptionEventHandler:34] com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at com.liferay.portlet.RestrictPortletContainerWrapper.render(RestrictPortletContainerWrapper.java:129)
+	at com.liferay.portal.kernel.portlet.PortletContainerUtil.render(PortletContainerUtil.java:156)
+	at com.liferay.taglib.portletext.RuntimeTag.doTag(RuntimeTag.java:153)
+	at com.liferay.taglib.portletext.RuntimeTag.doTag(RuntimeTag.java:68)
+	at com.liferay.taglib.util.VelocityTaglibImpl.runtime(VelocityTaglibImpl.java:1066)
+	at com.liferay.taglib.util.VelocityTaglibImpl.runtime(VelocityTaglibImpl.java:1059)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.doInvoke(UberspectImpl.java:389)
+	at org.apache.velocity.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:378)
+	at org.apache.velocity.runtime.parser.node.ASTMethod.execute(ASTMethod.java:270)
+	at org.apache.velocity.runtime.parser.node.ASTReference.execute(ASTReference.java:262)
+	at org.apache.velocity.runtime.parser.node.ASTReference.render(ASTReference.java:342)
+	at org.apache.velocity.runtime.parser.node.ASTBlock.render(ASTBlock.java:72)
+	at org.apache.velocity.runtime.directive.VelocimacroProxy.render(VelocimacroProxy.java:212)
+	at org.apache.velocity.runtime.directive.RuntimeMacro.render(RuntimeMacro.java:247)
+	at org.apache.velocity.runtime.parser.node.ASTDirective.render(ASTDirective.java:175)
+	at org.apache.velocity.runtime.parser.node.SimpleNode.render(SimpleNode.java:336)
+	at org.apache.velocity.Template.merge(Template.java:328)
+	at org.apache.velocity.Template.merge(Template.java:235)
+	at com.liferay.portal.velocity.VelocityTemplate.processTemplate(VelocityTemplate.java:112)
+	at com.liferay.portal.template.AbstractTemplate.processTemplate(AbstractTemplate.java:108)
+	at com.liferay.taglib.util.ThemeUtil.doIncludeVM(ThemeUtil.java:511)
+	at com.liferay.taglib.util.ThemeUtil.doDispatch(ThemeUtil.java:177)
+	at com.liferay.taglib.util.ThemeUtil.includeVM(ThemeUtil.java:133)
+	at com.liferay.taglib.util.ThemeUtil.include(ThemeUtil.java:99)
+	at com.liferay.taglib.theme.IncludeTag.doEndTag(IncludeTag.java:34)
+	at org.apache.jsp.html.common.themes.portal_jsp._jspx_meth_liferay_002dtheme_005finclude_005f1(portal_jsp.java:581)
+	at org.apache.jsp.html.common.themes.portal_jsp._jspService(portal_jsp.java:518)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:439)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at com.liferay.portal.struts.StrutsUtil.forward(StrutsUtil.java:78)
+	at com.liferay.portal.struts.PortalRequestProcessor.doForward(PortalRequestProcessor.java:274)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:168)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at com.liferay.portal.servlet.MainServlet.callParentService(MainServlet.java:557)
+	at com.liferay.portal.servlet.MainServlet.service(MainServlet.java:534)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at com.liferay.portal.servlet.FriendlyURLServlet.service(FriendlyURLServlet.java:161)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.strip.StripFilter.processFilter(StripFilter.java:361)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.cache.CacheFilter.processFilter(CacheFilter.java:419)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:320)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at com.liferay.portlet.SecurityPortletContainerWrapper.render(SecurityPortletContainerWrapper.java:150)
+	at com.liferay.portlet.RestrictPortletContainerWrapper.render(RestrictPortletContainerWrapper.java:126)
+	... 184 more
+Caused by: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at com.liferay.portal.service.persistence.impl.BasePersistenceImpl.processException(BasePersistenceImpl.java:251)
+	at com.liferay.portal.service.persistence.ResourcePermissionPersistenceImpl.fetchByC_N_S_P_R(ResourcePermissionPersistenceImpl.java:3730)
+	at com.liferay.portal.service.persistence.ResourcePermissionPersistenceImpl.fetchByC_N_S_P_R(ResourcePermissionPersistenceImpl.java:3595)
+	at com.liferay.portal.service.impl.ResourcePermissionLocalServiceImpl.doUpdateResourcePermission(ResourcePermissionLocalServiceImpl.java:1153)
+	at com.liferay.portal.service.impl.ResourcePermissionLocalServiceImpl.updateResourcePermission(ResourcePermissionLocalServiceImpl.java:1366)
+	at com.liferay.portal.service.impl.ResourcePermissionLocalServiceImpl.setResourcePermissions(ResourcePermissionLocalServiceImpl.java:1097)
+	at sun.reflect.GeneratedMethodAccessor258.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy91.setResourcePermissions(Unknown Source)
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addGroupPermissions(ResourceLocalServiceImpl.java:592)
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addGroupPermissions(ResourceLocalServiceImpl.java:582)
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addResources(ResourceLocalServiceImpl.java:907)
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addResources(ResourceLocalServiceImpl.java:298)
+	at sun.reflect.GeneratedMethodAccessor617.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy86.addResources(Unknown Source)
+	at com.liferay.portal.service.ResourceLocalServiceUtil.addResources(ResourceLocalServiceUtil.java:230)
+	at com.liferay.portal.util.PortalImpl.addDefaultResource(PortalImpl.java:7252)
+	at com.liferay.portal.util.PortalImpl.addPortletDefaultResource(PortalImpl.java:672)
+	at com.liferay.portal.util.PortalUtil.addPortletDefaultResource(PortalUtil.java:151)
+	at com.liferay.portlet.SecurityPortletContainerWrapper.check(SecurityPortletContainerWrapper.java:207)
+	at com.liferay.portlet.SecurityPortletContainerWrapper.checkRender(SecurityPortletContainerWrapper.java:243)
+	at com.liferay.portlet.SecurityPortletContainerWrapper.render(SecurityPortletContainerWrapper.java:139)
+	... 185 more
+Caused by: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at com.liferay.portal.dao.orm.hibernate.ExceptionTranslator.translate(ExceptionTranslator.java:30)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:125)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:98)
+	at com.liferay.portal.service.persistence.ResourcePermissionPersistenceImpl.fetchByC_N_S_P_R(ResourcePermissionPersistenceImpl.java:3701)
+	... 218 more
+Caused by: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:64)
+	at org.hibernate.impl.SessionImpl.autoFlushIfRequired(SessionImpl.java:1185)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1261)
+	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:113)
+	... 220 more
+Caused by: java.sql.BatchUpdateException: integrity constraint violation: unique constraint or index violation: IX_8D83D0CE
+	at org.hsqldb.jdbc.JDBCPreparedStatement.executeBatch(JDBCPreparedStatement.java:1927)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:2465)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 228 more
+21:49:34,900 ERROR [http-bio-8080-exec-2][status_jsp:753] javax.servlet.ServletException: java.util.concurrent.ExecutionException: com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.portlet.PortletContainerException: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+21:50:56,349 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+21:50:56,352 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+21:50:56,385 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+21:51:16,413 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+21:51:16,516 ERROR [localhost-startStop-1][JDBCExceptionReporter:82] user lacks privilege or object not found: LOCK_
+21:51:16,519 WARN  [localhost-startStop-1][StartupAction:147] Unable to clear locks because Lock table does not exist
+21:51:16,925 WARN  [localhost-startStop-1][ReleaseLocalServiceImpl:171] user lacks privilege or object not found: RELEASE_
+21:51:16,926 INFO  [localhost-startStop-1][ReleaseLocalServiceImpl:84] Create tables and populate with default data
+21:51:17,513 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+21:51:17,895 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+21:51:17,896 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+21:51:17,918 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+21:51:17,919 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+21:51:17,919 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+21:51:17,920 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+21:51:17,920 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+21:51:17,965 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+21:51:18,667 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+21:51:18,700 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+21:51:18,701 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+21:51:18,704 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+21:51:18,705 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+21:51:18,710 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+21:51:18,714 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+21:51:18,720 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+21:51:18,725 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+21:51:18,843 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+21:51:18,847 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+21:51:18,851 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+21:51:18,864 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+21:51:18,875 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+21:51:18,884 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+21:51:18,891 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+21:51:18,891 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+21:51:18,907 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+21:51:18,909 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+21:51:18,909 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+21:51:18,914 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+21:51:18,918 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+21:51:18,967 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+21:51:18,971 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+21:51:26,436 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+21:53:47,196 INFO  [http-bio-8080-exec-1][DialectDetector:71] Determine dialect for MySQL 5
+21:53:47,204 INFO  [http-bio-8080-exec-1][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+21:53:48,572 INFO  [http-bio-8080-exec-1][StartupAction:97] There are no patches installed
+21:53:48,597 INFO  [http-bio-8080-exec-1][BaseDB:484] Database does not support case sensitive queries
+21:53:49,524 ERROR [http-bio-8080-exec-1][status_jsp:753] Attempting to deploy an older Liferay Portal version. Current build version is 6210 and attempting to deploy version 6204.
+21:55:00,530 INFO  [http-bio-8080-exec-6][StartupAction:97] There are no patches installed
+21:55:00,541 INFO  [http-bio-8080-exec-6][BaseDB:484] Database does not support case sensitive queries
+21:55:01,076 ERROR [http-bio-8080-exec-6][status_jsp:753] Attempting to deploy an older Liferay Portal version. Current build version is 6210 and attempting to deploy version 6204.
+21:55:56,726 INFO  [http-bio-8080-exec-4][StartupAction:97] There are no patches installed
+21:55:56,738 INFO  [http-bio-8080-exec-4][BaseDB:484] Database does not support case sensitive queries
+21:55:57,246 ERROR [http-bio-8080-exec-4][status_jsp:753] Attempting to deploy an older Liferay Portal version. Current build version is 6210 and attempting to deploy version 6204.
+21:56:25,831 INFO  [http-bio-8080-exec-8][StartupAction:97] There are no patches installed
+21:56:25,842 INFO  [http-bio-8080-exec-8][BaseDB:484] Database does not support case sensitive queries
+21:56:26,260 ERROR [http-bio-8080-exec-8][status_jsp:753] Attempting to deploy an older Liferay Portal version. Current build version is 6210 and attempting to deploy version 6204.
+21:58:15,312 ERROR [http-bio-8080-exec-1][JDBCExceptionReporter:82] Table 'lportal.company' doesn't exist
+21:58:15,314 ERROR [http-bio-8080-exec-1][CompanyThreadLocal:62] com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not load an entity: [com.liferay.portal.model.impl.CompanyImpl#20155]
+com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not load an entity: [com.liferay.portal.model.impl.CompanyImpl#20155]
+	at com.liferay.portal.service.persistence.impl.BasePersistenceImpl.processException(BasePersistenceImpl.java:251)
+	at com.liferay.portal.service.persistence.CompanyPersistenceImpl.fetchByPrimaryKey(CompanyPersistenceImpl.java:1735)
+	at com.liferay.portal.service.persistence.CompanyPersistenceImpl.findByPrimaryKey(CompanyPersistenceImpl.java:1670)
+	at com.liferay.portal.service.persistence.CompanyPersistenceImpl.findByPrimaryKey(CompanyPersistenceImpl.java:1695)
+	at com.liferay.portal.service.base.CompanyLocalServiceBaseImpl.getCompany(CompanyLocalServiceBaseImpl.java:301)
+	at sun.reflect.GeneratedMethodAccessor588.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy24.getCompany(Unknown Source)
+	at com.liferay.portal.service.CompanyLocalServiceUtil.getCompany(CompanyLocalServiceUtil.java:200)
+	at com.liferay.portal.security.auth.CompanyThreadLocal.setCompanyId(CompanyThreadLocal.java:56)
+	at com.liferay.portal.util.PortalInstances._getCompanyId(PortalInstances.java:214)
+	at com.liferay.portal.util.PortalInstances.getCompanyId(PortalInstances.java:71)
+	at com.liferay.portal.servlet.filters.absoluteredirects.AbsoluteRedirectsFilter.doFilterTry(AbsoluteRedirectsFilter.java:60)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:183)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not load an entity: [com.liferay.portal.model.impl.CompanyImpl#20155]
+	at com.liferay.portal.dao.orm.hibernate.ExceptionTranslator.translate(ExceptionTranslator.java:30)
+	at com.liferay.portal.dao.orm.hibernate.SessionImpl.get(SessionImpl.java:158)
+	at com.liferay.portal.kernel.dao.orm.ClassLoaderSession.get(ClassLoaderSession.java:258)
+	at com.liferay.portal.service.persistence.CompanyPersistenceImpl.fetchByPrimaryKey(CompanyPersistenceImpl.java:1721)
+	... 48 more
+Caused by: org.hibernate.exception.SQLGrammarException: could not load an entity: [com.liferay.portal.model.impl.CompanyImpl#20155]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2041)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:86)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:76)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3294)
+	at org.hibernate.event.def.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:496)
+	at org.hibernate.event.def.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:477)
+	at org.hibernate.event.def.DefaultLoadEventListener.load(DefaultLoadEventListener.java:227)
+	at org.hibernate.event.def.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:269)
+	at org.hibernate.event.def.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:152)
+	at org.hibernate.impl.SessionImpl.fireLoad(SessionImpl.java:1090)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:1005)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:998)
+	at com.liferay.portal.dao.orm.hibernate.SessionImpl.get(SessionImpl.java:155)
+	... 50 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'lportal.company' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2322)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:1418)
+	at org.hibernate.jdbc.AbstractBatcher.getResultSet(AbstractBatcher.java:208)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:1953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:802)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2037)
+	... 62 more
+21:58:15,317 ERROR [http-bio-8080-exec-1][JDBCExceptionReporter:82] Table 'lportal.layoutset' doesn't exist
+21:58:15,318 ERROR [http-bio-8080-exec-1][PortalInstances:232] com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+	at com.liferay.portal.service.persistence.impl.BasePersistenceImpl.processException(BasePersistenceImpl.java:251)
+	at com.liferay.portal.service.persistence.LayoutSetPersistenceImpl.fetchByG_P(LayoutSetPersistenceImpl.java:1268)
+	at com.liferay.portal.service.persistence.LayoutSetPersistenceImpl.fetchByG_P(LayoutSetPersistenceImpl.java:1187)
+	at com.liferay.portal.service.persistence.LayoutSetPersistenceImpl.findByG_P(LayoutSetPersistenceImpl.java:1151)
+	at com.liferay.portal.service.impl.LayoutSetLocalServiceImpl.getLayoutSet(LayoutSetLocalServiceImpl.java:159)
+	at sun.reflect.GeneratedMethodAccessor587.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.service.impl.LayoutSetLocalServiceStagingAdvice.invoke(LayoutSetLocalServiceStagingAdvice.java:68)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy45.getLayoutSet(Unknown Source)
+	at com.liferay.portal.service.LayoutSetLocalServiceUtil.getLayoutSet(LayoutSetLocalServiceUtil.java:298)
+	at com.liferay.portal.util.PortalInstances._getCompanyId(PortalInstances.java:223)
+	at com.liferay.portal.util.PortalInstances.getCompanyId(PortalInstances.java:71)
+	at com.liferay.portal.servlet.filters.absoluteredirects.AbsoluteRedirectsFilter.doFilterTry(AbsoluteRedirectsFilter.java:60)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:183)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+	at com.liferay.portal.dao.orm.hibernate.ExceptionTranslator.translate(ExceptionTranslator.java:30)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:125)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:98)
+	at com.liferay.portal.service.persistence.LayoutSetPersistenceImpl.fetchByG_P(LayoutSetPersistenceImpl.java:1244)
+	... 49 more
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute query
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.loader.Loader.doList(Loader.java:2545)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2276)
+	at org.hibernate.loader.Loader.list(Loader.java:2271)
+	at org.hibernate.hql.classic.QueryTranslatorImpl.list(QueryTranslatorImpl.java:940)
+	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1268)
+	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:113)
+	... 51 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'lportal.layoutset' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2322)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:1418)
+	at org.hibernate.jdbc.AbstractBatcher.getResultSet(AbstractBatcher.java:208)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:1953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:802)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
+	at org.hibernate.loader.Loader.doList(Loader.java:2542)
+	... 58 more
+21:58:15,320 ERROR [http-bio-8080-exec-1][JDBCExceptionReporter:82] Table 'lportal.layout' doesn't exist
+21:58:15,424 WARN  [http-bio-8080-exec-1][code_jsp:?] {code="500", msg="", uri=/c/portal/setup_wizard}
+javax.servlet.ServletException: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:105)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+	at com.liferay.portal.service.persistence.impl.BasePersistenceImpl.processException(BasePersistenceImpl.java:251)
+	at com.liferay.portal.service.persistence.LayoutPersistenceImpl.findByG_P(LayoutPersistenceImpl.java:4316)
+	at com.liferay.portal.service.persistence.LayoutPersistenceImpl.findByG_P(LayoutPersistenceImpl.java:4200)
+	at com.liferay.portal.service.impl.LayoutLocalServiceImpl.getDefaultPlid(LayoutLocalServiceImpl.java:1141)
+	at sun.reflect.GeneratedMethodAccessor700.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.service.impl.LayoutLocalServiceVirtualLayoutsAdvice.invoke(LayoutLocalServiceVirtualLayoutsAdvice.java:183)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.service.impl.LayoutLocalServiceStagingAdvice.invoke(LayoutLocalServiceStagingAdvice.java:141)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy35.getDefaultPlid(Unknown Source)
+	at com.liferay.portal.service.LayoutLocalServiceUtil.getDefaultPlid(LayoutLocalServiceUtil.java:872)
+	at com.liferay.portal.service.ServiceContextFactory.getInstance(ServiceContextFactory.java:97)
+	at com.liferay.portal.servlet.filters.absoluteredirects.AbsoluteRedirectsFilter.doFilterTry(AbsoluteRedirectsFilter.java:84)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:183)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	... 29 more
+Caused by: com.liferay.portal.kernel.dao.orm.ORMException: org.hibernate.exception.SQLGrammarException: could not execute query
+	at com.liferay.portal.dao.orm.hibernate.ExceptionTranslator.translate(ExceptionTranslator.java:30)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:125)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104)
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:194)
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:162)
+	at com.liferay.portal.service.persistence.LayoutPersistenceImpl.findByG_P(LayoutPersistenceImpl.java:4305)
+	... 49 more
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute query
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:92)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.loader.Loader.doList(Loader.java:2545)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2276)
+	at org.hibernate.loader.Loader.list(Loader.java:2271)
+	at org.hibernate.hql.classic.QueryTranslatorImpl.list(QueryTranslatorImpl.java:940)
+	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1268)
+	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:113)
+	... 53 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'lportal.layout' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2322)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:1418)
+	at org.hibernate.jdbc.AbstractBatcher.getResultSet(AbstractBatcher.java:208)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:1953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:802)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
+	at org.hibernate.loader.Loader.doList(Loader.java:2542)
+	... 60 more
+22:00:21,141 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+22:00:21,144 WARN  [localhost-startStop-1][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+22:00:21,177 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+22:00:40,890 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+22:00:40,984 ERROR [localhost-startStop-1][JDBCExceptionReporter:82] user lacks privilege or object not found: LOCK_
+22:00:40,987 WARN  [localhost-startStop-1][StartupAction:147] Unable to clear locks because Lock table does not exist
+22:00:41,371 WARN  [localhost-startStop-1][ReleaseLocalServiceImpl:171] user lacks privilege or object not found: RELEASE_
+22:00:41,372 INFO  [localhost-startStop-1][ReleaseLocalServiceImpl:84] Create tables and populate with default data
+22:00:41,971 INFO  [localhost-startStop-1][BaseDB:481] Database supports case sensitive queries
+22:00:42,380 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+22:00:42,381 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+22:00:42,404 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+22:00:42,404 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+22:00:42,405 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+22:00:42,405 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+22:00:42,406 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+22:00:42,423 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+22:00:43,131 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+22:00:43,163 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+22:00:43,163 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+22:00:43,165 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+22:00:43,166 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+22:00:43,171 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+22:00:43,175 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+22:00:43,181 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+22:00:43,185 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+22:00:43,305 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+22:00:43,309 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+22:00:43,313 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+22:00:43,327 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+22:00:43,338 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+22:00:43,348 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+22:00:43,355 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+22:00:43,356 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+22:00:43,370 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+22:00:43,372 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+22:00:43,372 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+22:00:43,378 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+22:00:43,381 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+22:00:43,430 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+22:00:43,434 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+22:00:50,354 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+22:02:05,823 INFO  [http-bio-8080-exec-4][DialectDetector:71] Determine dialect for MySQL 5
+22:02:05,832 INFO  [http-bio-8080-exec-4][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+22:02:08,598 INFO  [http-bio-8080-exec-4][StartupAction:97] There are no patches installed
+22:02:08,612 ERROR [http-bio-8080-exec-4][JDBCExceptionReporter:82] Table 'lportal.lock_' doesn't exist
+22:02:08,614 WARN  [http-bio-8080-exec-4][StartupAction:147] Unable to clear locks because Lock table does not exist
+22:02:08,616 WARN  [http-bio-8080-exec-4][ReleaseLocalServiceImpl:171] Table 'lportal.release_' doesn't exist
+22:02:08,618 INFO  [http-bio-8080-exec-4][ReleaseLocalServiceImpl:84] Create tables and populate with default data
+22:02:44,382 WARN  [http-bio-8080-exec-4][BaseDB:457] Specified key was too long; max key length is 767 bytes: create index IX_7020130F on SCProductVersion (directDownloadURL);
+
+22:02:44,384 ERROR [http-bio-8080-exec-4][BaseDB:464] create index IX_7020130F on SCProductVersion (directDownloadURL);
+22:02:49,561 WARN  [http-bio-8080-exec-4][BaseDB:457] Specified key was too long; max key length is 767 bytes: create index IX_89509087 on User_ (companyId, openId);
+
+22:02:49,561 ERROR [http-bio-8080-exec-4][BaseDB:464] create index IX_89509087 on User_ (companyId, openId);
+22:02:52,248 INFO  [http-bio-8080-exec-4][BaseDB:484] Database does not support case sensitive queries
+22:02:53,434 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+22:02:53,435 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+22:02:53,448 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+22:02:53,448 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+22:02:53,462 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+22:02:53,463 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+22:02:53,463 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+22:02:53,472 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+22:02:53,479 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+22:02:53,490 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+22:02:53,491 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+22:02:53,492 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+22:02:53,494 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+22:02:53,497 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+22:02:53,500 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+22:02:53,503 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+22:02:53,505 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+22:02:53,523 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+22:02:53,525 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+22:02:53,527 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+22:02:53,536 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+22:02:53,539 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+22:02:53,544 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+22:02:53,549 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+22:02:53,550 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+22:02:53,553 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+22:02:53,554 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+22:02:53,555 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+22:02:53,557 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+22:02:53,558 INFO  [http-bio-8080-exec-4][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+22:02:59,166 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+22:02:59,168 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing custom-signup-portlet for deploy because it is missing marketplace-portlet
+22:02:59,248 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+22:02:59,248 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+22:02:59,476 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+22:02:59,476 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+22:02:59,527 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying marketplace-portlet from queue
+22:02:59,528 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+22:02:59,691 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Marketplace SQL scripts
+22:03:00,024 WARN  [http-bio-8080-exec-4][BaseDB:457] Specified key was too long; max key length is 767 bytes: create index IX_5848F52D on Marketplace_Module (appId, bundleSymbolicName, bundleVersion);
+
+22:03:00,025 ERROR [http-bio-8080-exec-4][BaseDB:464] create index IX_5848F52D on Marketplace_Module (appId, bundleSymbolicName, bundleVersion);
+22:03:00,078 WARN  [http-bio-8080-exec-4][BaseDB:457] Specified key was too long; max key length is 767 bytes: create index IX_DD03D499 on Marketplace_Module (bundleSymbolicName);
+
+22:03:00,078 ERROR [http-bio-8080-exec-4][BaseDB:464] create index IX_DD03D499 on Marketplace_Module (bundleSymbolicName);
+22:03:00,776 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for marketplace-portlet
+22:03:00,819 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.UpgradeProcess_1_0_0
+22:03:00,821 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.v1_0_0.UpgradeExpando
+22:03:00,879 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+22:03:00,883 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+22:03:01,174 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+22:03:01,176 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+22:03:01,177 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+22:03:01,468 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+22:03:01,596 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+22:03:01,597 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying calendar-portlet from queue
+22:03:01,597 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+22:03:01,702 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Calendar SQL scripts
+22:03:04,109 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for calendar-portlet
+22:03:04,128 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.UpgradeProcess_1_0_2
+22:03:04,131 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.v1_0_2.UpgradePortletPreferences
+22:03:04,960 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+22:03:04,980 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+22:03:05,284 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+22:03:05,285 INFO  [http-bio-8080-exec-4][SocialHotDeployListener:94] Registering social for calendar-portlet
+22:03:05,287 INFO  [http-bio-8080-exec-4][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+22:03:05,288 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying kaleo-web from queue
+22:03:05,288 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+22:03:05,493 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Kaleo SQL scripts
+22:03:11,488 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for kaleo-web
+22:03:11,505 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_0_0
+22:03:11,507 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_0_0.UpgradeKaleoTaskInstanceToken
+22:03:11,512 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_1_0
+22:03:11,514 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_1_0.UpgradeWorkflowContext
+22:03:11,544 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.UpgradeProcess_1_2_0
+22:03:11,546 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoLog
+22:03:11,554 INFO  [http-bio-8080-exec-4][Table:157] Starting backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470780191554
+22:03:11,557 INFO  [http-bio-8080-exec-4][Table:191] Finished backup of KaleoLog to C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62/temp/temp-db-KaleoLog-1470780191554 in 3 ms
+22:03:11,821 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.portal.workflow.kaleo.hook.upgrade.v1_2_0.UpgradeKaleoNotificationRecipient
+22:03:11,850 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for kaleo-web is available for use
+22:03:11,979 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+22:03:11,979 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying notifications-portlet from queue
+22:03:11,979 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+22:03:12,075 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Notification SQL scripts
+22:03:12,620 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for notifications-portlet
+22:03:12,636 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_0_0
+22:03:12,638 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_0_0.UpgradeUserNotificationEvent
+22:03:12,645 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_1_0
+22:03:12,649 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_1_0.UpgradeUserNotificationEvent
+22:03:12,902 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+22:03:12,905 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+22:03:13,133 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+22:03:13,157 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+22:03:13,157 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying opensocial-portlet from queue
+22:03:13,158 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+22:03:13,281 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running OpenSocial SQL scripts
+22:03:13,469 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'url' used in key specification without a key length: create unique index IX_A6A89EB1 on OpenSocial_Gadget (companyId, url);
+
+22:03:15,759 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for opensocial-portlet
+22:03:15,826 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+22:03:15,831 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+22:03:16,412 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+22:03:16,788 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+22:03:16,789 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying resources-importer-web from queue
+22:03:16,789 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+22:03:16,967 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for resources-importer-web
+22:03:16,992 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+22:03:17,013 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+22:03:17,014 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying sync-web from queue
+22:03:17,014 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for sync-web
+22:03:17,044 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Sync SQL scripts
+22:03:18,274 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for sync-web
+22:03:18,290 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.sync.hook.upgrade.v1_0_0.UpgradeIndex
+22:03:18,676 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for sync-web is available for use
+22:03:18,827 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+22:03:18,828 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying web-form-portlet from queue
+22:03:18,829 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+22:03:19,087 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+22:03:19,211 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+22:06:29,139 WARN  [liferay/mail-1][MailEngine:600] Failed to connect to a valid mail server. Please make sure one is properly configured. Could not connect to SMTP host: localhost, port: 25
+22:07:15,315 WARN  [liferay/mail-1][MailEngine:600] Failed to connect to a valid mail server. Please make sure one is properly configured. Could not connect to SMTP host: localhost, port: 25
+22:22:55,984 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for MySQL 5
+22:22:56,022 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+22:23:21,531 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+22:23:22,127 INFO  [localhost-startStop-1][BaseDB:484] Database does not support case sensitive queries
+22:23:22,436 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+22:23:22,441 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+22:23:29,571 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+22:23:34,466 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+22:23:34,468 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing custom-signup-portlet for deploy because it is missing marketplace-portlet
+22:23:41,795 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+22:23:41,795 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+22:23:48,817 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+22:23:48,817 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+22:23:51,717 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+22:23:51,765 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+22:23:52,768 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for marketplace-portlet
+22:23:52,898 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+22:23:52,905 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+22:23:53,205 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+22:23:53,207 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+22:23:53,207 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+22:23:53,515 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+22:23:53,592 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+22:23:53,593 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+22:23:53,593 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+22:23:55,230 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for calendar-portlet
+22:23:57,500 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+22:23:57,521 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+22:23:57,787 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+22:23:57,788 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+22:23:57,791 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+22:23:57,791 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+22:23:57,792 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+22:24:02,081 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for kaleo-web
+22:24:02,121 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for kaleo-web is available for use
+22:24:05,102 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+22:24:05,102 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+22:24:05,102 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+22:24:05,585 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for notifications-portlet
+22:24:05,856 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+22:24:05,859 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+22:24:06,046 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+22:24:13,231 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+22:24:13,232 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+22:24:13,232 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+22:24:14,791 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for opensocial-portlet
+22:24:14,857 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+22:24:14,862 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+22:24:15,319 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+22:24:17,203 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+22:24:17,203 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+22:24:17,203 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+22:24:17,437 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for resources-importer-web
+22:24:17,444 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+22:24:20,282 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+22:24:20,282 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+22:24:20,282 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+22:24:21,178 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for sync-web
+22:24:21,664 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for sync-web is available for use
+22:24:23,827 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+22:24:23,827 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+22:24:23,828 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+22:24:24,071 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+22:24:24,176 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+22:24:45,653 WARN  [http-bio-8080-exec-7][code_jsp:?] {code="404", msg="", uri=/WEB-INF/classes/com/liferay/training/amf2/MySignupPortlet.java}
+22:35:27,715 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+22:35:27,765 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+22:35:27,772 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+22:35:27,776 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+22:35:29,258 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+22:35:29,258 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+22:35:29,259 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+22:35:29,542 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+22:35:29,644 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+22:35:38,743 ERROR [http-bio-8080-exec-1][status_jsp:753] java.lang.IllegalStateException: setAttribute: Session [null] has already been invalidated
+22:37:29,449 ERROR [http-bio-8080-exec-17][status_jsp:753] java.lang.reflect.UndeclaredThrowableException

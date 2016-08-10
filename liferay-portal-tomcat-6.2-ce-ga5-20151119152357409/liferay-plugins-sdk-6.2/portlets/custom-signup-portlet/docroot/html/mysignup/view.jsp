@@ -7,9 +7,10 @@
 
 <portlet:actionURL name="processAction" var="processActionURL" />
 
+<!-- TODO get the bInfoErrorList from renderRequest, not session -->
 <%
 StringBuilder builtStr = new StringBuilder();
-Object[] bInfoErrorList = (Object[])portletSession.getAttribute("bInfoErrorList");
+Object[] bInfoErrorList = (Object[])portletSession.getAttribute("bInfoErrorList"); 
 if (bInfoErrorList != null){
 	for (Object str: bInfoErrorList){
 		builtStr.append(str + "<br>");
@@ -41,8 +42,8 @@ if (bInfoErrorList != null){
          <aui:input type="text" name="<%=MySignupConstants.BDAY_PARAM%>" label="Birth day:" inlineLabel="true"/>
          <aui:input type="text" name="<%=MySignupConstants.BMONTH_PARAM%>" label="Birth Month:" inlineLabel="true"/>
          <aui:input type="text" name="<%=MySignupConstants.BYEAR_PARAM%>" label="Birth Year:" inlineLabel="true"/>
-         <aui:input type="text" name="<%=MySignupConstants.UPASS1_PARAM%>" label="Password:" inlineLabel="true"/>
-         <aui:input type="text" name="<%=MySignupConstants.UPASS2_PARAM%>" label="Confirm Password:" inlineLabel="true"/>
+         <aui:input type="password" name="<%=MySignupConstants.UPASS1_PARAM%>" label="Password:" inlineLabel="true"/>
+         <aui:input type="password" name="<%=MySignupConstants.UPASS2_PARAM%>" label="Confirm Password:" inlineLabel="true"/>
       </aui:column>
       
       <aui:column>

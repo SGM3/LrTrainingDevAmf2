@@ -2,13 +2,18 @@ package com.liferay.training.amf2;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
 import javax.portlet.PortletMode;
 
+import com.liferay.counter.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
@@ -16,13 +21,23 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.model.Address;
+import com.liferay.portal.model.Contact;
+import com.liferay.portal.model.ListTypeConstants;
+import com.liferay.portal.model.ListTypeModel;
+import com.liferay.portal.model.Phone;
 import com.liferay.portal.model.Region;
 import com.liferay.portal.model.User;
+import com.liferay.portal.service.AddressLocalServiceUtil;
+import com.liferay.portal.service.ContactLocalServiceUtil;
+import com.liferay.portal.service.PhoneLocalServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
-import com.liferay.portal.service.UserLocalService;
+import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.UserLocalServiceUtil;
+import com.liferay.portal.service.persistence.ListTypeUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
@@ -93,16 +108,15 @@ public class MySignupPortlet extends MVCPortlet {
 	}
 	
 	private boolean isUsernameUnique(ActionRequest req, String uname){
-		uname = uname.trim();
 		ThemeDisplay themeDisplay = (ThemeDisplay) req.getAttribute(WebKeys.THEME_DISPLAY);
-		long groupId = themeDisplay.getScopeGroupId();
 		long companyId = themeDisplay.getCompanyId();
+		uname = uname.trim();
 		try {
-			long id = UserLocalServiceUtil.getUserIdByScreenName(companyId, uname);
+			UserLocalServiceUtil.getUserIdByScreenName(companyId, uname);
 		} catch (PortalException e) {
 			return true;
 		} catch (SystemException e) {
-			log.error("Unable to query User table");
+			log.error("Unable to query User table: " + e.getMessage());
 		}
 		return false;// TODO unique username logic
 	}
@@ -116,7 +130,7 @@ public class MySignupPortlet extends MVCPortlet {
 				}
 			}
 		} catch (SystemException e) {
-			log.error("Unable to fetch Region aread codes for US (Country ID 19)");
+			log.error("Unable to query Region area codes for US (Country ID 19)");
 		}//19 is country code for US
 		return false;
 	}
@@ -126,13 +140,24 @@ public class MySignupPortlet extends MVCPortlet {
 			throws IOException, PortletException {
 			boolean hasError = false;
 			ArrayList<String> allErrors = new ArrayList<String>();
-			User builtUser = null;
+			
+//			User builtUser = UserLocalServiceUtil.createUser(0);
+//			Contact builtUserContact = ContactLocalServiceUtil.createContact(0);
+//			Phone homePhone = null, mobilePhone = null;
+//			Address builtUserAddr = AddressLocalServiceUtil.createAddress(0);
+
+			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+			long groupId = themeDisplay.getScopeGroupId();
+			long companyId = themeDisplay.getCompanyId();
+			long curUserId = themeDisplay.getUserId();
+			Locale curUserLocale = themeDisplay.getLocale();
 				
 			String fname = ParamUtil.getString(request, FIRSTN_PARAM);
 			if (Validator.isNull(fname)){
 				hasError = true;
 				allErrors.add("First name is required.");
-			} else{
+			} else {
+				fname = StringUtil.trim(fname);
 				if (!Validator.isName(fname)){
 					hasError = true;
 					allErrors.add("First name must be alpha numeric.");
@@ -142,12 +167,14 @@ public class MySignupPortlet extends MVCPortlet {
 					allErrors.add("First name is too long.");
 				}
 			}
+//			builtUser.setFirstName(fname);
 			
 			String lname = ParamUtil.getString(request, LASTN_PARAM);
 			if (Validator.isNull(lname)){
 				hasError = true;
 				allErrors.add("Last name is required.");
 			} else{
+				lname = StringUtil.trim(lname);
 				if (!Validator.isName(lname)){
 					hasError = true;
 					allErrors.add("Last name must be alpha numeric.");
@@ -157,12 +184,14 @@ public class MySignupPortlet extends MVCPortlet {
 					allErrors.add("Last name is too long.");
 				}
 			}
+//			builtUser.setLastName(lname);
 			
 			String emailAddr = ParamUtil.getString(request, EMAIL_PARAM);
 			if (Validator.isNull(emailAddr)){
 				hasError = true;
 				allErrors.add("Email is required.");
 			} else{
+				emailAddr = StringUtil.trim(emailAddr);
 				if (!Validator.isEmailAddress(emailAddr)){
 					hasError = true;
 					allErrors.add("Email is in invalid format.");
@@ -172,13 +201,15 @@ public class MySignupPortlet extends MVCPortlet {
 					allErrors.add("Email is too long.");
 				}
 			}
+//			builtUser.setEmailAddress(emailAddr);
 			
 			String username = ParamUtil.getString(request, UNAME_PARAM);
 			if (Validator.isNull(username)){
 				hasError = true;
 				allErrors.add("Username is required.");
 			} else{
-				if (!isAlphaNumericString(username)){
+				username = StringUtil.trim(username);
+				if (!isAlphaNumericString(username)){// TODO Spaced accepted?
 					hasError = true;
 					allErrors.add("Username must be an alpha numeric string.");
 				}
@@ -191,76 +222,133 @@ public class MySignupPortlet extends MVCPortlet {
 					allErrors.add("Username is aleady taken.");
 				}
 			}
+//			builtUser.setScreenName(username);
 			
 			String gender = ParamUtil.getString(request, GENDER_PARAM);
+			boolean isMale = false;
 			if (Validator.isNull(gender)){
 				hasError = true;
 				allErrors.add("Gender is required.");
+			} else {
+				gender = StringUtil.trim(gender);//shouldn't need to trim, just to make sure
+				isMale = gender.equals("male");
 			}
+//			builtUserContact.setMale(isMale);//TODO set gender on user
 			
 			String bmonth = ParamUtil.getString(request, BMONTH_PARAM);
 			if (Validator.isNull(bmonth)){
 				hasError = true;
 				allErrors.add("Birthday month is required.");
-			} else if (!Validator.isNumber(bmonth)){
-				hasError = true;
-				allErrors.add("Numeric birthday month expected.");
-			} else if (Integer.parseInt(bmonth) < 1 || Integer.parseInt(bmonth) > 12){
-				hasError = true;
-				allErrors.add("Birthday month must be in range [1-12].");
+			} else{
+				bmonth = StringUtil.trim(bmonth);
+				if (!Validator.isNumber(bmonth)){
+					hasError = true;
+					allErrors.add("Numeric birthday month expected.");
+				} else if (Integer.parseInt(bmonth) < 1 || Integer.parseInt(bmonth) > 12){
+					hasError = true;
+					allErrors.add("Birthday month must be in range [1-12].");
+				}
 			}
 			
 			String bday = ParamUtil.getString(request, BDAY_PARAM);
 			if (Validator.isNull(bday)){
 				hasError = true;
 				allErrors.add("Birthday day is required.");
-			} else if (!Validator.isNumber(bday)){
-				hasError = true;
-				allErrors.add("Numeric birthday day expected.");
-			} else if (Integer.parseInt(bday) < 1 || Integer.parseInt(bday) > 31){
-				hasError = true;
-				allErrors.add("Birthday day must be in range [1-31].");
+			} else {
+				bday = StringUtil.trim(bday);
+				if (!Validator.isNumber(bday)){
+					hasError = true;
+					allErrors.add("Numeric birthday day expected.");
+				} else if (Integer.parseInt(bday) < 1 || Integer.parseInt(bday) > 31){
+					hasError = true;
+					allErrors.add("Birthday day must be in range [1-31].");
+				}
 			}
 			
 			String byear = ParamUtil.getString(request, BYEAR_PARAM);
 			if (Validator.isNull(byear)){
 				hasError = true;
 				allErrors.add("Birthday year is required.");
-			} else if (!Validator.isNumber(byear)){
-				hasError = true;
-				allErrors.add("Numeric year month expected.");
+			} else {
+				byear = StringUtil.trim(byear);
+				if (!Validator.isNumber(byear)){
+					hasError = true;
+					allErrors.add("Numeric year month expected.");
+				}
 			}
+			
+			int bm = Integer.parseInt(bmonth), bd = Integer.parseInt(bday), by = Integer.parseInt(byear);
+			
+			Calendar bCal = new GregorianCalendar(), thirteenYearsAgo = new GregorianCalendar();
+			bCal.clear();
+			thirteenYearsAgo.clear(Calendar.AM_PM);
+			thirteenYearsAgo.clear(Calendar.MILLISECOND);
+			thirteenYearsAgo.clear(Calendar.SECOND);
+			thirteenYearsAgo.clear(Calendar.MINUTE);
+			thirteenYearsAgo.clear(Calendar.HOUR_OF_DAY);
+			thirteenYearsAgo.add(Calendar.YEAR, -13);
+			
+			if (!Validator.isDate(bm, bd, by)){
+				String gregDate = String.format("%02d/%02d/%d", bm, bd, by);
+				allErrors.add("The date \"" + gregDate + "\" (format: MM/DD/YYYY) is not valid.");
+			} else {
+				bCal.set(by, bm - 1, bd);
+				if (bCal.after(thirteenYearsAgo)){
+					allErrors.add("Must be at least 13 years old to sign up.");
+				}
+			}
+//			builtUserContact.setBirthday(new Date(bCal.getTimeInMillis()));
 			//TODO Must be 13+
+			//TODO Validate as Gregorian date
+
 			
 			String upass1 = ParamUtil.getString(request, UPASS1_PARAM);
 			if (Validator.isNull(upass1)){
 				hasError = true;
 				allErrors.add("Password is required.");
 			} else if (meetsPasswordRequirements(upass1)){
+				//should not trim
 				hasError = true;
 				allErrors.add("Does not meet minimum password requirements.(" 
 								+ MIN_PASS_REQ + ").");
 			}
+//			builtUser.setPassword(upass1);
 			
 			String upass2 = ParamUtil.getString(request, UPASS2_PARAM);
 			if (Validator.isNotNull(upass2) && !upass2.equals(upass1)){
 				allErrors.add("Does not match password 1.");
 			}
-			
+			// TODO nothing to add to builtUser?
 
 			String homeNum = ParamUtil.getString(request, HOMEPHONE_PARAM);
 			if (Validator.isNotNull(homeNum)){
+				homeNum = StringUtil.trim(homeNum);
 				if (!Validator.isPhoneNumber(homeNum) || homeNum.length() != 10){
 					hasError = true;
 					allErrors.add("Home phone number invalid.");
+				} else {
+					// should be valid format at this point
+//					homePhone = PhoneLocalServiceUtil.createPhone(0);
+//					homePhone.setNumber(homeNum);
+//					homePhone.setTypeId(11011);// TODO Set as 'home'
+					// from DB table ListType for 'com.liferay.portal.model.Contact.phone'
+					// for 'personal'
 				}
 			}
 			
 			String mobileNum = ParamUtil.getString(request, MOBILEPHONE_PARAM);
 			if (Validator.isNotNull(mobileNum)){
+				mobileNum = StringUtil.trim(mobileNum);
 				if (!Validator.isPhoneNumber(mobileNum) || mobileNum.length() != 10){
 					hasError = true;
 					allErrors.add("Mobile phone number invalid.");
+				} else {
+					// should be valid format at this point
+//					mobilePhone = PhoneLocalServiceUtil.createPhone(0);
+//					mobilePhone.setNumber(homeNum);
+//					mobilePhone.setTypeId(11008);// TODO Set as 'mobile'
+					// from DB table ListType for 'com.liferay.portal.model.Contact.phone'
+					// for 'mobile-phone'
 				}
 			}
 
@@ -268,18 +356,25 @@ public class MySignupPortlet extends MVCPortlet {
 			if (Validator.isNull(addr1)){
 				hasError = true;
 				allErrors.add("Address is required.");
-			} else if (!isAlphaNumericString(addr1.replaceAll(" ", "")) 
+			} else {
+				addr1 = StringUtil.trim(addr1);
+				if (!isAlphaNumericString(addr1.replaceAll(" ", "")) 
 					|| addr1.length() > 255){ // spaces are accepted
-				hasError = true;
-				allErrors.add("Address is invalid.");
+					hasError = true;
+					allErrors.add("Address is invalid.");
+				}
 			}
+//			builtUserAddr.setStreet1(addr1);
 			
 			String addr2 = ParamUtil.getString(request, ADDR2_PARAM);
 			if (Validator.isNotNull(addr2)){
+				addr2 = StringUtil.trim(addr2);
 				if (!isAlphaNumericString(addr2.replaceAll(" ", "")) 
 						|| addr2.length() > 255){ // spaces are accepted
 					hasError = true;
 					allErrors.add("Address 2 is invalid.");
+				} else {
+//					builtUserAddr.setStreet2(addr2);
 				}
 			}
 			
@@ -287,40 +382,68 @@ public class MySignupPortlet extends MVCPortlet {
 			if (Validator.isNull(city)){
 				hasError = true;
 				allErrors.add("City is required.");
-			} else if (!isAlphaNumericString(city.replaceAll(" ", "")) 
+			} else {
+				city = StringUtil.trim(city);
+				if (!isAlphaNumericString(city.replaceAll(" ", "")) 
 					|| city.length() > 255){ // spaces are accepted
-				hasError = true;
-				allErrors.add("City is invalid.");
+					hasError = true;
+					allErrors.add("City is invalid.");
+				}
 			}
+//			builtUserAddr.setCity(city);
 			
 			String state = ParamUtil.getString(request, STATE_PARAM);
 			if (Validator.isNull(state)){
 				hasError = true;
 				allErrors.add("State is required.");
-			} else if (isValidRegionCode(request, state)){ 
-				allErrors.add("State is invalid. (Must use LifeRay State code)");
+			} else {
+				state = StringUtil.trim(state);
+				if (!isValidRegionCode(request, state)){ 
+					hasError = true;
+					allErrors.add("State is invalid. (Must use LifeRay State code)");
+				}
 			}
+			//TODO Set state somewhere, maybe make UI dropdown
+//			builtUserAddr.setCountryId(19);// 19 is the country code form Regions table for US
 			
 			String zipCode = ParamUtil.getString(request, ZIP_PARAM);
 			if (Validator.isNull(zipCode)){
 				hasError = true;
 				allErrors.add("Zip code is required.");
-			} else if (!Validator.isNumber(zipCode) || zipCode.length() != 5){
-				allErrors.add("Zip code is invalid.");
+			} else {
+				zipCode = StringUtil.trim(zipCode);
+				if (!Validator.isNumber(zipCode) || zipCode.length() != 5){
+					hasError = true;
+					allErrors.add("Zip code is invalid.");
+				}
 			}
-
+//			builtUserAddr.setZip(zipCode);
 			
 			String secQuestion = ParamUtil.getString(request, SECQ_PARAM);
 			if (Validator.isNull(secQuestion)){
 				hasError = true;
 				allErrors.add("A security question is required.");
 			}
+			// no need to trim, drop down
+//			builtUser.setReminderQueryQuestion(secQuestion);
 			
 			String secAnswer = ParamUtil.getString(request, SECA_PARAM);
 			if (Validator.isNull(secAnswer)){
 				hasError = true;
 				allErrors.add("An anwser to the security question is required.");
+			} else {
+				//should not trim
+				if (!isAlphaNumericString(secAnswer.replaceAll(" ", ""))){
+					hasError = true;
+					allErrors.add("Email is in invalid format.");
+				}
+				if (secAnswer.length() > 255){
+					hasError = true;
+					allErrors.add("Security answer is too long.");
+				}
 			}
+//			builtUser.setReminderQueryAnswer(secAnswer);
+			
 			
 			String acceptedTou = ParamUtil.getString(request, ATOU_PARAM);
 			if (Validator.isNull(acceptedTou)){
@@ -330,6 +453,7 @@ public class MySignupPortlet extends MVCPortlet {
 				hasError = true;
 				allErrors.add("Terms of user must be accepted to continue.");
 			}
+//			builtUser.setAgreedToTermsOfUse(true);
 			
 //			System.out.println("fname: " + fname);
 //			System.out.println("lname: " + lname);
@@ -350,7 +474,7 @@ public class MySignupPortlet extends MVCPortlet {
 //			System.out.println("zipCode: " + zipCode);
 //			System.out.println("secQuestion: " + secQuestion);
 //			System.out.println("secAnswer: " + secAnswer);
-			System.out.println("acceptedTou: " + acceptedTou);
+//			System.out.println("acceptedTou: " + acceptedTou);
 
 
 
@@ -359,8 +483,33 @@ public class MySignupPortlet extends MVCPortlet {
 				request.getPortletSession().setAttribute("bInfoErrorList", allErrors.toArray());
 			} else {
 				try {
-//					UserLocalServiceUtil.addUser(builtUser); //TODO uncomment
-					if (builtUser == null && builtUser != null)throw new SystemException();
+					//Contact Phone Address
+					long userId = CounterLocalServiceUtil.increment(User.class.getName());
+					long contactId = CounterLocalServiceUtil.increment(Contact.class.getName());
+					long hPhoneId = CounterLocalServiceUtil.increment(Phone.class.getName());
+					long mPhoneId = CounterLocalServiceUtil.increment(Phone.class.getName());
+					long addrId = CounterLocalServiceUtil.increment(Address.class.getName());
+					
+//					builtUser.setPrimaryKey(0);
+					//NOTE: Instance type service calls seems to be purely transactional
+					
+//					User utmp = UserLocalServiceUtil.addUser(builtUser); // Invalid, this service
+//																		 // call is purely
+//																		 // transactional
+					try {
+						User utmp = UserLocalServiceUtil.addUser(
+								curUserId, companyId, false, upass1, upass2,
+								false, username, emailAddr, 0L, null, curUserLocale, fname, null,
+								lname, 0, 0, isMale, bm - 1, bd, by, null, null,
+								null, null, null, true, null);
+					} catch (PortalException e) {
+						log.error("Unable to add new user: " + e.getMessage());
+					}
+//					ContactLocalServiceUtil.addContact(builtUserContact); //TODO uncomment
+//					PhoneLocalServiceUtil.addPhone(homePhone); //TODO uncomment
+//					PhoneLocalServiceUtil.addPhone(mobilePhone); //TODO uncomment
+//					AddressLocalServiceUtil.addAddress(builtUserAddr); //TODO uncomment
+					if (request == null && request != null) throw new SystemException();
 					SessionMessages.add(request,"add_user_sucess", "New User created sucessfully");
 				} catch (SystemException e) {
 					log.error("Unable to add new user");
