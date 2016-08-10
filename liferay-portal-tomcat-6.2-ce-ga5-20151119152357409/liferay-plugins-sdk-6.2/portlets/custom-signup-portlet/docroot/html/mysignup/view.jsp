@@ -9,7 +9,7 @@
 
 <!-- TODO get the bInfoErrorList from renderRequest, not session -->
 <%
-	boolean isSignedIn = themeDisplay.isSignedIn();
+boolean isSignedIn = themeDisplay.isSignedIn();
 StringBuilder builtStr = null;
 Object[] bInfoErrorList = null;
 if (!isSignedIn){
@@ -25,11 +25,6 @@ if (!isSignedIn){
 %>
 <c:if test="<%= isSignedIn %>">
  <p>
- 
- <c:forEach items="${ us_reg_codes }"  var="reg">
-   Item ${reg.regionId} is for ${reg.regionCode}<p>
-</c:forEach>
-<%--  <%= testString.toString() %> --%>
  </p>
  <span>You are already signed in as: <%= themeDisplay.getUser().getScreenName() %></span>
 </c:if>

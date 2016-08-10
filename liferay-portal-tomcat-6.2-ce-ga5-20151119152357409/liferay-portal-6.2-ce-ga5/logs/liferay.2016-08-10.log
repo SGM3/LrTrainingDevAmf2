@@ -5239,3 +5239,68 @@ java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Lcom.lifera
 20:21:15,369 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
 20:21:15,624 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
 20:21:15,680 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:38:11,683 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for MySQL 5
+20:38:11,720 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+20:38:40,850 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+20:38:41,451 INFO  [localhost-startStop-1][BaseDB:484] Database does not support case sensitive queries
+20:38:41,899 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+20:38:41,903 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+20:38:48,995 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\deploy
+20:38:51,073 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+20:38:51,082 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing custom-signup-portlet for deploy because it is missing marketplace-portlet
+20:38:58,799 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+20:38:58,799 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+20:39:05,643 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin kaleo-web requires marketplace-portlet
+20:39:05,644 INFO  [localhost-startStop-1][HotDeployImpl:276] Queueing kaleo-web for deploy because it is missing marketplace-portlet
+20:39:08,517 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying marketplace-portlet from queue
+20:39:08,550 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+20:39:09,405 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for marketplace-portlet
+20:39:09,521 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+20:39:09,524 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+20:39:09,775 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+20:39:09,775 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+20:39:09,775 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+20:39:10,075 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+20:39:10,138 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+20:39:10,138 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying calendar-portlet from queue
+20:39:10,138 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+20:39:11,590 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for calendar-portlet
+20:39:13,647 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+20:39:13,666 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+20:39:13,896 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+20:39:13,896 INFO  [localhost-startStop-1][SocialHotDeployListener:94] Registering social for calendar-portlet
+20:39:13,896 INFO  [localhost-startStop-1][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+20:39:13,896 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying kaleo-web from queue
+20:39:13,896 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for kaleo-web
+20:39:17,782 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for kaleo-web
+20:39:17,820 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for kaleo-web is available for use
+20:39:20,483 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+20:39:20,484 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying notifications-portlet from queue
+20:39:20,484 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+20:39:20,903 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for notifications-portlet
+20:39:21,134 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+20:39:21,134 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+20:39:21,310 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+20:39:27,538 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+20:39:27,538 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying opensocial-portlet from queue
+20:39:27,538 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+20:39:28,984 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for opensocial-portlet
+20:39:29,050 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+20:39:29,055 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+20:39:29,492 INFO  [localhost-startStop-1][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+20:39:31,170 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+20:39:31,177 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying resources-importer-web from queue
+20:39:31,177 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+20:39:31,370 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for resources-importer-web
+20:39:31,370 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+20:39:33,937 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+20:39:33,938 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying sync-web from queue
+20:39:33,938 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for sync-web
+20:39:34,744 INFO  [localhost-startStop-1][HookHotDeployListener:709] Registering hook for sync-web
+20:39:35,160 INFO  [localhost-startStop-1][HookHotDeployListener:851] Hook for sync-web is available for use
+20:39:37,001 INFO  [localhost-startStop-1][HotDeployEvent:145] Plugin web-form-portlet requires marketplace-portlet
+20:39:37,003 INFO  [localhost-startStop-1][HotDeployImpl:217] Deploying web-form-portlet from queue
+20:39:37,003 INFO  [localhost-startStop-1][PluginPackageUtil:1016] Reading plugin package for web-form-portlet
+20:39:37,255 INFO  [localhost-startStop-1][PortletHotDeployListener:344] Registering portlets for web-form-portlet
+20:39:37,356 INFO  [localhost-startStop-1][PortletHotDeployListener:492] 1 portlet for web-form-portlet is available for use
+20:39:55,880 WARN  [http-bio-8080-exec-10][code_jsp:?] {code="404", msg="", uri=/WEB-INF/classes/com/liferay/training/amf2/MySignupPortlet.java}
