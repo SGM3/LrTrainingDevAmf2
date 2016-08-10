@@ -9,7 +9,7 @@
 
 <!-- TODO get the bInfoErrorList from renderRequest, not session -->
 <%
-boolean isSignedIn = themeDisplay.isSignedIn();
+	boolean isSignedIn = themeDisplay.isSignedIn();
 StringBuilder builtStr = null;
 Object[] bInfoErrorList = null;
 if (!isSignedIn){
@@ -17,13 +17,20 @@ if (!isSignedIn){
 	bInfoErrorList = (Object[])portletSession.getAttribute("bInfoErrorList"); 
 	if (bInfoErrorList != null){
 		for (Object str: bInfoErrorList){
-			builtStr.append(str + "<br>");
+	builtStr.append(str + "<br>");
 		}
 	}
 }
 
 %>
 <c:if test="<%= isSignedIn %>">
+ <p>
+ 
+ <c:forEach items="${ us_reg_codes }"  var="reg">
+   Item ${reg.regionId} is for ${reg.regionCode}<p>
+</c:forEach>
+<%--  <%= testString.toString() %> --%>
+ </p>
  <span>You are already signed in as: <%= themeDisplay.getUser().getScreenName() %></span>
 </c:if>
 
@@ -66,7 +73,12 @@ if (!isSignedIn){
 	         <aui:input type="text" name="<%=MySignupConstants.ADDR1_PARAM%>" label="Address:" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.ADDR2_PARAM%>" label="Address 2:" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.CITY_PARAM%>" label="City:" inlineLabel="true"/>
-	         <aui:input type="text" name="<%=MySignupConstants.STATE_PARAM%>" label="State:" inlineLabel="true"/>
+	         <aui:select label="State:" name="<%=MySignupConstants.STATE_PARAM%>">
+					<c:forEach items="${ us_reg_codes }"  var="reg">
+						<aui:option selected="false" value="${reg.regionId}">${reg.regionCode}</aui:option>
+					</c:forEach>
+	    	 </aui:select>
+<%-- 	         <aui:input type="text" name="<%=MySignupConstants.STATE_PARAM%>" label="State:" inlineLabel="true"/> --%>
 	         <aui:input type="text" name="<%=MySignupConstants.ZIP_PARAM%>" label="Zip:" inlineLabel="true"/>
 	      </aui:column>
 	      

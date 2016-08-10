@@ -24,4 +24,6 @@ public interface MySignupConstants {
 	public static final String SECQ_PARAM = "security_question";
 	public static final String SECA_PARAM = "security_answer";
 	public static final String ATOU_PARAM = "accepted_tou";
+	
+	public static final String US_REG_CODES_ATTR = "us_reg_codes";
 }

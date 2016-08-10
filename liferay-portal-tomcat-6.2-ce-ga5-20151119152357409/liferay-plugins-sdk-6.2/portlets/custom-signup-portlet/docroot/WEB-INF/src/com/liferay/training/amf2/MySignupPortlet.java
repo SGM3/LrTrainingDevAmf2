@@ -11,6 +11,8 @@ import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
 import javax.portlet.PortletMode;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -32,6 +34,7 @@ import com.liferay.portal.service.RegionServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.portal.util.PortalUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
@@ -114,19 +117,25 @@ public class MySignupPortlet extends MVCPortlet {
 		return false;// TODO unique username logic
 	}
 	
-	private boolean isValidRegionCode(ActionRequest req, String rCode, long[] holder){// TODO LR state code (from DB)
+	private List<Region> getCountryRegions(long countryCode){
+		List<Region> reg = null;
 		try {
-			List<Region> reg = RegionServiceUtil.getRegions(19);
-			for (Region r: reg){
-				if (r.getRegionCode().equals(rCode)){//includes 50 states and Puerto Rico and DC
-					holder[0] = r.getRegionId();
-					return true;
-				}
-			}
+			reg = RegionServiceUtil.getRegions(countryCode);
 		} catch (SystemException e) {
-			log.error("Unable to query Region area codes for US (Country ID 19)");
-		}//19 is country code for US
-		return false;
+			log.error("Unable to query Region area codes(Country ID " + countryCode + ")");
+			reg = new ArrayList<Region>();
+		}
+		return reg;
+	}
+	
+	@Override
+	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+			throws IOException, PortletException {
+		// TODO Auto-generated method stub
+		List<Region> regs = getCountryRegions(19);
+//		log.error(regs);
+		renderRequest.setAttribute(US_REG_CODES_ATTR, regs);
+		super.doView(renderRequest, renderResponse);
 	}
 	
 	@Override
@@ -134,14 +143,9 @@ public class MySignupPortlet extends MVCPortlet {
 			throws IOException, PortletException {
 			boolean hasError = false;
 			ArrayList<String> allErrors = new ArrayList<String>();
-			
-//			User builtUser = UserLocalServiceUtil.createUser(0);
-//			Contact builtUserContact = ContactLocalServiceUtil.createContact(0);
-//			Phone homePhone = null, mobilePhone = null;
-//			Address builtUserAddr = AddressLocalServiceUtil.createAddress(0);
 
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-			long groupId = themeDisplay.getScopeGroupId();
+//			long groupId = themeDisplay.getScopeGroupId();
 			long companyId = themeDisplay.getCompanyId();
 			long curUserId = themeDisplay.getUserId();
 			Locale curUserLocale = themeDisplay.getLocale();
@@ -235,6 +239,7 @@ public class MySignupPortlet extends MVCPortlet {
 			}
 //			builtUserContact.setMale(isMale);//TODO set gender on user
 			
+			boolean isValidDay = false, isValidMonth = false, isValidYear = false;
 			String bmonth = ParamUtil.getString(request, BMONTH_PARAM);
 			if (Validator.isNull(bmonth)){
 				hasError = true;
@@ -247,6 +252,8 @@ public class MySignupPortlet extends MVCPortlet {
 				} else if (Integer.parseInt(bmonth) < 1 || Integer.parseInt(bmonth) > 12){
 					hasError = true;
 					allErrors.add("Birthday month must be in range [1-12].");
+				} else{
+					isValidMonth = true;
 				}
 			}
 			
@@ -262,6 +269,8 @@ public class MySignupPortlet extends MVCPortlet {
 				} else if (Integer.parseInt(bday) < 1 || Integer.parseInt(bday) > 31){
 					hasError = true;
 					allErrors.add("Birthday day must be in range [1-31].");
+				} else {
+					isValidDay = true;
 				}
 			}
 			
@@ -274,10 +283,14 @@ public class MySignupPortlet extends MVCPortlet {
 				if (!Validator.isNumber(byear)){
 					hasError = true;
 					allErrors.add("Numeric year month expected.");
+				} else {
+					isValidYear = true;
 				}
 			}
 			
-			int bm = Integer.parseInt(bmonth), bd = Integer.parseInt(bday), by = Integer.parseInt(byear);
+			int bm = isValidMonth?Integer.parseInt(bmonth):1, 
+					bd = isValidDay?Integer.parseInt(bday):1, 
+					by = isValidYear?Integer.parseInt(byear):1;
 			
 			Calendar bCal = new GregorianCalendar(), thirteenYearsAgo = new GregorianCalendar();
 			bCal.clear();
@@ -327,9 +340,6 @@ public class MySignupPortlet extends MVCPortlet {
 					hasError = true;
 					allErrors.add("Home phone number invalid.");
 				} else {
-					// should be valid format at this point
-//					homePhone = PhoneLocalServiceUtil.createPhone(0);
-//					homePhone.setNumber(homeNum);
 //					homePhone.setTypeId(11011);// TODO Set as 'home'
 					// from DB table ListType for 'com.liferay.portal.model.Contact.phone'
 					// for 'personal'
@@ -343,9 +353,6 @@ public class MySignupPortlet extends MVCPortlet {
 					hasError = true;
 					allErrors.add("Mobile phone number invalid.");
 				} else {
-					// should be valid format at this point
-//					mobilePhone = PhoneLocalServiceUtil.createPhone(0);
-//					mobilePhone.setNumber(homeNum);
 //					mobilePhone.setTypeId(11008);// TODO Set as 'mobile'
 					// from DB table ListType for 'com.liferay.portal.model.Contact.phone'
 					// for 'mobile-phone'
@@ -399,13 +406,12 @@ public class MySignupPortlet extends MVCPortlet {
 				allErrors.add("State is required.");
 			} else {
 				state = StringUtil.trim(state);
-				long [] holder = new long[1];
-				if (!isValidRegionCode(request, state, holder)){ // TODO remove holder,
-																 // after UI change
+				if (!Validator.isNumber(state)){
 					hasError = true;
 					allErrors.add("State is invalid. (Must use LifeRay State code)");
 				} else {
-					regionCodeState = holder[0];
+					regionCodeState = Integer.parseInt(state);
+					System.out.println("ASDasdASD" + regionCodeState);
 				}
 			}
 			//TODO Set state somewhere, maybe make UI dropdown
@@ -539,10 +545,10 @@ public class MySignupPortlet extends MVCPortlet {
 										 // the context PhoneLocalServiceImpl.java:76
 						// from Prathima, classPk is contactId
 						try {
-							Phone hptmp = PhoneLocalServiceUtil.addPhone(
+							PhoneLocalServiceUtil.addPhone(
 									userId, Phone.class.getName(), contactId,
 									homeNum, null, 11011, true, sc);
-							Phone mptmp = PhoneLocalServiceUtil.addPhone(
+							PhoneLocalServiceUtil.addPhone(
 									userId, Phone.class.getName(), contactId
 									, mobileNum, null, 11008, true, sc);
 						} catch (PortalException e) {
@@ -564,6 +570,7 @@ public class MySignupPortlet extends MVCPortlet {
 				request.getPortletSession().setAttribute(
 						"bInfoErrorList", allErrors.toArray());
 			}
+			PortalUtil.copyRequestParameters(request, response);
 			
 			response.setPortletMode(PortletMode.VIEW);
 	}

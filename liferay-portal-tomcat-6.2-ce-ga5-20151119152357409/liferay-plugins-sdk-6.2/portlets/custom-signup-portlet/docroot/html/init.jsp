@@ -15,6 +15,7 @@
 <%@ page import="com.liferay.portlet.journal.model.JournalArticle" %>
 <%@ page import="com.liferay.portal.kernel.util.Validator" %>
 <%@ page import="com.liferay.training.amf2.constants.MySignupConstants" %>
+<%@ page import="com.liferay.portal.model.Region" %>
 
 <liferay-theme:defineObjects />
 
