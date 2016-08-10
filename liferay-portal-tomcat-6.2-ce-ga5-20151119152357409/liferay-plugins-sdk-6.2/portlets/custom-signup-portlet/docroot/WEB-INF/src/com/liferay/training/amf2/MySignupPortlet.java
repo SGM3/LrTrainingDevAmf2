@@ -3,7 +3,6 @@ package com.liferay.training.amf2;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
@@ -13,7 +12,6 @@ import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
 import javax.portlet.PortletMode;
 
-import com.liferay.counter.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
@@ -25,19 +23,14 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Address;
-import com.liferay.portal.model.Contact;
-import com.liferay.portal.model.ListTypeConstants;
-import com.liferay.portal.model.ListTypeModel;
 import com.liferay.portal.model.Phone;
 import com.liferay.portal.model.Region;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.AddressLocalServiceUtil;
-import com.liferay.portal.service.ContactLocalServiceUtil;
 import com.liferay.portal.service.PhoneLocalServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.UserLocalServiceUtil;
-import com.liferay.portal.service.persistence.ListTypeUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
@@ -121,11 +114,12 @@ public class MySignupPortlet extends MVCPortlet {
 		return false;// TODO unique username logic
 	}
 	
-	private boolean isValidRegionCode(ActionRequest req, String rCode){// TODO LR state code (from DB)
+	private boolean isValidRegionCode(ActionRequest req, String rCode, long[] holder){// TODO LR state code (from DB)
 		try {
 			List<Region> reg = RegionServiceUtil.getRegions(19);
 			for (Region r: reg){
 				if (r.getRegionCode().equals(rCode)){//includes 50 states and Puerto Rico and DC
+					holder[0] = r.getRegionId();
 					return true;
 				}
 			}
@@ -151,6 +145,12 @@ public class MySignupPortlet extends MVCPortlet {
 			long companyId = themeDisplay.getCompanyId();
 			long curUserId = themeDisplay.getUserId();
 			Locale curUserLocale = themeDisplay.getLocale();
+			
+			if (themeDisplay.isSignedIn()){
+				response.setPortletMode(PortletMode.VIEW);
+				return;
+			}
+			
 				
 			String fname = ParamUtil.getString(request, FIRSTN_PARAM);
 			if (Validator.isNull(fname)){
@@ -393,14 +393,19 @@ public class MySignupPortlet extends MVCPortlet {
 //			builtUserAddr.setCity(city);
 			
 			String state = ParamUtil.getString(request, STATE_PARAM);
+			long regionCodeState = 0L;
 			if (Validator.isNull(state)){
 				hasError = true;
 				allErrors.add("State is required.");
 			} else {
 				state = StringUtil.trim(state);
-				if (!isValidRegionCode(request, state)){ 
+				long [] holder = new long[1];
+				if (!isValidRegionCode(request, state, holder)){ // TODO remove holder,
+																 // after UI change
 					hasError = true;
 					allErrors.add("State is invalid. (Must use LifeRay State code)");
+				} else {
+					regionCodeState = holder[0];
 				}
 			}
 			//TODO Set state somewhere, maybe make UI dropdown
@@ -435,7 +440,7 @@ public class MySignupPortlet extends MVCPortlet {
 				//should not trim
 				if (!isAlphaNumericString(secAnswer.replaceAll(" ", ""))){
 					hasError = true;
-					allErrors.add("Email is in invalid format.");
+					allErrors.add("Security answer must be alph numeric.");
 				}
 				if (secAnswer.length() > 255){
 					hasError = true;
@@ -480,15 +485,15 @@ public class MySignupPortlet extends MVCPortlet {
 
 			if (hasError) {
 				SessionErrors.add(request,"basic_error");
-				request.getPortletSession().setAttribute("bInfoErrorList", allErrors.toArray());
 			} else {
 				try {
 					//Contact Phone Address
-					long userId = CounterLocalServiceUtil.increment(User.class.getName());
-					long contactId = CounterLocalServiceUtil.increment(Contact.class.getName());
-					long hPhoneId = CounterLocalServiceUtil.increment(Phone.class.getName());
-					long mPhoneId = CounterLocalServiceUtil.increment(Phone.class.getName());
-					long addrId = CounterLocalServiceUtil.increment(Address.class.getName());
+					long userId = -1;
+					long contactId = -1;
+					long addrId = -1;
+					String uuid = null;
+//					long hPhoneId;
+//					long mPhoneId;
 					
 //					builtUser.setPrimaryKey(0);
 					//NOTE: Instance type service calls seems to be purely transactional
@@ -499,21 +504,65 @@ public class MySignupPortlet extends MVCPortlet {
 					try {
 						User utmp = UserLocalServiceUtil.addUser(
 								curUserId, companyId, false, upass1, upass2,
-								false, username, emailAddr, 0L, null, curUserLocale, fname, null,
+								false, username, emailAddr, 0L, null,
+								curUserLocale, fname, null,
 								lname, 0, 0, isMale, bm - 1, bd, by, null, null,
 								null, null, null, true, null);
+						userId = utmp.getUserId();
+						contactId = utmp.getContactId();
+						uuid = utmp.getUuid();
 					} catch (PortalException e) {
-						log.error("Unable to add new user: " + e.getMessage());
+						hasError = true;
+						allErrors.add("Unable to add user.");
+						log.error("Unable to add new user: " + e.getLocalizedMessage());
 					}
-//					ContactLocalServiceUtil.addContact(builtUserContact); //TODO uncomment
-//					PhoneLocalServiceUtil.addPhone(homePhone); //TODO uncomment
-//					PhoneLocalServiceUtil.addPhone(mobilePhone); //TODO uncomment
-//					AddressLocalServiceUtil.addAddress(builtUserAddr); //TODO uncomment
-					if (request == null && request != null) throw new SystemException();
-					SessionMessages.add(request,"add_user_sucess", "New User created sucessfully");
+					if (userId != -1){
+						try {
+							ServiceContext sc = new ServiceContext();
+							sc.setUuid(uuid);// mock out the service context because
+											 // the services decide the pull it from
+											 // the context PhoneLocalServiceImpl.java:76
+							Address atmp = AddressLocalServiceUtil.addAddress(
+									userId, Address.class.getName(), contactId, addr1, addr2,
+									"", city, zipCode, regionCodeState, 19, 11002,
+									false, true, sc);
+							addrId = atmp.getAddressId();
+						} catch (PortalException e) {
+							allErrors.add("Unable to add address.");
+							log.error("Unable to add address: " + e.getLocalizedMessage());
+						}
+					}
+					if (addrId != -1){
+						ServiceContext sc = new ServiceContext();
+						sc.setUuid(uuid);// mock out the service context because
+										 // the services decide the pull it from
+										 // the context PhoneLocalServiceImpl.java:76
+						// from Prathima, classPk is contactId
+						try {
+							Phone hptmp = PhoneLocalServiceUtil.addPhone(
+									userId, Phone.class.getName(), contactId,
+									homeNum, null, 11011, true, sc);
+							Phone mptmp = PhoneLocalServiceUtil.addPhone(
+									userId, Phone.class.getName(), contactId
+									, mobileNum, null, 11008, true, sc);
+						} catch (PortalException e) {
+							hasError = true;
+							allErrors.add("Internal error, unable to complete the request");
+							log.error("Unable to add phone number[s]: " + e.getLocalizedMessage());
+						}
+					}
+					log.info("SUCCESS");
+					SessionMessages.add(request,"add_user_success", "New User created sucessfully");
 				} catch (SystemException e) {
 					log.error("Unable to add new user");
+					hasError = true;
+					allErrors.add("Internal error, unable to complete the request");
+					request.getPortletSession().setAttribute("bInfoErrorList", allErrors.toArray());
 				}
+			}
+			if (hasError){
+				request.getPortletSession().setAttribute(
+						"bInfoErrorList", allErrors.toArray());
 			}
 			
 			response.setPortletMode(PortletMode.VIEW);
