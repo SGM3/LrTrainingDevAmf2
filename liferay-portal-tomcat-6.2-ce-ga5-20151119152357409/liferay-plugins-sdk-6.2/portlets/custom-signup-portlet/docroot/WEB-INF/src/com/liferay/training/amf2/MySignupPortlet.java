@@ -129,17 +129,6 @@ public class MySignupPortlet extends MVCPortlet {
 		return false;
 	}
 	
-	@Override
-	public void doView(
-			RenderRequest renderRequest, RenderResponse renderResponse)
-		throws IOException, PortletException {
-		// TODO Auto-generated method stub
-		List<Region> regs = getCountryRegions(19);
-//		log.error(regs);
-		renderRequest.setAttribute(US_REG_CODES_ATTR, regs);
-		super.doView(renderRequest, renderResponse);
-	}
-	
 	private boolean validateFirstname(String fname, List<String> allErrors){
 		boolean hasError = false;
 		if (Validator.isNull(fname)){
@@ -394,6 +383,16 @@ public class MySignupPortlet extends MVCPortlet {
 	}
 	
 	@Override
+	public void doView(
+			RenderRequest renderRequest, RenderResponse renderResponse)
+		throws IOException, PortletException {
+		List<Region> regs = getCountryRegions(19);
+		_log.info(regs);
+		renderRequest.setAttribute(US_REG_CODES_ATTR, regs);
+		super.doView(renderRequest, renderResponse);
+	}
+	
+	@Override
 	public void processAction(ActionRequest request, ActionResponse response)
 			throws IOException, PortletException {
 			boolean hasError = false;
@@ -405,7 +404,6 @@ public class MySignupPortlet extends MVCPortlet {
 			ArrayList<String> allErrors = new ArrayList<String>();
 
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-//			long groupId = themeDisplay.getScopeGroupId();
 			long companyId = themeDisplay.getCompanyId();
 			long curUserId = themeDisplay.getUserId();
 			Locale curUserLocale = themeDisplay.getLocale();
@@ -414,7 +412,6 @@ public class MySignupPortlet extends MVCPortlet {
 				response.setPortletMode(PortletMode.VIEW);
 				return;
 			}
-			
 				
 			String fname = StringUtil.trim(ParamUtil.getString(request, FIRSTN_PARAM));
 			hasError |= validateFirstname(fname, allErrors);
@@ -503,6 +500,11 @@ public class MySignupPortlet extends MVCPortlet {
 //					User utmp = UserLocalServiceUtil.addUser(builtUser); // Invalid, this service
 																		 // call is purely
 																		 // transactional
+					ServiceContext sc = new ServiceContext();
+					sc.setUuid(uuid);// Mock? out the service context because
+									 // the services decide the pull it from
+									 // the context AddressLocalServiceImpl.java:76
+									 // and PhoneLocalServiceImpl.java:84
 					try {
 						User utmp = UserLocalServiceUtil.addUser(
 								curUserId, companyId, false, upass1, upass2,
@@ -522,10 +524,6 @@ public class MySignupPortlet extends MVCPortlet {
 					}
 					if (userId != -1){
 						try {
-							ServiceContext sc = new ServiceContext();
-							sc.setUuid(uuid);// mock out the service context because
-											 // the services decide the pull it from
-											 // the context PhoneLocalServiceImpl.java:76
 							Address atmp = AddressLocalServiceUtil.addAddress(
 									userId, Address.class.getName(), contactId, addr1, addr2,
 									"", city, zipCode, regionCodeState, 19, 11002,
@@ -538,10 +536,6 @@ public class MySignupPortlet extends MVCPortlet {
 						}
 					}
 					if (addrId != -1){
-						ServiceContext sc = new ServiceContext();
-						sc.setUuid(uuid);// mock out the service context because
-										 // the services decide the pull it from
-										 // the context PhoneLocalServiceImpl.java:84
 						// from Prathima, classPk is contactId
 						try {
 							// From ListType Table, 11011 is for home and 11008 is mobile phone usage
