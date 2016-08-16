@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.liferay.training.service.builder.model.TrackerEntry" />
+	<class name="com.liferay.training.service.builder.model.impl.TrackerEntryImpl" table="tracking_TrackerEntry">
+		<cache usage="read-write" />
+		<id name="trackerEntryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="eventDate" type="org.hibernate.type.TimestampType" />
+		<property name="eventType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ipAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>
