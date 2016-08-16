@@ -22,3 +22,403 @@
 13:51:52,785 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
 13:51:52,788 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
 13:51:52,899 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+13:57:05,212 ERROR [http-bio-8080-exec-11][AggregateFilter:459] Unable to parse SASS on CSS /css/main.css
+com.liferay.portal.kernel.scripting.ScriptingException: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:254)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:129)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil._parseSass(DynamicCSSUtil.java:509)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil.parseSass(DynamicCSSUtil.java:178)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:455)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:494)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getContent(AggregateFilter.java:395)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.processFilter(AggregateFilter.java:511)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy564.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy564.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.cache.CacheFilter.processFilter(CacheFilter.java:432)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy564.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:248)
+	... 70 more
+Caused by: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.doEval(RubyExecutor.java:189)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:332)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 1 more
+Caused by: org.jruby.exceptions.RaiseException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+14:23:22,807 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:23:22,808 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+14:23:22,810 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+14:23:22,811 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+14:23:22,815 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:23:24,068 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:23:24,068 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+14:23:24,068 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:23:24,640 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+14:23:24,646 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+14:23:24,649 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+14:23:24,838 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+14:23:43,280 ERROR [http-bio-8080-exec-16][AggregateFilter:459] Unable to parse SASS on CSS /css/main.css
+com.liferay.portal.kernel.scripting.ScriptingException: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:254)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:129)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil._parseSass(DynamicCSSUtil.java:509)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil.parseSass(DynamicCSSUtil.java:178)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:455)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:494)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getContent(AggregateFilter.java:395)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.processFilter(AggregateFilter.java:511)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy569.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy569.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.cache.CacheFilter.processFilter(CacheFilter.java:432)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy569.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:248)
+	... 70 more
+Caused by: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.doEval(RubyExecutor.java:189)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:332)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 1 more
+Caused by: org.jruby.exceptions.RaiseException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+14:24:05,012 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:24:05,012 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+14:24:05,013 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+14:24:05,014 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+14:24:05,018 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:24:06,267 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:24:06,267 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+14:24:06,267 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:24:06,917 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+14:24:06,924 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+14:24:06,927 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+14:24:07,040 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+14:24:14,736 ERROR [http-bio-8080-exec-11][AggregateFilter:459] Unable to parse SASS on CSS /css/main.css
+com.liferay.portal.kernel.scripting.ScriptingException: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:254)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:129)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil._parseSass(DynamicCSSUtil.java:509)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil.parseSass(DynamicCSSUtil.java:178)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:455)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:494)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getContent(AggregateFilter.java:395)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.processFilter(AggregateFilter.java:511)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy574.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy574.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.cache.CacheFilter.processFilter(CacheFilter.java:432)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy574.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:248)
+	... 70 more
+Caused by: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.doEval(RubyExecutor.java:189)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:332)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 1 more
+Caused by: org.jruby.exceptions.RaiseException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+14:28:48,223 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:28:48,224 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+14:28:48,225 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+14:28:48,227 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+14:28:48,230 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:28:49,446 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:28:49,446 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+14:28:49,446 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:28:50,071 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+14:28:50,077 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+14:28:50,080 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+14:28:50,187 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+14:30:10,592 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:30:10,593 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+14:30:10,593 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+14:30:10,594 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+14:30:10,604 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:30:11,811 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+14:30:11,811 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+14:30:11,811 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+14:30:12,338 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+14:30:12,344 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+14:30:12,347 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+14:30:12,524 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+14:31:58,697 ERROR [http-bio-8080-exec-35][AggregateFilter:459] Unable to parse SASS on CSS /css/main.css
+com.liferay.portal.kernel.scripting.ScriptingException: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:254)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:129)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil._parseSass(DynamicCSSUtil.java:509)
+	at com.liferay.portal.servlet.filters.dynamiccss.DynamicCSSUtil.parseSass(DynamicCSSUtil.java:178)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:455)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getCssContent(AggregateFilter.java:494)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.getContent(AggregateFilter.java:395)
+	at com.liferay.portal.servlet.filters.aggregate.AggregateFilter.processFilter(AggregateFilter.java:511)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy583.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy583.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.cache.CacheFilter.processFilter(CacheFilter.java:432)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at sun.reflect.GeneratedMethodAccessor397.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy583.doFilter(Unknown Source)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.PortalClassLoaderFilter.doFilter(PortalClassLoaderFilter.java:74)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.eval(RubyExecutor.java:248)
+	... 70 more
+Caused by: org.jruby.embed.EvalFailedException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.liferay.portal.scripting.ruby.RubyExecutor.doEval(RubyExecutor.java:189)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:332)
+	at com.liferay.portal.scripting.ruby.RubyExecutor$EvalCallable.call(RubyExecutor.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 1 more
+Caused by: org.jruby.exceptions.RaiseException: (ENOENT) No such file or directory - C:\Users\Administrator\Tools\LiferayBundles\amf-dev-training\liferay-portal-tomcat-6.2-ce-ga5-20151119152357409\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\work\Catalina\localhost\login-registration-tracker-portlet\sass\b59432b2d859855bb47801113c914ed61e17b0c2
