@@ -1,0 +1,24 @@
+13:51:34,333 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+13:51:37,187 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+13:51:37,198 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+13:51:37,199 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+13:51:37,209 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+13:51:40,014 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+13:51:40,015 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+13:51:40,015 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+13:51:40,662 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+13:51:40,671 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+13:51:40,682 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+13:51:40,808 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use
+13:51:50,894 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+13:51:50,895 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for login-registration-tracker-portlet
+13:51:50,896 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:560] 1 portlet for login-registration-tracker-portlet was unregistered
+13:51:50,897 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for login-registration-tracker-portlet was unregistered
+13:51:50,905 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+13:51:52,226 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin login-registration-tracker-portlet requires marketplace-portlet
+13:51:52,226 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployImpl:217] Deploying login-registration-tracker-portlet from queue
+13:51:52,227 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for login-registration-tracker-portlet
+13:51:52,780 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:709] Registering hook for login-registration-tracker-portlet
+13:51:52,785 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:851] Hook for login-registration-tracker-portlet is available for use
+13:51:52,788 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:344] Registering portlets for login-registration-tracker-portlet
+13:51:52,899 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:492] 1 portlet for login-registration-tracker-portlet is available for use

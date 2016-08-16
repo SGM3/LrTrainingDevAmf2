@@ -275,6 +275,39 @@ public class TrackerEntryLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByEventType(eventType, start, end);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByEventType(eventType);
+	}
+
+	public static int countByEventType(java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().countByEventType(eventType);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserId(
+		long userId, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByUserId(userId, start, end);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserId(
+		long userId) throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByUserId(userId);
+	}
+
+	public static int countByUserId(long userId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().countByUserId(userId);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

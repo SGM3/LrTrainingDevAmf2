@@ -287,6 +287,45 @@ public class TrackerEntryLocalServiceWrapper implements TrackerEntryLocalService
 			arguments);
 	}
 
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByEventType(eventType, start, end);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByEventType(eventType);
+	}
+
+	@Override
+	public int countByEventType(java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.countByEventType(eventType);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserId(
+		long userId, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByUserId(userId, start, end);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserId(
+		long userId) throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByUserId(userId);
+	}
+
+	@Override
+	public int countByUserId(long userId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.countByUserId(userId);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

@@ -3,4 +3,16 @@
 
 <hook>
 	<portal-properties>portal.properties</portal-properties>
+	
+<!-- 	<servlet-filter> -->
+<!-- 		<servlet-filter-name>Store IP Filter</servlet-filter-name> -->
+<!-- 		<servlet-filter-impl>com.liferay.training.filter.IpAddressFilter</servlet-filter-impl> -->
+<!-- 	</servlet-filter> -->
+<!-- 	<servlet-filter-mapping> -->
+<!-- 		<servlet-filter-name>Store IP Filter</servlet-filter-name> -->
+<!-- 		<before-filter>SSO Open SSO Filter</before-filter> -->
+<!-- 		<url-pattern>/web/*</url-pattern> -->
+<!-- 		<dispatcher>REQUEST</dispatcher> -->
+<!-- 		<dispatcher>FORWARD</dispatcher> -->
+<!-- 	</servlet-filter-mapping> -->
 </hook>
