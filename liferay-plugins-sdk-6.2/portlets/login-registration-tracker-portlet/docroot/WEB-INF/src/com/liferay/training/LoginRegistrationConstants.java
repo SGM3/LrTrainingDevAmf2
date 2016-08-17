@@ -29,6 +29,15 @@ public interface LoginRegistrationConstants {
 	public static final String ALL_CUR_PARAM_NAME = "cur";
 	public static final String LOGIN_CUR_PARAM_NAME = "lcur";
 	public static final String REGIS_CUR_PARAM_NAME = "rcur";
+	
 
-	public static final int PAGE_DELTA = 2;
+	public static final String LAN_KEY_ALL = "lrt-all-tab";
+	public static final String LAN_KEY_REGIS = "lrt-regis-tab";
+	public static final String LAN_KEY_LOGIN = "lrt-login-tab";
+	
+	public static final String TABS_CSL_ATTR = "tabsCsl";
+	
+	public static final String DATE_FORMAT_STRING = "YYYY-MM-DD kk:mm:ss";
+
+	public static final int PAGE_DELTA = 20;
 }

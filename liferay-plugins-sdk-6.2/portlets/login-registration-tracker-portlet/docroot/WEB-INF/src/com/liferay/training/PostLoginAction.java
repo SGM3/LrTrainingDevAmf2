@@ -24,15 +24,9 @@ public class PostLoginAction extends com.liferay.portal.kernel.events.Action {
 	
 	@Override
 	public void run(HttpServletRequest request, HttpServletResponse response) throws ActionException {
-		// TODO Auto-generated method stub
-		System.out.println("Hit postlogin with params:");
-		System.out.println(request);
-		System.out.println(response);
 		Date now;
 		long tId = 0L;
-		long groupId;
 		TrackerEntry tEntry;
-		ThemeDisplay themeDisplay;
 
 		now = new Date();
 		HttpSession session = request.getSession(false);

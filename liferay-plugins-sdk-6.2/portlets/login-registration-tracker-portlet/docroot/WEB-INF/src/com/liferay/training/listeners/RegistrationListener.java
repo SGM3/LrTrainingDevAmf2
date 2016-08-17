@@ -26,10 +26,12 @@ public class RegistrationListener extends BaseModelListener<User> {
 			_log.debug("About to retrieve User UUID");
 			tEntry.setUserUuid(user.getUserUuid());
 			tEntry.setUserName(user.getScreenName());
+			tEntry.setUserId(user.getUserId());
 			tEntry.setTrackerEntryId(tId);
 			tEntry.setEventDate(now);
-			tEntry.setEventType(LoginRegistrationConstants.LOGIN_EVENT_TYPE);
+			tEntry.setEventType(LoginRegistrationConstants.REGIS_EVENT_TYPE);
 			tEntry.setIpAddress("0.0.0.0");
+			TrackerEntryLocalServiceUtil.addTrackerEntry(tEntry);
 		} catch (SystemException e) {
 			_log.error(
 				"Unable to create TrackerEntry: " + e.getLocalizedMessage());

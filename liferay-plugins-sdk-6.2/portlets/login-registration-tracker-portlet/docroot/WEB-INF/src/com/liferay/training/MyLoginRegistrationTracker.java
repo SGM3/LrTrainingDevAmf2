@@ -11,10 +11,10 @@ import javax.portlet.RenderResponse;
 
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.language.LanguageUtil;
-import com.liferay.portal.kernel.util.ListUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
@@ -27,13 +27,6 @@ import static com.liferay.training.LoginRegistrationConstants.*;
  */
 public class MyLoginRegistrationTracker extends MVCPortlet {
 	
-
-	public static final String LAN_KEY_ALL = "lrt-all-tab";
-	public static final String LAN_KEY_REGIS = "lrt-regis-tab";
-	public static final String LAN_KEY_LOGIN = "lrt-login-tab";
-	
-	public static final String TABS_CSL_ATTR = "tabsCsl";
-	
 	@Override
 	public void doView(
 		RenderRequest renderRequest, RenderResponse renderResponse)
@@ -42,21 +35,34 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 			ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest
 					.getAttribute(WebKeys.THEME_DISPLAY);
 			Locale loc = themeDisplay.getLocale();
+			
 			loc = loc == null?LocaleUtil.getDefault():loc;
 			
+			long scopeGroupId = themeDisplay.getScopeGroupId();
 			String allString = LanguageUtil.get(loc, LAN_KEY_ALL);
 			String regisString = LanguageUtil.get(loc, LAN_KEY_REGIS);
 			String loginString = LanguageUtil.get(loc, LAN_KEY_LOGIN);
 			StringBuilder tabsCsl = new StringBuilder(allString).append(',')
 					.append(regisString).append(',').append(loginString);
+			PermissionChecker permissionChecker =
+				    themeDisplay.getPermissionChecker();
+			
+//			if (permissionChecker.hasPermission(groupId, name, primKey, actionId)){} //TODO
 
-			String curTabValue = ParamUtil.getString(renderRequest, CURTAB_PARAM_NAME, allString);
-			Integer curPage = ParamUtil.getInteger(renderRequest, ALL_CUR_PARAM_NAME, 1);
-			Integer rCurPage = ParamUtil.getInteger(renderRequest, REGIS_CUR_PARAM_NAME, 1);
-			Integer lCurPage = ParamUtil.getInteger(renderRequest, LOGIN_CUR_PARAM_NAME, 1);
-			Integer allDelta = ParamUtil.getInteger(renderRequest, PAGE_DELTA_ALL_PARAM, PAGE_DELTA);
-			Integer rDelta = ParamUtil.getInteger(renderRequest, PAGE_DELTA_REGIS_PARAM, PAGE_DELTA);
-			Integer lDelta = ParamUtil.getInteger(renderRequest, PAGE_DELTA_LOGIN_PARAM, PAGE_DELTA);
+			String curTabValue = ParamUtil.getString(
+				renderRequest, CURTAB_PARAM_NAME, allString);
+			Integer curPage = ParamUtil.getInteger(
+				renderRequest, ALL_CUR_PARAM_NAME, 1);
+			Integer rCurPage = ParamUtil.getInteger(
+				renderRequest, REGIS_CUR_PARAM_NAME, 1);
+			Integer lCurPage = ParamUtil.getInteger(
+				renderRequest, LOGIN_CUR_PARAM_NAME, 1);
+			Integer allDelta = ParamUtil.getInteger(
+				renderRequest, PAGE_DELTA_ALL_PARAM, PAGE_DELTA);
+			Integer rDelta = ParamUtil.getInteger(
+				renderRequest, PAGE_DELTA_REGIS_PARAM, PAGE_DELTA);
+			Integer lDelta = ParamUtil.getInteger(
+				renderRequest, PAGE_DELTA_LOGIN_PARAM, PAGE_DELTA);
 			
 			PortletURL tabs1URL = renderResponse.createRenderURL();
 			
@@ -68,7 +74,6 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 			tabs1URL.setParameter(PAGE_DELTA_LOGIN_PARAM, lDelta.toString());
 			tabs1URL.setParameter(CURTAB_PARAM_NAME, curTabValue);
 			
-			//TODO byUser entry
 			curPage--;
 			rCurPage--;
 			lCurPage--;
@@ -86,8 +91,7 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 				TrackerEntryLocalServiceUtil.getTrackerEntries(start, end);
 			List<TrackerEntry> curPageLoginEntries = 
 				TrackerEntryLocalServiceUtil.findByEventType(
-					LOGIN_EVENT_TYPE, lstart + 1, lend + 1);//TODO remove +1's after testing
-			loginCount--;//TODO remove after testing
+					LOGIN_EVENT_TYPE, lstart, lend);
 			List<TrackerEntry> curPageRegisEntries = 
 				TrackerEntryLocalServiceUtil.findByEventType(
 					REGIS_EVENT_TYPE, rstart, rend);
@@ -110,9 +114,12 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 			renderRequest.setAttribute(
 				SEARCH_ENTRY_REGIS_COUNT_ATTR, regisCount);
 			
-			renderRequest.setAttribute(SEARCH_CON_ADELTA_ATTR, allDelta.intValue());
-			renderRequest.setAttribute(SEARCH_CON_RDELTA_ATTR, rDelta.intValue());
-			renderRequest.setAttribute(SEARCH_CON_LDELTA_ATTR, lDelta.intValue());
+			renderRequest.setAttribute(
+				SEARCH_CON_ADELTA_ATTR, allDelta.intValue());
+			renderRequest.setAttribute(
+				SEARCH_CON_RDELTA_ATTR, rDelta.intValue());
+			renderRequest.setAttribute(
+				SEARCH_CON_LDELTA_ATTR, lDelta.intValue());
 			
 			renderRequest.setAttribute(CURTAB_ATTR, curTabValue);
 			renderRequest.setAttribute(ITER_OBJ_ATTR, tabs1URL);

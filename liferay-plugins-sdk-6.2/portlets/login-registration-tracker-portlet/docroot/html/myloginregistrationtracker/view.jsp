@@ -2,9 +2,12 @@
 
 <!-- TODO remove -->
 <%@page import="java.util.Date"%>
-<%@ page import="java.util.ArrayList" %>
-
 <%@page import="com.liferay.training.service.builder.model.TrackerEntry"%>
+
+<%
+java.text.DateFormat df = com.liferay.portal.kernel.util.DateFormatFactoryUtil 
+		.getSimpleDateFormat(LoginRegistrationConstants.DATE_FORMAT_STRING);
+%>
 
 <liferay-ui:tabs names="${tabsCsl}" refresh="true" param="curTab" tabsValues="${tabsCsl}"  value="${curTabValue}" url="${tabsUrl}"  >
     <liferay-ui:section>
@@ -13,7 +16,7 @@
 	    	<liferay-ui:search-container-results results="${trackerEntries}" >
     		</liferay-ui:search-container-results>
 			<liferay-ui:search-container-row className="com.liferay.training.service.builder.model.TrackerEntry" keyProperty="trackerEntryId" modelVar="entry" >
-				<liferay-ui:search-container-column-text name="Date" value="<%= \"TO_FIX_\" + entry.getEventDate().toString() %>" />
+				<liferay-ui:search-container-column-text name="Date" value="<%= df.format(entry.getEventDate()) %>" />
    				<liferay-ui:search-container-column-text name="Username" value="<%= entry.getUserName() %>" />
    				<liferay-ui:search-container-column-text name="User ID" value="<%= \"\" + entry.getUserId() %>" />
    				<liferay-ui:search-container-column-text name="IP Address" value="<%= entry.getIpAddress() %>" />
@@ -28,7 +31,7 @@
 	    	<liferay-ui:search-container-results results="${regisTrackerEntries}" >
     		</liferay-ui:search-container-results>
 			<liferay-ui:search-container-row className="com.liferay.training.service.builder.model.TrackerEntry" keyProperty="trackerEntryId" modelVar="entry" >
-				<liferay-ui:search-container-column-text name="Date" value="<%= \"TO_FIX_\" + entry.getEventDate().toString() %>" />
+				<liferay-ui:search-container-column-text name="Date" value="<%= df.format(entry.getEventDate()) %>" />
    				<liferay-ui:search-container-column-text name="Username" value="<%= entry.getUserName() %>" />
    				<liferay-ui:search-container-column-text name="User ID" value="<%= \"\" + entry.getUserId() %>" />
    				<liferay-ui:search-container-column-text name="IP Address" value="<%= entry.getIpAddress() %>" />
@@ -43,7 +46,7 @@
 	    	<liferay-ui:search-container-results results="${loginTrackerEntries}" >
     		</liferay-ui:search-container-results>
 			<liferay-ui:search-container-row className="com.liferay.training.service.builder.model.TrackerEntry" keyProperty="trackerEntryId" modelVar="entry" >
-				<liferay-ui:search-container-column-text name="Date" value="<%= \"TO_FIX_\" + entry.getEventDate().toString() %>" />
+				<liferay-ui:search-container-column-text name="Date" value="<%= df.format(entry.getEventDate()) %>" />
    				<liferay-ui:search-container-column-text name="Username" value="<%= entry.getUserName() %>" />
    				<liferay-ui:search-container-column-text name="User ID" value="<%= \"\" + entry.getUserId() %>" />
    				<liferay-ui:search-container-column-text name="IP Address" value="<%= entry.getIpAddress() %>" />
