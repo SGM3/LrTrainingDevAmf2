@@ -254,7 +254,7 @@ public class MySignupPortlet extends MVCPortlet {
 		thirteenYearsAgo.clear(Calendar.HOUR_OF_DAY);
 		thirteenYearsAgo.add(Calendar.YEAR, -13);
 		
-		if (!Validator.isDate(bm, bd, by)){
+		if (!Validator.isDate(bm - 1, bd, by)){
 			String gregDate = String.format("%02d/%02d/%d", bm, bd, by);
 			allErrors.add("The date \"" + gregDate + "\" (format: MM/DD/YYYY) is not valid.");
 		} else {
@@ -519,7 +519,7 @@ public class MySignupPortlet extends MVCPortlet {
 					}
 					catch (PortalException e) {
 						hasError = true;
-						allErrors.add("Unable to add user.");
+						allErrors.add("Unable to add user.(DB Exception)");
 						_log.error("Unable to add new user: " + e.getLocalizedMessage());
 					}
 					if (userId != -1){
@@ -531,7 +531,7 @@ public class MySignupPortlet extends MVCPortlet {
 							addrId = atmp.getAddressId();
 						}
 						catch (PortalException e) {
-							allErrors.add("Unable to add address.");
+							allErrors.add("Unable to add address. (DB Exception)");
 							_log.error("Unable to add address: " + e.getLocalizedMessage());
 						}
 					}
@@ -553,8 +553,10 @@ public class MySignupPortlet extends MVCPortlet {
 							_log.error("Unable to add phone number[s]: " + e.getLocalizedMessage());
 						}
 					}
-					_log.info("SUCCESS");
-					SessionMessages.add(request,"add_user_success", "New User created sucessfully");
+					if (!hasError){
+						_log.info("SUCCESS");
+						SessionMessages.add(request,"add_user_success", "New User created sucessfully");
+					}
 				} catch (SystemException e) {
 					_log.error("Unable to add new user");
 					hasError = true;
