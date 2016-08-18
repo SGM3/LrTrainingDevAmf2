@@ -3,6 +3,6 @@
 
 <display>
 	<category name="category.sample">
-		<portlet id="my-login-registration-tracker"></portlet>
+		<portlet id="amf-event-monitor"></portlet>
 	</category>
 </display>

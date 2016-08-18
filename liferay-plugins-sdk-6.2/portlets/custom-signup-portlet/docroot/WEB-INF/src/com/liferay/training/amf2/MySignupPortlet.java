@@ -27,11 +27,14 @@ import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Address;
 import com.liferay.portal.model.Phone;
 import com.liferay.portal.model.Region;
+import com.liferay.portal.model.Role;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.AddressLocalServiceUtil;
 import com.liferay.portal.service.PhoneLocalServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
+import com.liferay.portal.service.RoleLocalServiceUtil;
 import com.liferay.portal.service.ServiceContext;
+import com.liferay.portal.service.UserGroupRoleLocalServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
@@ -405,6 +408,7 @@ public class MySignupPortlet extends MVCPortlet {
 
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 			long companyId = themeDisplay.getCompanyId();
+			long groupId = themeDisplay.getSiteGroupId();
 			long curUserId = themeDisplay.getUserId();
 			Locale curUserLocale = themeDisplay.getLocale();
 			
@@ -556,6 +560,19 @@ public class MySignupPortlet extends MVCPortlet {
 					if (!hasError){
 						_log.info("SUCCESS");
 						SessionMessages.add(request,"add_user_success", "New User created sucessfully");
+					} else {
+						
+						// Add the user to the site
+						
+						Role role = null;
+						try {
+							role = RoleLocalServiceUtil.getRole(companyId, "Site Member");
+						} catch (PortalException e) {
+							_log.error("Unable to find \"Site Member\" Role");
+							throw new PortletException(e);
+						}
+						long[] SiteroleIds = {role.getRoleId()};
+						UserGroupRoleLocalServiceUtil.addUserGroupRoles(userId, groupId, SiteroleIds);
 					}
 				} catch (SystemException e) {
 					_log.error("Unable to add new user");

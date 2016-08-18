@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.liferay.training.service.builder">
+	<author>Shanon Mathai</author>
+	<namespace>tracking</namespace>
+
+	<entity name="TrackerEntry" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="trackerEntryId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+
+		<!-- Other fields -->
+		
+		<column name="eventDate" type="Date" />
+		<column name="eventType" type="String" />
+		<column name="ipAddress" type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="eventDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="EventType" return-type="Collection">
+			<finder-column name="eventType" />
+		</finder>
+
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdAndEventType" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="eventType" />
+		</finder>
+		
+	</entity>
+</service-builder>
