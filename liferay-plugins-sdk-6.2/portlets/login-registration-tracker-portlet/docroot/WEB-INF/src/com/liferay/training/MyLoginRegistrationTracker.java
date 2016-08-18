@@ -1,6 +1,7 @@
 package com.liferay.training;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -9,11 +10,15 @@ import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.model.User;
 import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.service.builder.model.TrackerEntry;
@@ -38,7 +43,7 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 			
 			loc = loc == null?LocaleUtil.getDefault():loc;
 			
-			long scopeGroupId = themeDisplay.getScopeGroupId();
+			long groupId = themeDisplay.getScopeGroupId();
 			String allString = LanguageUtil.get(loc, LAN_KEY_ALL);
 			String regisString = LanguageUtil.get(loc, LAN_KEY_REGIS);
 			String loginString = LanguageUtil.get(loc, LAN_KEY_LOGIN);
@@ -46,8 +51,6 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 					.append(regisString).append(',').append(loginString);
 			PermissionChecker permissionChecker =
 				    themeDisplay.getPermissionChecker();
-			
-//			if (permissionChecker.hasPermission(groupId, name, primKey, actionId)){} //TODO
 
 			String curTabValue = ParamUtil.getString(
 				renderRequest, CURTAB_PARAM_NAME, allString);
@@ -78,23 +81,107 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 			rCurPage--;
 			lCurPage--;
 			
-			int allCount = 
-				TrackerEntryLocalServiceUtil.getTrackerEntriesCount();
-			int loginCount = 
-				TrackerEntryLocalServiceUtil.countByEventType(LOGIN_EVENT_TYPE);
-			int regisCount = 
-				TrackerEntryLocalServiceUtil.countByEventType(REGIS_EVENT_TYPE);
-			int start = curPage * allDelta, end = start + allDelta;
-			int rstart = rCurPage * rDelta, rend = rstart + rDelta;
-			int lstart = lCurPage * lDelta, lend = lstart + lDelta;
-			List<TrackerEntry> curPageEntries = 
-				TrackerEntryLocalServiceUtil.getTrackerEntries(start, end);
-			List<TrackerEntry> curPageLoginEntries = 
-				TrackerEntryLocalServiceUtil.findByEventType(
-					LOGIN_EVENT_TYPE, lstart, lend);
-			List<TrackerEntry> curPageRegisEntries = 
-				TrackerEntryLocalServiceUtil.findByEventType(
-					REGIS_EVENT_TYPE, rstart, rend);
+			//uninitialized on purpose
+			
+			int allCount;
+			int loginCount;
+			int regisCount;
+			int start, end;
+			int rstart, rend;
+			int lstart, lend;
+			List<TrackerEntry> curPageEntries;
+			List<TrackerEntry> curPageLoginEntries;
+			List<TrackerEntry> curPageRegisEntries;
+
+			if (permissionChecker.hasPermission(
+				groupId, PORTLET_PERM_KEY, groupId, "VIEW_ALL_ENTRIES")){
+
+				allCount = 
+					TrackerEntryLocalServiceUtil.getTrackerEntriesCount();
+				loginCount = 
+					TrackerEntryLocalServiceUtil.countByEventType(
+						LOGIN_EVENT_TYPE);
+				regisCount = 
+					TrackerEntryLocalServiceUtil.countByEventType(
+						REGIS_EVENT_TYPE);
+				start = curPage * allDelta;
+				end = start + allDelta;
+				rstart = rCurPage * rDelta;
+				rend = rstart + rDelta;
+				lstart = lCurPage * lDelta;
+				lend = lstart + lDelta;
+				curPageEntries = 
+					TrackerEntryLocalServiceUtil.getTrackerEntries(start, end);
+				curPageLoginEntries = 
+					TrackerEntryLocalServiceUtil.findByEventType(
+						LOGIN_EVENT_TYPE, lstart, lend);
+				curPageRegisEntries = 
+					TrackerEntryLocalServiceUtil.findByEventType(
+						REGIS_EVENT_TYPE, rstart, rend);
+				
+				System.out.println("Has permission to --ALL-- entries");//TODO Remove
+			} else if (permissionChecker.hasPermission(
+				groupId, PORTLET_PERM_KEY, groupId, "VIEW_SELF_ENTRIES")){
+
+				User curUser = themeDisplay.getUser();
+				long userId = -1;
+				
+				if (curUser != null){
+					userId = curUser.getUserId();
+				} else {
+					try {
+						userId = themeDisplay.getDefaultUserId();
+					} catch (PortalException e) {
+						_log.error("Unable to retrieve user "
+								+ "id with VIEW_ALL_ENTRIES permission.");
+
+						// now sure of best practice here
+						
+						throw new PortletException(e);
+					}
+				}
+				
+				allCount = 
+					TrackerEntryLocalServiceUtil.countByUserId(userId);
+				loginCount = 
+					TrackerEntryLocalServiceUtil.countByUserIdAndEventType(
+						userId, LOGIN_EVENT_TYPE);
+				regisCount = 
+					TrackerEntryLocalServiceUtil.countByUserIdAndEventType(
+						userId, REGIS_EVENT_TYPE);
+				start = curPage * allDelta;
+				end = start + allDelta;
+				rstart = rCurPage * rDelta;
+				rend = rstart + rDelta;
+				lstart = lCurPage * lDelta;
+				lend = lstart + lDelta;
+				curPageEntries = 
+					TrackerEntryLocalServiceUtil.findByUserId(
+							userId, start, end);
+				curPageLoginEntries = 
+					TrackerEntryLocalServiceUtil.findByUserIdAndEventType(
+						userId, LOGIN_EVENT_TYPE, lstart, lend);
+				curPageRegisEntries = 
+					TrackerEntryLocalServiceUtil.findByUserIdAndEventType(
+						userId, REGIS_EVENT_TYPE, rstart, rend);
+
+				System.out.println("Has permission to >>SELF<< entries");
+			}else {
+				allCount = 0;
+				loginCount = 0;
+				regisCount = 0;
+				start = 0;
+				end = 0;
+				rstart = 0;
+				rend = 0;
+				lstart = 0;
+				lend = 0;
+
+				curPageEntries = new ArrayList<TrackerEntry>();
+				curPageLoginEntries = new ArrayList<TrackerEntry>();
+				curPageRegisEntries = new ArrayList<TrackerEntry>();
+				System.out.println("Has permission to [[NO]] entries");
+			}
 			
 			renderRequest.setAttribute(
 				ALL_TRACKER_ENTRIES_ATTR, curPageEntries);
@@ -133,5 +220,6 @@ public class MyLoginRegistrationTracker extends MVCPortlet {
 		}
 		super.doView(renderRequest, renderResponse);
 	}
-
+	
+	private Log _log = LogFactoryUtil.getLog(MyLoginRegistrationTracker.class);
 }

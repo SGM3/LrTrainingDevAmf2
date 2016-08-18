@@ -28,7 +28,7 @@
 
 		<!-- Order -->
 
-		<order by="asc">
+		<order by="desc">
 			<order-column name="eventDate" />
 		</order>
 
@@ -40,6 +40,11 @@
 
 		<finder name="UserId" return-type="Collection">
 			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdAndEventType" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="eventType" />
 		</finder>
 		
 	</entity>

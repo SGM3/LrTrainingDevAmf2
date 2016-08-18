@@ -23,7 +23,9 @@ public class PostLoginAction extends com.liferay.portal.kernel.events.Action {
 	}
 	
 	@Override
-	public void run(HttpServletRequest request, HttpServletResponse response) throws ActionException {
+	public void run(
+			HttpServletRequest request, HttpServletResponse response)
+					throws ActionException {
 		Date now;
 		long tId = 0L;
 		TrackerEntry tEntry;
@@ -32,7 +34,6 @@ public class PostLoginAction extends com.liferay.portal.kernel.events.Action {
 		HttpSession session = request.getSession(false);
 		User curUser;
 		curUser = (User) session.getAttribute("USER");
-//		request.getSession().getAttribute(arg0);
 		
 		if (curUser != null) {
 			
@@ -40,19 +41,21 @@ public class PostLoginAction extends com.liferay.portal.kernel.events.Action {
 			try {
 				tId = CounterLocalServiceUtil.increment(
 						TrackerEntry.class.getName());
-//				User curUser = themeDisplay.getUser();;
 				tEntry.setUserUuid(curUser.getUserUuid());
 				tEntry.setUserName(curUser.getScreenName());
+				tEntry.setUserId(curUser.getUserId());
 				tEntry.setTrackerEntryId(tId);
 				tEntry.setEventDate(now);
-				tEntry.setEventType(LoginRegistrationConstants.LOGIN_EVENT_TYPE);
+				tEntry.setEventType(
+					LoginRegistrationConstants.LOGIN_EVENT_TYPE);
 				tEntry.setIpAddress(request.getRemoteAddr());
-	
 				
-				TrackerEntryLocalServiceUtil.addTrackerEntry(tEntry);
+				TrackerEntryLocalServiceUtil.addTrackerEntry(
+					tEntry);
 			} catch (SystemException e) {
 				_log.error(
-					"Unable to create Tracker Entry: " + e.getLocalizedMessage());
+					"Unable to create Tracker Entry: " 
+					+ e.getLocalizedMessage());
 			}
 		}
 	}

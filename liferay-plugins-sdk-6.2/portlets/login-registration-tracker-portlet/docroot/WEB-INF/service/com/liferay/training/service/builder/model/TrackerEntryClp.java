@@ -420,6 +420,8 @@ public class TrackerEntryClp extends BaseModelImpl<TrackerEntry>
 
 		value = DateUtil.compareTo(getEventDate(), trackerEntry.getEventDate());
 
+		value = value * -1;
+
 		if (value != 0) {
 			return value;
 		}

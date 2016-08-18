@@ -308,6 +308,25 @@ public class TrackerEntryLocalServiceUtil {
 		return getService().countByUserId(userId);
 	}
 
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .findByUserIdAndEventType(userId, eventType, start, end);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByUserIdAndEventType(userId, eventType);
+	}
+
+	public static int countByUserIdAndEventType(long userId,
+		java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().countByUserIdAndEventType(userId, eventType);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

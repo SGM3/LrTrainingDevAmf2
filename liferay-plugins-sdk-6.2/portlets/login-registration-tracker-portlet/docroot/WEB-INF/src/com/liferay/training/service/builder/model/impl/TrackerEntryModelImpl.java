@@ -78,8 +78,8 @@ public class TrackerEntryModelImpl extends BaseModelImpl<TrackerEntry>
 		};
 	public static final String TABLE_SQL_CREATE = "create table tracking_TrackerEntry (trackerEntryId LONG not null primary key,groupId LONG,companyId LONG,userId LONG,userName VARCHAR(75) null,eventDate DATE null,eventType VARCHAR(75) null,ipAddress VARCHAR(75) null)";
 	public static final String TABLE_SQL_DROP = "drop table tracking_TrackerEntry";
-	public static final String ORDER_BY_JPQL = " ORDER BY trackerEntry.eventDate ASC";
-	public static final String ORDER_BY_SQL = " ORDER BY tracking_TrackerEntry.eventDate ASC";
+	public static final String ORDER_BY_JPQL = " ORDER BY trackerEntry.eventDate DESC";
+	public static final String ORDER_BY_SQL = " ORDER BY tracking_TrackerEntry.eventDate DESC";
 	public static final String DATA_SOURCE = "liferayDataSource";
 	public static final String SESSION_FACTORY = "liferaySessionFactory";
 	public static final String TX_MANAGER = "liferayTransactionManager";
@@ -431,6 +431,8 @@ public class TrackerEntryModelImpl extends BaseModelImpl<TrackerEntry>
 		int value = 0;
 
 		value = DateUtil.compareTo(getEventDate(), trackerEntry.getEventDate());
+
+		value = value * -1;
 
 		if (value != 0) {
 			return value;

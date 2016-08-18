@@ -1,9 +1,5 @@
 <%@include file="/html/init.jsp" %>
 
-<!-- TODO remove -->
-<%@page import="java.util.Date"%>
-<%@page import="com.liferay.training.service.builder.model.TrackerEntry"%>
-
 <%
 java.text.DateFormat df = com.liferay.portal.kernel.util.DateFormatFactoryUtil 
 		.getSimpleDateFormat(LoginRegistrationConstants.DATE_FORMAT_STRING);

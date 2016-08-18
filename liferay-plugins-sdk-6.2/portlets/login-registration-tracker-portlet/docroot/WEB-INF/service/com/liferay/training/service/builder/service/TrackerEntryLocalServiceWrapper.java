@@ -326,6 +326,29 @@ public class TrackerEntryLocalServiceWrapper implements TrackerEntryLocalService
 		return _trackerEntryLocalService.countByUserId(userId);
 	}
 
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByUserIdAndEventType(userId,
+			eventType, start, end);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.findByUserIdAndEventType(userId,
+			eventType);
+	}
+
+	@Override
+	public int countByUserIdAndEventType(long userId, java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryLocalService.countByUserIdAndEventType(userId,
+			eventType);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

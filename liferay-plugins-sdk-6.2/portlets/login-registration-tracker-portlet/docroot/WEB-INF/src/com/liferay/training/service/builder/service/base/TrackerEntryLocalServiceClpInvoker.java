@@ -137,6 +137,20 @@ public class TrackerEntryLocalServiceClpInvoker {
 		_methodName45 = "countByUserId";
 
 		_methodParameterTypes45 = new String[] { "long" };
+
+		_methodName46 = "findByUserIdAndEventType";
+
+		_methodParameterTypes46 = new String[] {
+				"long", "java.lang.String", "int", "int"
+			};
+
+		_methodName47 = "findByUserIdAndEventType";
+
+		_methodParameterTypes47 = new String[] { "long", "java.lang.String" };
+
+		_methodName48 = "countByUserIdAndEventType";
+
+		_methodParameterTypes48 = new String[] { "long", "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -274,6 +288,26 @@ public class TrackerEntryLocalServiceClpInvoker {
 			return TrackerEntryLocalServiceUtil.countByUserId(((Long)arguments[0]).longValue());
 		}
 
+		if (_methodName46.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+			return TrackerEntryLocalServiceUtil.findByUserIdAndEventType(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1],
+				((Integer)arguments[2]).intValue(),
+				((Integer)arguments[3]).intValue());
+		}
+
+		if (_methodName47.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+			return TrackerEntryLocalServiceUtil.findByUserIdAndEventType(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
+		if (_methodName48.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
+			return TrackerEntryLocalServiceUtil.countByUserIdAndEventType(((Long)arguments[0]).longValue(),
+				(java.lang.String)arguments[1]);
+		}
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -325,4 +359,10 @@ public class TrackerEntryLocalServiceClpInvoker {
 	private String[] _methodParameterTypes44;
 	private String _methodName45;
 	private String[] _methodParameterTypes45;
+	private String _methodName46;
+	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
 }

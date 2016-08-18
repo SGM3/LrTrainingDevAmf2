@@ -1,6 +1,8 @@
 package com.liferay.training;
 
 public interface LoginRegistrationConstants {
+	public static final String PORTLET_PERM_KEY =
+		"myloginregistrationtracker_WAR_loginregistrationtrackerportlet";
 	
 	public static final String PAGE_DELTA_ALL_PARAM = "delta";
 	public static final String PAGE_DELTA_REGIS_PARAM = "deltar";

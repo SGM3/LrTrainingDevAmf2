@@ -17,6 +17,7 @@ package com.liferay.training.service.builder.service.impl;
 import java.util.List;
 
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.base.TrackerEntryLocalServiceBaseImpl;
@@ -43,12 +44,13 @@ public class TrackerEntryLocalServiceImpl
 	 * Never reference this interface directly. Always use {@link com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil} to access the tracker entry local service.
 	 */
 	
-	public List<TrackerEntry> findByEventType(String eventType, int start, int end) throws SystemException{
+	public List<TrackerEntry> findByEventType(
+			String eventType, int start, int end) throws SystemException{
 		return trackerEntryPersistence.findByEventType(eventType, start, end);
 	}
 	
-
-	public List<TrackerEntry> findByEventType(String eventType) throws SystemException {
+	public List<TrackerEntry> findByEventType(
+			String eventType) throws SystemException {
 		return trackerEntryPersistence.findByEventType(eventType);
 	}
 	
@@ -56,17 +58,36 @@ public class TrackerEntryLocalServiceImpl
 		return trackerEntryPersistence.countByEventType(eventType);
 	}
 	
-	public List<TrackerEntry> findByUserId(long userId, int start, int end) throws SystemException{
+	public List<TrackerEntry> findByUserId(
+			long userId, int start, int end) throws SystemException{
 		return trackerEntryPersistence.findByUserId(userId, start, end);
 	}
 	
-
 	public List<TrackerEntry> findByUserId(long userId) throws SystemException {
 		return trackerEntryPersistence.findByUserId(userId);
 	}
 	
 	public int countByUserId(long userId) throws SystemException{
 		return trackerEntryPersistence.countByUserId(userId);
+	}
+	
+	public List<TrackerEntry> findByUserIdAndEventType(
+			long userId, String eventType, int start, int end)
+				throws SystemException {
+		return trackerEntryPersistence.findByUserIdAndEventType(
+			userId, eventType, start, end);
+	}
+	
+	public List<TrackerEntry> findByUserIdAndEventType(
+			long userId, String eventType) throws SystemException {
+		return trackerEntryPersistence.findByUserIdAndEventType(
+				userId, eventType);
+	}
+	
+	public int countByUserIdAndEventType(
+			long userId, String eventType) throws SystemException {
+		return trackerEntryPersistence.countByUserIdAndEventType(
+				userId, eventType);
 	}
 	
 }

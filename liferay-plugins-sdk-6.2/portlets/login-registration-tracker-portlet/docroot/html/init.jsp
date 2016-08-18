@@ -11,6 +11,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat" %>
 
 <%@ page import="com.liferay.portal.kernel.template.TemplateHandler" %>
@@ -30,6 +31,7 @@
 <%@ page import="com.liferay.portal.util.PortalUtil" %>
 
 <%@ page import="com.liferay.training.LoginRegistrationConstants" %>
+<%@ page import="com.liferay.training.service.builder.model.TrackerEntry"%>
 
 <liferay-theme:defineObjects />
 

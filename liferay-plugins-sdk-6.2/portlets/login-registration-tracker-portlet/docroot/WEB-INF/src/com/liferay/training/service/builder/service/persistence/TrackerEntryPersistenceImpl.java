@@ -1109,6 +1109,586 @@ public class TrackerEntryPersistenceImpl extends BasePersistenceImpl<TrackerEntr
 	}
 
 	private static final String _FINDER_COLUMN_USERID_USERID_2 = "trackerEntry.userId = ?";
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_USERIDANDEVENTTYPE =
+		new FinderPath(TrackerEntryModelImpl.ENTITY_CACHE_ENABLED,
+			TrackerEntryModelImpl.FINDER_CACHE_ENABLED, TrackerEntryImpl.class,
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByUserIdAndEventType",
+			new String[] {
+				Long.class.getName(), String.class.getName(),
+				
+			Integer.class.getName(), Integer.class.getName(),
+				OrderByComparator.class.getName()
+			});
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERIDANDEVENTTYPE =
+		new FinderPath(TrackerEntryModelImpl.ENTITY_CACHE_ENABLED,
+			TrackerEntryModelImpl.FINDER_CACHE_ENABLED, TrackerEntryImpl.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION,
+			"findByUserIdAndEventType",
+			new String[] { Long.class.getName(), String.class.getName() },
+			TrackerEntryModelImpl.USERID_COLUMN_BITMASK |
+			TrackerEntryModelImpl.EVENTTYPE_COLUMN_BITMASK |
+			TrackerEntryModelImpl.EVENTDATE_COLUMN_BITMASK);
+	public static final FinderPath FINDER_PATH_COUNT_BY_USERIDANDEVENTTYPE = new FinderPath(TrackerEntryModelImpl.ENTITY_CACHE_ENABLED,
+			TrackerEntryModelImpl.FINDER_CACHE_ENABLED, Long.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION,
+			"countByUserIdAndEventType",
+			new String[] { Long.class.getName(), String.class.getName() });
+
+	/**
+	 * Returns all the tracker entries where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @return the matching tracker entries
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<TrackerEntry> findByUserIdAndEventType(long userId,
+		String eventType) throws SystemException {
+		return findByUserIdAndEventType(userId, eventType, QueryUtil.ALL_POS,
+			QueryUtil.ALL_POS, null);
+	}
+
+	/**
+	 * Returns a range of all the tracker entries where userId = &#63; and eventType = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.liferay.training.service.builder.model.impl.TrackerEntryModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param start the lower bound of the range of tracker entries
+	 * @param end the upper bound of the range of tracker entries (not inclusive)
+	 * @return the range of matching tracker entries
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<TrackerEntry> findByUserIdAndEventType(long userId,
+		String eventType, int start, int end) throws SystemException {
+		return findByUserIdAndEventType(userId, eventType, start, end, null);
+	}
+
+	/**
+	 * Returns an ordered range of all the tracker entries where userId = &#63; and eventType = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.liferay.training.service.builder.model.impl.TrackerEntryModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param start the lower bound of the range of tracker entries
+	 * @param end the upper bound of the range of tracker entries (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching tracker entries
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public List<TrackerEntry> findByUserIdAndEventType(long userId,
+		String eventType, int start, int end,
+		OrderByComparator orderByComparator) throws SystemException {
+		boolean pagination = true;
+		FinderPath finderPath = null;
+		Object[] finderArgs = null;
+
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+				(orderByComparator == null)) {
+			pagination = false;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERIDANDEVENTTYPE;
+			finderArgs = new Object[] { userId, eventType };
+		}
+		else {
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_USERIDANDEVENTTYPE;
+			finderArgs = new Object[] {
+					userId, eventType,
+					
+					start, end, orderByComparator
+				};
+		}
+
+		List<TrackerEntry> list = (List<TrackerEntry>)FinderCacheUtil.getResult(finderPath,
+				finderArgs, this);
+
+		if ((list != null) && !list.isEmpty()) {
+			for (TrackerEntry trackerEntry : list) {
+				if ((userId != trackerEntry.getUserId()) ||
+						!Validator.equals(eventType, trackerEntry.getEventType())) {
+					list = null;
+
+					break;
+				}
+			}
+		}
+
+		if (list == null) {
+			StringBundler query = null;
+
+			if (orderByComparator != null) {
+				query = new StringBundler(4 +
+						(orderByComparator.getOrderByFields().length * 3));
+			}
+			else {
+				query = new StringBundler(4);
+			}
+
+			query.append(_SQL_SELECT_TRACKERENTRY_WHERE);
+
+			query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_USERID_2);
+
+			boolean bindEventType = false;
+
+			if (eventType == null) {
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_1);
+			}
+			else if (eventType.equals(StringPool.BLANK)) {
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_3);
+			}
+			else {
+				bindEventType = true;
+
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_2);
+			}
+
+			if (orderByComparator != null) {
+				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
+					orderByComparator);
+			}
+			else
+			 if (pagination) {
+				query.append(TrackerEntryModelImpl.ORDER_BY_JPQL);
+			}
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(userId);
+
+				if (bindEventType) {
+					qPos.add(eventType);
+				}
+
+				if (!pagination) {
+					list = (List<TrackerEntry>)QueryUtil.list(q, getDialect(),
+							start, end, false);
+
+					Collections.sort(list);
+
+					list = new UnmodifiableList<TrackerEntry>(list);
+				}
+				else {
+					list = (List<TrackerEntry>)QueryUtil.list(q, getDialect(),
+							start, end);
+				}
+
+				cacheResult(list);
+
+				FinderCacheUtil.putResult(finderPath, finderArgs, list);
+			}
+			catch (Exception e) {
+				FinderCacheUtil.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return list;
+	}
+
+	/**
+	 * Returns the first tracker entry in the ordered set where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching tracker entry
+	 * @throws com.liferay.training.service.builder.NoSuchTrackerEntryException if a matching tracker entry could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public TrackerEntry findByUserIdAndEventType_First(long userId,
+		String eventType, OrderByComparator orderByComparator)
+		throws NoSuchTrackerEntryException, SystemException {
+		TrackerEntry trackerEntry = fetchByUserIdAndEventType_First(userId,
+				eventType, orderByComparator);
+
+		if (trackerEntry != null) {
+			return trackerEntry;
+		}
+
+		StringBundler msg = new StringBundler(6);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("userId=");
+		msg.append(userId);
+
+		msg.append(", eventType=");
+		msg.append(eventType);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchTrackerEntryException(msg.toString());
+	}
+
+	/**
+	 * Returns the first tracker entry in the ordered set where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching tracker entry, or <code>null</code> if a matching tracker entry could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public TrackerEntry fetchByUserIdAndEventType_First(long userId,
+		String eventType, OrderByComparator orderByComparator)
+		throws SystemException {
+		List<TrackerEntry> list = findByUserIdAndEventType(userId, eventType,
+				0, 1, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the last tracker entry in the ordered set where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching tracker entry
+	 * @throws com.liferay.training.service.builder.NoSuchTrackerEntryException if a matching tracker entry could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public TrackerEntry findByUserIdAndEventType_Last(long userId,
+		String eventType, OrderByComparator orderByComparator)
+		throws NoSuchTrackerEntryException, SystemException {
+		TrackerEntry trackerEntry = fetchByUserIdAndEventType_Last(userId,
+				eventType, orderByComparator);
+
+		if (trackerEntry != null) {
+			return trackerEntry;
+		}
+
+		StringBundler msg = new StringBundler(6);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("userId=");
+		msg.append(userId);
+
+		msg.append(", eventType=");
+		msg.append(eventType);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchTrackerEntryException(msg.toString());
+	}
+
+	/**
+	 * Returns the last tracker entry in the ordered set where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching tracker entry, or <code>null</code> if a matching tracker entry could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public TrackerEntry fetchByUserIdAndEventType_Last(long userId,
+		String eventType, OrderByComparator orderByComparator)
+		throws SystemException {
+		int count = countByUserIdAndEventType(userId, eventType);
+
+		if (count == 0) {
+			return null;
+		}
+
+		List<TrackerEntry> list = findByUserIdAndEventType(userId, eventType,
+				count - 1, count, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the tracker entries before and after the current tracker entry in the ordered set where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param trackerEntryId the primary key of the current tracker entry
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the previous, current, and next tracker entry
+	 * @throws com.liferay.training.service.builder.NoSuchTrackerEntryException if a tracker entry with the primary key could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public TrackerEntry[] findByUserIdAndEventType_PrevAndNext(
+		long trackerEntryId, long userId, String eventType,
+		OrderByComparator orderByComparator)
+		throws NoSuchTrackerEntryException, SystemException {
+		TrackerEntry trackerEntry = findByPrimaryKey(trackerEntryId);
+
+		Session session = null;
+
+		try {
+			session = openSession();
+
+			TrackerEntry[] array = new TrackerEntryImpl[3];
+
+			array[0] = getByUserIdAndEventType_PrevAndNext(session,
+					trackerEntry, userId, eventType, orderByComparator, true);
+
+			array[1] = trackerEntry;
+
+			array[2] = getByUserIdAndEventType_PrevAndNext(session,
+					trackerEntry, userId, eventType, orderByComparator, false);
+
+			return array;
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		finally {
+			closeSession(session);
+		}
+	}
+
+	protected TrackerEntry getByUserIdAndEventType_PrevAndNext(
+		Session session, TrackerEntry trackerEntry, long userId,
+		String eventType, OrderByComparator orderByComparator, boolean previous) {
+		StringBundler query = null;
+
+		if (orderByComparator != null) {
+			query = new StringBundler(6 +
+					(orderByComparator.getOrderByFields().length * 6));
+		}
+		else {
+			query = new StringBundler(3);
+		}
+
+		query.append(_SQL_SELECT_TRACKERENTRY_WHERE);
+
+		query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_USERID_2);
+
+		boolean bindEventType = false;
+
+		if (eventType == null) {
+			query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_1);
+		}
+		else if (eventType.equals(StringPool.BLANK)) {
+			query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_3);
+		}
+		else {
+			bindEventType = true;
+
+			query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_2);
+		}
+
+		if (orderByComparator != null) {
+			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
+
+			if (orderByConditionFields.length > 0) {
+				query.append(WHERE_AND);
+			}
+
+			for (int i = 0; i < orderByConditionFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByConditionFields[i]);
+
+				if ((i + 1) < orderByConditionFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN_HAS_NEXT);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN);
+					}
+				}
+			}
+
+			query.append(ORDER_BY_CLAUSE);
+
+			String[] orderByFields = orderByComparator.getOrderByFields();
+
+			for (int i = 0; i < orderByFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByFields[i]);
+
+				if ((i + 1) < orderByFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC_HAS_NEXT);
+					}
+					else {
+						query.append(ORDER_BY_DESC_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC);
+					}
+					else {
+						query.append(ORDER_BY_DESC);
+					}
+				}
+			}
+		}
+		else {
+			query.append(TrackerEntryModelImpl.ORDER_BY_JPQL);
+		}
+
+		String sql = query.toString();
+
+		Query q = session.createQuery(sql);
+
+		q.setFirstResult(0);
+		q.setMaxResults(2);
+
+		QueryPos qPos = QueryPos.getInstance(q);
+
+		qPos.add(userId);
+
+		if (bindEventType) {
+			qPos.add(eventType);
+		}
+
+		if (orderByComparator != null) {
+			Object[] values = orderByComparator.getOrderByConditionValues(trackerEntry);
+
+			for (Object value : values) {
+				qPos.add(value);
+			}
+		}
+
+		List<TrackerEntry> list = q.list();
+
+		if (list.size() == 2) {
+			return list.get(1);
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * Removes all the tracker entries where userId = &#63; and eventType = &#63; from the database.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public void removeByUserIdAndEventType(long userId, String eventType)
+		throws SystemException {
+		for (TrackerEntry trackerEntry : findByUserIdAndEventType(userId,
+				eventType, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
+			remove(trackerEntry);
+		}
+	}
+
+	/**
+	 * Returns the number of tracker entries where userId = &#63; and eventType = &#63;.
+	 *
+	 * @param userId the user ID
+	 * @param eventType the event type
+	 * @return the number of matching tracker entries
+	 * @throws SystemException if a system exception occurred
+	 */
+	@Override
+	public int countByUserIdAndEventType(long userId, String eventType)
+		throws SystemException {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_USERIDANDEVENTTYPE;
+
+		Object[] finderArgs = new Object[] { userId, eventType };
+
+		Long count = (Long)FinderCacheUtil.getResult(finderPath, finderArgs,
+				this);
+
+		if (count == null) {
+			StringBundler query = new StringBundler(3);
+
+			query.append(_SQL_COUNT_TRACKERENTRY_WHERE);
+
+			query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_USERID_2);
+
+			boolean bindEventType = false;
+
+			if (eventType == null) {
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_1);
+			}
+			else if (eventType.equals(StringPool.BLANK)) {
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_3);
+			}
+			else {
+				bindEventType = true;
+
+				query.append(_FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_2);
+			}
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(userId);
+
+				if (bindEventType) {
+					qPos.add(eventType);
+				}
+
+				count = (Long)q.uniqueResult();
+
+				FinderCacheUtil.putResult(finderPath, finderArgs, count);
+			}
+			catch (Exception e) {
+				FinderCacheUtil.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return count.intValue();
+	}
+
+	private static final String _FINDER_COLUMN_USERIDANDEVENTTYPE_USERID_2 = "trackerEntry.userId = ? AND ";
+	private static final String _FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_1 = "trackerEntry.eventType IS NULL";
+	private static final String _FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_2 = "trackerEntry.eventType = ?";
+	private static final String _FINDER_COLUMN_USERIDANDEVENTTYPE_EVENTTYPE_3 = "(trackerEntry.eventType IS NULL OR trackerEntry.eventType = '')";
 
 	public TrackerEntryPersistenceImpl() {
 		setModelClass(TrackerEntry.class);
@@ -1368,6 +1948,29 @@ public class TrackerEntryPersistenceImpl extends BasePersistenceImpl<TrackerEntr
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_USERID, args);
 				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERID,
+					args);
+			}
+
+			if ((trackerEntryModelImpl.getColumnBitmask() &
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERIDANDEVENTTYPE.getColumnBitmask()) != 0) {
+				Object[] args = new Object[] {
+						trackerEntryModelImpl.getOriginalUserId(),
+						trackerEntryModelImpl.getOriginalEventType()
+					};
+
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_USERIDANDEVENTTYPE,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERIDANDEVENTTYPE,
+					args);
+
+				args = new Object[] {
+						trackerEntryModelImpl.getUserId(),
+						trackerEntryModelImpl.getEventType()
+					};
+
+				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_USERIDANDEVENTTYPE,
+					args);
+				FinderCacheUtil.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_USERIDANDEVENTTYPE,
 					args);
 			}
 		}

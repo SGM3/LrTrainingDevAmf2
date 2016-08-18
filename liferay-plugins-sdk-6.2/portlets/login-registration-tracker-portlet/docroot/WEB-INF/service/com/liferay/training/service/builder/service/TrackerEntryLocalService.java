@@ -274,4 +274,15 @@ public interface TrackerEntryLocalService extends BaseLocalService,
 
 	public int countByUserId(long userId)
 		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByUserIdAndEventType(
+		long userId, java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public int countByUserIdAndEventType(long userId, java.lang.String eventType)
+		throws com.liferay.portal.kernel.exception.SystemException;
 }
