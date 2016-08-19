@@ -1,7 +1,7 @@
 package com.liferay.training.amf2.constants;
 
 public interface MySignupConstants {
-	public static final String FIRSTN_PARAM = "ﬁrst_name";
+	public static final String FIRSTN_PARAM = "first_name";
 	public static final String LASTN_PARAM = "last_name";
 	public static final String EMAIL_PARAM = "email_address";
 	public static final String UNAME_PARAM = "username";
