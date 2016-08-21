@@ -107,18 +107,17 @@ public class SignupValidator {
 	
 	//TODO Move everyhting above this point
 	
-	private String validateFirstname(String fname){
+	private void validateFirstname(String fname){
 		if (Validator.isNull(fname)){
-			return "First name is required.";
+			_allErrors.add("First name is required.");
 		} else {
 			if (!Validator.isName(fname)){
-				return "First name must be alpha numeric.";
+				_allErrors.add("First name must be alpha numeric.");
 			}
 			if (fname.length() > 50){
-				return "First name is too long.";
+				_allErrors.add("First name is too long.");
 			}
 		}
-		return null;
 	}
 	
 	private boolean validateLastname(String lname){

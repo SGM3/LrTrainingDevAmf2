@@ -145,13 +145,14 @@ public class MySignupPortlet extends MVCPortlet {
 					_log.error("Unable to add new user");
 					errorMessages.add("Internal error, unable to complete "
 							+ "the request");
-					request.getPortletSession().setAttribute(
+					request.setAttribute(
 						"bInfoErrorList", errorMessages);
 				}
 			}
+			System.out.println(errorMessages);
 			if (!errorMessages.isEmpty()){
 				SessionErrors.add(request,"basic_error");
-				request.getPortletSession().setAttribute(
+				request.setAttribute(
 						"bInfoErrorList", errorMessages);
 			}
 			PortalUtil.copyRequestParameters(request, response);
