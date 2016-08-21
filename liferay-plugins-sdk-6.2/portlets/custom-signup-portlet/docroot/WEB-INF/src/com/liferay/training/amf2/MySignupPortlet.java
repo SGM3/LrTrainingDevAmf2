@@ -70,8 +70,9 @@ public class MySignupPortlet extends MVCPortlet {
 			ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(
 					WebKeys.THEME_DISPLAY);
 			
-			List<String> errorMessages = _signupValidator.validateAndListErrors(
-				themeDisplay, extractor);
+			List<String> errorMessages = 
+				_signupValidator.validateFormAndListErrors(
+					themeDisplay, extractor);
 
 			if (errorMessages.isEmpty()) { 
 				

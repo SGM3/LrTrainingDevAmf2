@@ -28,7 +28,7 @@
 		<liferay-ui:error key="basic_error" message="${builtStr}"/>
 	</c:if>
 	
-	<liferay-ui:success key="add_user_success" message="new-user-created-success-msesage"/>
+	<liferay-ui:success key="add_user_success" message="new-user-created-success-message"/>
 	
 	<aui:form action="<%= processActionURL%>" method="post">
 	 <aui:fieldset label="New User">
@@ -62,24 +62,24 @@
 						<aui:option selected="false" value="${reg.regionId}">${reg.regionCode}</aui:option>
 					</c:forEach>
 	    	 </aui:select>
-	         <aui:input type="text" name="<%=MySignupConstants.ZIP_PARAM%>" label="Zip:" inlineLabel="true"/>
+	         <aui:input type="text" name="<%=MySignupConstants.ZIP_PARAM%>" label="zip-label" inlineLabel="true"/>
 	      </aui:column>
 	      
 	      <aui:column>        
 	      	 <h3>Security</h3>
 			 <%-- TODO maybe localize available questions --%>
 	         <aui:select label="security-question-label" name="<%=MySignupConstants.SECQ_PARAM%>">
-	            <aui:option selected="true" value="mom">What is your mother's maiden name?</aui:option>
-	            <aui:option selected="false" value="make">What is the make of your first car?</aui:option>
-	            <aui:option selected="false" value="mascot">What is your high school mascot?</aui:option>
-	            <aui:option selected="false" value="actor">Who is your favorite actor?</aui:option> 
+	            <aui:option selected="true" value="mom" label="security-question-maiden-name"/>
+	            <aui:option selected="false" value="make" label="security-question-first-car-make"/>
+	            <aui:option selected="false" value="mascot" label="security-question-hs-mascot"/>
+	            <aui:option selected="false" value="actor" label="security-question-favorite-actor"/>
 	    	 </aui:select>
 	         <aui:input type="text" name="<%=MySignupConstants.SECA_PARAM%>" label="security-answer-label" inlineLabel="true"/>
 	         <aui:input type="checkbox" name="<%=MySignupConstants.ATOU_PARAM%>" label="atou-terms"/>
 	      </aui:column>
 	      <aui:button-row>
-	         <aui:button type="submit" value="Create"/>
-	         <aui:button type="button" value="Cancel" last="true"/>
+	         <aui:button type="submit" value="create-button-text"/>
+	         <aui:button type="button" value="cancel-button-text" last="true"/>
 	      </aui:button-row>
 	   </aui:layout>
 	 </aui:fieldset>

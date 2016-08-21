@@ -5,8 +5,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
+
 import javax.portlet.PortletException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.theme.ThemeDisplay;
@@ -16,10 +20,18 @@ import parameter.handler.SignupParamExtractor;
 
 public class SignupValidator {
 	
-	public List<String> validateAndListErrors(
+	public List<String> validateFormAndListErrors(
 		ThemeDisplay themeDisplay, SignupParamExtractor extractor) 
 			throws PortletException {
 		_allErrors = new ArrayList<String>();
+		
+		if (themeDisplay != null) {
+			_userLocale = themeDisplay.getLocale();
+		}
+		
+		if (_userLocale == null){
+			_userLocale = LocaleUtil.US;
+		}
 		
 		validateFirstname(extractor.getFirstName());
 		
@@ -35,9 +47,9 @@ public class SignupValidator {
 		
 		String gender = StringUtil.trim(extractor.getGender());
 		
-		if (Validator.isNull(gender)  && !gender.equalsIgnoreCase("male") 
+		if (Validator.isNull(gender) && !gender.equalsIgnoreCase("male") 
 			&& !gender.equalsIgnoreCase("female")){
-			_allErrors.add("Gender is required.");
+			addErrorKey("gender-required-error");
 		}
 		String bmonth = extractor.getBirthdayMonth();
 		String bday = extractor.getBirthdayDay();
@@ -61,7 +73,7 @@ public class SignupValidator {
 		
 		String secQuestion = extractor.getSecurityQuestion();
 		if (Validator.isNull(secQuestion)){
-			_allErrors.add("A security question is required.");
+			addErrorKey("security-question-required-error");
 		}
 		
 		String secAnswer = extractor.getSecurityAnswer();
@@ -69,9 +81,9 @@ public class SignupValidator {
 		
 		String acceptedTou = extractor.getAcceptedTermsOfUse();
 		if (Validator.isNull(acceptedTou)){
-			_allErrors.add("Terms of user must be accepted to continue.");
+			addErrorKey("term-of-use-must-accept-error");
 		} else if (!acceptedTou.equals("true")){
-			_allErrors.add("Terms of user must be accepted to continue.");
+			addErrorKey("term-of-use-must-accept-error");
 		}
 		
 		return _allErrors;
@@ -107,13 +119,13 @@ public class SignupValidator {
 	
 	private void validateFirstname(String fname){
 		if (Validator.isNull(fname)){
-			_allErrors.add("First name is required.");
+			addErrorKey("first-name-required-error");
 		} else {
 			if (!Validator.isName(fname)){
-				_allErrors.add("First name must be alpha numeric.");
+				addErrorKey("first-name-invalid-characters-error");
 			}
 			if (fname.length() > 50){
-				_allErrors.add("First name is too long.");
+				addErrorKey("first-name-length-error");
 			}
 		}
 	}
@@ -122,15 +134,15 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(lname)){
 			hasError = true;
-			_allErrors.add("Last name is required.");
+			addErrorKey("last-name-required-error");
 		} else{
 			if (!Validator.isName(lname)){
 				hasError = true;
-				_allErrors.add("Last name must be alpha numeric.");
+				addErrorKey("last-name-invalid-characters-error");
 			}
 			if (lname.length() > 50){
 				hasError = true;
-				_allErrors.add("Last name is too long.");
+				addErrorKey("last-name-length-error");
 			}
 		}
 		return hasError;
@@ -140,15 +152,15 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(emailAddr)){
 			hasError = true;
-			_allErrors.add("Email is required.");
+			addErrorKey("email-required-error");
 		} else{
 			if (!Validator.isEmailAddress(emailAddr)){
 				hasError = true;
-				_allErrors.add("Email is in invalid format.");
+				addErrorKey("email-format-error");
 			}
 			if (emailAddr.length() > 255){
 				hasError = true;
-				_allErrors.add("Email is too long.");
+				addErrorKey("email-length-error");
 			}
 		}
 		return hasError;
@@ -159,19 +171,19 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(username)){
 			hasError = true;
-			_allErrors.add("Username is required.");
+			addErrorKey("username-required-error");
 		} else{
 			if (!MyAmfStringUtil.isAlphaNumericString(username)){
 				hasError = true;
-				_allErrors.add("Username must be an alpha numeric string.");
+				addErrorKey("username-invalid-characters-error");
 			}
 			if (username.length() > 50){
 				hasError = true;
-				_allErrors.add("Username is too long.");
+				addErrorKey("username-length-error");
 			}
 			if (!MyAmfStringUtil.isUsernameUnique(td, username)){
 				hasError = true;
-				_allErrors.add("Username is aleady taken.");
+				addErrorKey("username-taken-error");
 			}
 		}
 		return hasError;
@@ -182,41 +194,41 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(bdayStr)){
 			hasError = true;
-			_allErrors.add("Birthday day is required.");
+			addErrorKey("birthday-day-required-error");
 		} else {
 			if (!Validator.isNumber(bdayStr)){
 				hasError = true;
-				_allErrors.add("Numeric birthday day expected.");
+				addErrorKey("birthday-day-not-numeric-error");
 			} else {
 				int bday = Integer.parseInt(bdayStr);
 				if (bday < 1 || bday > 31){
 					hasError = true;
-					_allErrors.add("Birthday day must be in range [1-31].");
+					addErrorKey("birthday-day-range-error");
 				}
 			}
 		}
 		if (Validator.isNull(bmonthStr)){
 			hasError = true;
-			_allErrors.add("Birthday month is required.");
+			addErrorKey("birthday-month-required-error");
 		} else{
 			if (!Validator.isNumber(bmonthStr)){
 				hasError = true;
-				_allErrors.add("Numeric birthday month expected.");
+				addErrorKey("birthday-month-not-numeric-error");
 			} else {
 				int bmonth = Integer.parseInt(bmonthStr);
 				if (bmonth < 1 || bmonth > 12){
 					hasError = true;
-					_allErrors.add("Birthday month must be in range [1-12].");
+					addErrorKey("birthday-month-range-error");
 				}
 			}
 		}
 		if (Validator.isNull(byearStr)){
 			hasError = true;
-			_allErrors.add("Birthday year is required.");
+			addErrorKey("birthday-year-required-error");
 		} else {
 			if (!Validator.isNumber(byearStr)){
 				hasError = true;
-				_allErrors.add("Numeric year month expected.");
+				addErrorKey("birthday-year-not-numeric-error");
 			}
 		}
 		int bm = (!hasError)?Integer.parseInt(bmonthStr):1, 
@@ -224,7 +236,9 @@ public class SignupValidator {
 				by = (!hasError)?Integer.parseInt(byearStr):1;			
 		Calendar bCal = new GregorianCalendar(by, bm - 1, by);
 		Calendar thirteenYearsAgo = new GregorianCalendar();
-				//create a Calendar date equal to 13 yeas before today
+		
+		//create a Calendar date equal to 13 yeas before today
+		
 		thirteenYearsAgo.clear(Calendar.AM_PM);
 		thirteenYearsAgo.clear(Calendar.MILLISECOND);
 		thirteenYearsAgo.clear(Calendar.SECOND);
@@ -233,14 +247,12 @@ public class SignupValidator {
 		thirteenYearsAgo.add(Calendar.YEAR, -13);
 		
 		if (!Validator.isDate(bm - 1, bd, by)){
-			String gregDate = String.format("%02d/%02d/%d", bm, bd, by);
-			_allErrors.add(
-				"The date \"" + gregDate 
-				+ "\" (format: MM/DD/YYYY) is not valid.");
+			addErrorKey(
+				"birthday-year-not-accepted-parameterized-error", bm, bd, by);
 		} else {
 			bCal.set(by, bm - 1, bd);
 			if (bCal.after(thirteenYearsAgo)){
-				_allErrors.add("Must be at least 13 years old to sign up.");
+				addErrorKey("birthday-age-requirement-error");
 			}
 		}
 		return hasError;
@@ -250,12 +262,11 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(upass1)){
 			hasError = true;
-			_allErrors.add("Password is required.");
+			addErrorKey("password-required-error");
 		} else if (!meetsPasswordRequirements(upass1)){
 			//should not trim
 			hasError = true;
-			_allErrors.add("Does not meet minimum password requirements.(" 
-							+ _MIN_PASS_REQ + ").");
+			addErrorKey("password-requirements-not-met-error");
 		}
 		
 		return hasError;
@@ -266,14 +277,14 @@ public class SignupValidator {
 		if (Validator.isNotNull(homeNum)){
 			if (!Validator.isPhoneNumber(homeNum) || homeNum.length() != 10){
 				hasError = true;
-				_allErrors.add("Home phone number invalid.");
+				addErrorKey("phone-home-invalid-error");
 			}
 		}
 		if (Validator.isNotNull(mobileNum)){
 			if (!Validator.isPhoneNumber(mobileNum) 
 				|| mobileNum.length() != 10){
 				hasError = true;
-				_allErrors.add("Mobile phone number invalid.");
+				addErrorKey("phone-mobile-invalid-error");
 			}
 		}
 		return hasError;
@@ -287,12 +298,12 @@ public class SignupValidator {
 		
 		if (Validator.isNull(addr1)){
 			hasError = true;
-			_allErrors.add("Address is required.");
+			addErrorKey("address-line-one-required-error");
 		} else {
 			if (!MyAmfStringUtil.isAlphaNumericString(addr1.replaceAll(" ", "")) 
 				|| addr1.length() > 255) {
 				hasError = true;
-				_allErrors.add("Address is invalid.");
+				addErrorKey("address-line-one-invalid-error");
 			}
 		}
 		
@@ -300,7 +311,7 @@ public class SignupValidator {
 			if (!MyAmfStringUtil.isAlphaNumericString(addr2.replaceAll(" ", "")) 
 					|| addr2.length() > 255){
 				hasError = true;
-				_allErrors.add("Address 2 is invalid.");
+				addErrorKey("address-line-two-invalid-error");
 			}
 		}
 		return hasError;
@@ -310,12 +321,16 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(city)){
 			hasError = true;
-			_allErrors.add("City is required.");
+			addErrorKey("city-required-error");
 		} else {
-			if (!MyAmfStringUtil.isAlphaNumericString(city.replaceAll(" ", "")) 
-				|| city.length() > 255){ // spaces are accepted
+			if (!MyAmfStringUtil.isAlphaNumericString(
+				city.replaceAll(" ", ""))){
 				hasError = true;
-				_allErrors.add("City is invalid.");
+				addErrorKey("city-invalid-characters-error"); 
+			}
+			else if (city.length() > 255){ // spaces are accepted
+				hasError = true;
+				addErrorKey("city-length-error");
 			}
 		}
 		return hasError;
@@ -325,11 +340,11 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(state)){
 			hasError = true;
-			_allErrors.add("State is required.");
+			addErrorKey("region-required-error");
 		} else {
 			if (!Validator.isNumber(state)){
 				hasError = true;
-				_allErrors.add("State is invalid. (Must use LifeRay State code)");
+				addErrorKey("region-invalid-error");
 			}
 		}
 		// NOTE: 19 is the country code form Regions table for US
@@ -340,11 +355,11 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(zipCode)){
 			hasError = true;
-			_allErrors.add("Zip code is required.");
+			addErrorKey("zip-required-error");
 		} else {
 			if (!Validator.isNumber(zipCode) || zipCode.length() != 5){
 				hasError = true;
-				_allErrors.add("Zip code is invalid.");
+				addErrorKey("zip-invalid-error");
 			}
 		}
 		return hasError;
@@ -354,27 +369,32 @@ public class SignupValidator {
 		boolean hasError = false;
 		if (Validator.isNull(secAnswer)){
 			hasError = true;
-			_allErrors.add("An anwser to the security question is required.");
+			addErrorKey("security-answer-required-error");
 		} else {
 			//should not trim
 			if (!MyAmfStringUtil.isAlphaNumericString(
 				secAnswer.replaceAll(" ", ""))){
 				hasError = true;
-				_allErrors.add("Security answer must be alph numeric.");
+				addErrorKey("security-answer-invalid-characters-error");
 			}
 			if (secAnswer.length() > 255){
 				hasError = true;
-				_allErrors.add("Security answer is too long.");
+				addErrorKey("security-answer-length-error");
 			}
 		}
 		return hasError;
 	}
-
+	private void addErrorKey(String key, Object ... vars) {
+		String parameterizedString = LanguageUtil.get(_userLocale, key);
+		String injectedString = String.format(parameterizedString, vars);
+		_allErrors.add(injectedString);
+	}
 	
-	private static final String _MIN_PASS_REQ = "6 characters long, must "
-			+ "contain at least one of each: uppercase letter, number, "
-			+ "special character";
+	private void addErrorKey(String key){
+		_allErrors.add(LanguageUtil.get(_userLocale, key));
+	}
+	
 	private List<String> _allErrors;
-	
+	private Locale _userLocale;	
 	
 }

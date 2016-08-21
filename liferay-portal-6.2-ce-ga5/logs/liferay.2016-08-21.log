@@ -2253,3 +2253,129 @@ Stacktrace:
 18:04:34,184 INFO  [localhost-startStop-30][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
 18:04:34,185 INFO  [localhost-startStop-30][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
 18:04:34,245 INFO  [localhost-startStop-30][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:36:18,340 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:36:18,344 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:36:18,453 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:36:18,456 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:36:18,800 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821183618456\WEB-INF\web.xml
+18:36:19,023 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:36:28,208 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:36:28,209 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:36:28,213 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:36:28,218 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:36:28,222 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:36:29,278 INFO  [localhost-startStop-31][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:36:29,278 INFO  [localhost-startStop-31][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:36:29,279 INFO  [localhost-startStop-31][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:36:29,490 INFO  [localhost-startStop-31][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:36:29,496 INFO  [localhost-startStop-31][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:36:29,498 INFO  [localhost-startStop-31][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:36:29,657 INFO  [localhost-startStop-31][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:39:01,049 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:39:01,052 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:39:01,136 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:39:01,139 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:39:01,461 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821183901140\WEB-INF\web.xml
+18:39:01,683 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:39:10,123 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:39:10,125 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:39:10,129 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:39:10,133 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:39:10,138 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:39:11,193 INFO  [localhost-startStop-32][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:39:11,193 INFO  [localhost-startStop-32][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:39:11,194 INFO  [localhost-startStop-32][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:39:11,401 INFO  [localhost-startStop-32][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:39:11,407 INFO  [localhost-startStop-32][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:39:11,408 INFO  [localhost-startStop-32][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:39:11,472 INFO  [localhost-startStop-32][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:40:22,695 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:40:22,698 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:40:22,799 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:40:22,801 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:40:23,111 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821184022802\WEB-INF\web.xml
+18:40:23,331 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:40:31,741 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:40:31,743 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:40:31,747 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:40:31,752 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:40:31,756 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:40:32,824 INFO  [localhost-startStop-33][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:40:32,824 INFO  [localhost-startStop-33][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:40:32,825 INFO  [localhost-startStop-33][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:40:33,031 INFO  [localhost-startStop-33][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:40:33,037 INFO  [localhost-startStop-33][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:40:33,038 INFO  [localhost-startStop-33][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:40:33,102 INFO  [localhost-startStop-33][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:50:47,430 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:50:47,433 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:50:47,519 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:50:47,522 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:50:47,873 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821185047522\WEB-INF\web.xml
+18:50:48,101 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:50:54,759 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:50:54,760 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:50:54,765 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:50:54,769 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:50:54,774 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:50:55,905 INFO  [localhost-startStop-34][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:50:55,906 INFO  [localhost-startStop-34][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:50:55,906 INFO  [localhost-startStop-34][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:50:56,109 INFO  [localhost-startStop-34][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:50:56,115 INFO  [localhost-startStop-34][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:50:56,116 INFO  [localhost-startStop-34][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:50:56,194 INFO  [localhost-startStop-34][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:54:48,139 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:54:48,142 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:54:48,224 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:54:48,227 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:54:48,552 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821185448228\WEB-INF\web.xml
+18:54:48,793 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:54:56,863 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:54:56,865 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:54:56,869 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:54:56,874 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:54:56,878 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:54:57,984 INFO  [localhost-startStop-35][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:54:57,985 INFO  [localhost-startStop-35][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:54:57,985 INFO  [localhost-startStop-35][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:54:58,197 INFO  [localhost-startStop-35][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:54:58,203 INFO  [localhost-startStop-35][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:54:58,204 INFO  [localhost-startStop-35][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:54:58,270 INFO  [localhost-startStop-35][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+18:55:24,801 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+18:55:24,804 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+18:55:24,892 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+18:55:24,894 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+18:55:25,211 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821185524895\WEB-INF\web.xml
+18:55:25,474 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+18:55:28,396 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:55:28,398 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+18:55:28,402 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+18:55:28,406 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+18:55:28,410 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:55:29,523 INFO  [localhost-startStop-36][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+18:55:29,524 INFO  [localhost-startStop-36][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+18:55:29,524 INFO  [localhost-startStop-36][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+18:55:29,731 INFO  [localhost-startStop-36][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+18:55:29,737 INFO  [localhost-startStop-36][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+18:55:29,739 INFO  [localhost-startStop-36][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+18:55:29,804 INFO  [localhost-startStop-36][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+23:28:24,442 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+23:28:24,443 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+23:28:24,560 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+23:28:24,639 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+23:28:25,043 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821232824640\WEB-INF\web.xml
+23:28:25,349 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+23:28:29,915 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+23:28:29,915 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+23:28:29,918 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+23:28:29,921 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HookHotDeployListener:982] Hook for custom-signup-portlet was unregistered
+23:28:29,923 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+23:28:31,089 INFO  [localhost-startStop-37][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+23:28:31,090 INFO  [localhost-startStop-37][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+23:28:31,090 INFO  [localhost-startStop-37][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+23:28:31,303 INFO  [localhost-startStop-37][HookHotDeployListener:709] Registering hook for custom-signup-portlet
+23:28:31,307 INFO  [localhost-startStop-37][HookHotDeployListener:851] Hook for custom-signup-portlet is available for use
+23:28:31,309 INFO  [localhost-startStop-37][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+23:28:31,381 INFO  [localhost-startStop-37][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
