@@ -105,8 +105,6 @@ public class SignupValidator {
 		return false;
 	}
 	
-	//TODO Move everyhting above this point
-	
 	private void validateFirstname(String fname){
 		if (Validator.isNull(fname)){
 			_allErrors.add("First name is required.");

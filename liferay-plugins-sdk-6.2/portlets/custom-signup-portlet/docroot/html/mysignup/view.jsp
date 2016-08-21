@@ -1,4 +1,3 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@include file="/html/init.jsp"%>
 
 <portlet:defineObjects />
