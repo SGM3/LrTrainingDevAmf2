@@ -11,10 +11,10 @@
 <%
 boolean isSignedIn = themeDisplay.isSignedIn();
 StringBuilder builtStr = null;
-Object[] bInfoErrorList = null;
+java.util.List bInfoErrorList = null;
 if (!isSignedIn){
 	builtStr = new StringBuilder();
-	bInfoErrorList = (Object[])portletSession.getAttribute("bInfoErrorList"); 
+	bInfoErrorList = (java.util.List)portletSession.getAttribute("bInfoErrorList"); 
 	if (bInfoErrorList != null){
 		for (Object str: bInfoErrorList){
 	builtStr.append(str + "<br>");

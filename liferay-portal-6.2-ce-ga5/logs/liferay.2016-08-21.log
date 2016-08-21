@@ -1,0 +1,17 @@
+00:10:15,939 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:204] Processing custom-signup-portlet-6.2.0.1.war
+00:10:15,948 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:79] Copying portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war
+00:10:16,087 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:863] Deploying custom-signup-portlet-6.2.0.1.war
+00:10:16,131 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:966] Updating Custom Signup from version 6.2.0.1 to version 6.2.0.1
+00:10:16,756 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2391] Modifying Servlet 2.5 C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\tomcat-7.0.62\temp\20160821241016132\WEB-INF\web.xml
+00:10:17,082 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][PortletAutoDeployListener:91] Portlets for C:\lrprojects\amf-proj\liferay-portal-6.2-ce-ga5\deploy\custom-signup-portlet-6.2.0.1.war copied successfully. Deployment will start in a few seconds.
+00:10:23,363 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+00:10:23,368 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:525] Unregistering portlets for custom-signup-portlet
+00:10:23,385 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PortletHotDeployListener:565] 2 portlets for custom-signup-portlet were unregistered
+00:10:23,393 INFO  [ContainerBackgroundProcessor[StandardEngine[Catalina]]][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+00:10:24,649 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin custom-signup-portlet requires marketplace-portlet
+00:10:24,649 INFO  [localhost-startStop-2][HotDeployImpl:217] Deploying custom-signup-portlet from queue
+00:10:24,651 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for custom-signup-portlet
+00:10:24,816 INFO  [localhost-startStop-2][PortletHotDeployListener:344] Registering portlets for custom-signup-portlet
+00:10:24,909 INFO  [localhost-startStop-2][PortletHotDeployListener:497] 2 portlets for custom-signup-portlet are available for use
+00:10:58,309 ERROR [http-bio-8080-exec-1][status_jsp:753] java.lang.IllegalStateException: setAttribute: Session [null] has already been invalidated
+00:12:45,363 WARN  [liferay/mail-1][MailEngine:600] Failed to connect to a valid mail server. Please make sure one is properly configured. Could not connect to SMTP host: localhost, port: 25
