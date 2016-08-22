@@ -5,6 +5,7 @@ import javax.portlet.ActionRequest;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
@@ -13,6 +14,15 @@ public class AmfExcerciseSignupParamExtractorImpl
 	implements SignupParamExtractor{
 	
 	public AmfExcerciseSignupParamExtractorImpl(ActionRequest request){
+		try {
+			US_COUNTRY_CODE = CountryServiceUtil.getCountryByA2("US").getCountryId();
+		} catch (Exception e) {
+			
+			// US country ID in 6.2 is 19
+			// as found in the 'country' table
+			
+			US_COUNTRY_CODE = 19L;
+		}
 		_actionRequest = request;
 	}
 	
@@ -119,11 +129,9 @@ public class AmfExcerciseSignupParamExtractorImpl
 	}
 	
 	public long getCountryId() {
-		
-		//US country ID in 6.2 is 19
-		
-		return 19L;
+		return US_COUNTRY_CODE;
 	}
 	
+	private static long US_COUNTRY_CODE;
 	private ActionRequest _actionRequest;
 }

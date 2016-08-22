@@ -11,6 +11,7 @@ import javax.portlet.RenderResponse;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
@@ -27,6 +28,7 @@ import com.liferay.portal.service.ServiceContextFactory;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import com.liferay.training.amf2.constants.MySignupConstants;
 import com.liferay.training.amf2.util.MyAmfStringUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
@@ -82,7 +84,7 @@ public class MySignupPortlet extends MVCPortlet {
 					
 					try {
 						boolean isMale = extractor.getGender()
-								.equalsIgnoreCase("male");
+								.equalsIgnoreCase(MySignupConstants.MALE_STRING_VALUE);
 						int bm = Integer.parseInt(extractor.getBirthdayMonth());
 						int bd = Integer.parseInt(extractor.getBirthdayDay());
 						int by = Integer.parseInt(extractor.getBirthdayYear());
@@ -132,22 +134,26 @@ public class MySignupPortlet extends MVCPortlet {
 								null, 11008, true, serviceContext);
 					}
 					catch (PortalException e) {
-						errorMessages.add("Unable to add user or related entity"
-								+ " elements.(DB Exception)");
+						String dbRelatedError = 
+							LanguageUtil.get(
+								themeDisplay.getLocale(),
+								"user-or-entity-transaction-error");
+						errorMessages.add(dbRelatedError);
 						_log.error("Unable to add new user or supporting "
 								+ "element: " + e.getLocalizedMessage());
 					}
 					if (errorMessages.isEmpty()){
 						_log.info("SUCCESS");
-						SessionMessages.add(request,"add_user_success", "New "
-								+ "User created sucessfully");
+						SessionMessages.add(
+							request,"user-and-entity-transaction-success");
 					}
 				} catch (SystemException e) {
+					String systemRelatedError = LanguageUtil.get(
+						themeDisplay.getLocale(),
+						"user-or-entity-transaction-system-error");
 					_log.error("Unable to add new user");
-					errorMessages.add("Internal error, unable to complete "
-							+ "the request");
-					request.setAttribute(
-						"bInfoErrorList", errorMessages);
+					errorMessages.add(systemRelatedError);
+					request.setAttribute("bInfoErrorList", errorMessages);
 				}
 			}
 			System.out.println(errorMessages);

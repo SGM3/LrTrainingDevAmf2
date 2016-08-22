@@ -14,6 +14,7 @@ import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.training.amf2.constants.MySignupConstants;
 import com.liferay.training.amf2.util.MyAmfStringUtil;
 
 import parameter.handler.SignupParamExtractor;
@@ -33,57 +34,58 @@ public class SignupValidator {
 			_userLocale = LocaleUtil.US;
 		}
 		
-		validateFirstname(extractor.getFirstName());
+		_validateFirstname(extractor.getFirstName());
 		
-		validateLastname(extractor.getLastName());
+		_validateLastname(extractor.getLastName());
 
-		validateEmail(extractor.getEmailAddress());
+		_validateEmail(extractor.getEmailAddress());
 
 		try {
-			validateUsername(themeDisplay, extractor.getUsername());
+			_validateUsername(themeDisplay, extractor.getUsername());
 		} catch (SystemException e) {
 			throw new PortletException(e);
 		}
 		
 		String gender = StringUtil.trim(extractor.getGender());
 		
-		if (Validator.isNull(gender) && !gender.equalsIgnoreCase("male") 
-			&& !gender.equalsIgnoreCase("female")){
-			addErrorKey("gender-required-error");
+		if (Validator.isNull(gender) 
+			&& !gender.equalsIgnoreCase(MySignupConstants.MALE_STRING_VALUE) 
+			&& !gender.equalsIgnoreCase(MySignupConstants.FEMALE_STRING_VALUE)){
+			_addErrorKey("gender-required-error");
 		}
 		String bmonth = extractor.getBirthdayMonth();
 		String bday = extractor.getBirthdayDay();
 		String byear = extractor.getBirthdayYear();
 		
-		validateDateAndAge(bday, bmonth, byear);
+		_validateDateAndAge(bday, bmonth, byear);
 		
-		validatePasswords(extractor.getPassword1(), extractor.getPassword2());
+		_validatePasswords(extractor.getPassword1(), extractor.getPassword2());
 
-		validatePhones(
+		_validatePhones(
 			extractor.getHomePhoneNumber(), extractor.getMobilePhoneNumber());
 
-		validateAddressLines(
+		_validateAddressLines(
 			extractor.getStreetAddress1(), extractor.getStreetAddress2());
 		
-		validateCity(extractor.getCity());
+		_validateCity(extractor.getCity());
 		
-		validateState(extractor.getState());
+		_validateState(extractor.getState());
 		
-		validateZip(extractor.getZip());
+		_validateZip(extractor.getZip());
 		
 		String secQuestion = extractor.getSecurityQuestion();
 		if (Validator.isNull(secQuestion)){
-			addErrorKey("security-question-required-error");
+			_addErrorKey("security-question-required-error");
 		}
 		
 		String secAnswer = extractor.getSecurityAnswer();
-		validateSecurityAnswer(secAnswer);
+		_validateSecurityAnswer(secAnswer);
 		
 		String acceptedTou = extractor.getAcceptedTermsOfUse();
 		if (Validator.isNull(acceptedTou)){
-			addErrorKey("term-of-use-must-accept-error");
+			_addErrorKey("term-of-use-must-accept-error");
 		} else if (!acceptedTou.equals("true")){
-			addErrorKey("term-of-use-must-accept-error");
+			_addErrorKey("term-of-use-must-accept-error");
 		}
 		
 		return _allErrors;
@@ -117,118 +119,118 @@ public class SignupValidator {
 		return false;
 	}
 	
-	private void validateFirstname(String fname){
+	private void _validateFirstname(String fname){
 		if (Validator.isNull(fname)){
-			addErrorKey("first-name-required-error");
+			_addErrorKey("first-name-required-error");
 		} else {
 			if (!Validator.isName(fname)){
-				addErrorKey("first-name-invalid-characters-error");
+				_addErrorKey("first-name-invalid-characters-error");
 			}
 			if (fname.length() > 50){
-				addErrorKey("first-name-length-error");
+				_addErrorKey("first-name-length-error");
 			}
 		}
 	}
 	
-	private boolean validateLastname(String lname){
+	private boolean _validateLastname(String lname){
 		boolean hasError = false;
 		if (Validator.isNull(lname)){
 			hasError = true;
-			addErrorKey("last-name-required-error");
+			_addErrorKey("last-name-required-error");
 		} else{
 			if (!Validator.isName(lname)){
 				hasError = true;
-				addErrorKey("last-name-invalid-characters-error");
+				_addErrorKey("last-name-invalid-characters-error");
 			}
 			if (lname.length() > 50){
 				hasError = true;
-				addErrorKey("last-name-length-error");
+				_addErrorKey("last-name-length-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateEmail(String emailAddr){
+	private boolean _validateEmail(String emailAddr){
 		boolean hasError = false;
 		if (Validator.isNull(emailAddr)){
 			hasError = true;
-			addErrorKey("email-required-error");
+			_addErrorKey("email-required-error");
 		} else{
 			if (!Validator.isEmailAddress(emailAddr)){
 				hasError = true;
-				addErrorKey("email-format-error");
+				_addErrorKey("email-format-error");
 			}
 			if (emailAddr.length() > 255){
 				hasError = true;
-				addErrorKey("email-length-error");
+				_addErrorKey("email-length-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateUsername(ThemeDisplay td, String username) 
+	private boolean _validateUsername(ThemeDisplay td, String username) 
 			throws SystemException{
 		boolean hasError = false;
 		if (Validator.isNull(username)){
 			hasError = true;
-			addErrorKey("username-required-error");
+			_addErrorKey("username-required-error");
 		} else{
 			if (!MyAmfStringUtil.isAlphaNumericString(username)){
 				hasError = true;
-				addErrorKey("username-invalid-characters-error");
+				_addErrorKey("username-invalid-characters-error");
 			}
 			if (username.length() > 50){
 				hasError = true;
-				addErrorKey("username-length-error");
+				_addErrorKey("username-length-error");
 			}
 			if (!MyAmfStringUtil.isUsernameUnique(td, username)){
 				hasError = true;
-				addErrorKey("username-taken-error");
+				_addErrorKey("username-taken-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateDateAndAge(
+	private boolean _validateDateAndAge(
 			String bdayStr, String bmonthStr, String byearStr){
 		boolean hasError = false;
 		if (Validator.isNull(bdayStr)){
 			hasError = true;
-			addErrorKey("birthday-day-required-error");
+			_addErrorKey("birthday-day-required-error");
 		} else {
 			if (!Validator.isNumber(bdayStr)){
 				hasError = true;
-				addErrorKey("birthday-day-not-numeric-error");
+				_addErrorKey("birthday-day-not-numeric-error");
 			} else {
 				int bday = Integer.parseInt(bdayStr);
 				if (bday < 1 || bday > 31){
 					hasError = true;
-					addErrorKey("birthday-day-range-error");
+					_addErrorKey("birthday-day-range-error");
 				}
 			}
 		}
 		if (Validator.isNull(bmonthStr)){
 			hasError = true;
-			addErrorKey("birthday-month-required-error");
+			_addErrorKey("birthday-month-required-error");
 		} else{
 			if (!Validator.isNumber(bmonthStr)){
 				hasError = true;
-				addErrorKey("birthday-month-not-numeric-error");
+				_addErrorKey("birthday-month-not-numeric-error");
 			} else {
 				int bmonth = Integer.parseInt(bmonthStr);
 				if (bmonth < 1 || bmonth > 12){
 					hasError = true;
-					addErrorKey("birthday-month-range-error");
+					_addErrorKey("birthday-month-range-error");
 				}
 			}
 		}
 		if (Validator.isNull(byearStr)){
 			hasError = true;
-			addErrorKey("birthday-year-required-error");
+			_addErrorKey("birthday-year-required-error");
 		} else {
 			if (!Validator.isNumber(byearStr)){
 				hasError = true;
-				addErrorKey("birthday-year-not-numeric-error");
+				_addErrorKey("birthday-year-not-numeric-error");
 			}
 		}
 		int bm = (!hasError)?Integer.parseInt(bmonthStr):1, 
@@ -247,50 +249,50 @@ public class SignupValidator {
 		thirteenYearsAgo.add(Calendar.YEAR, -13);
 		
 		if (!Validator.isDate(bm - 1, bd, by)){
-			addErrorKey(
+			_addErrorKey(
 				"birthday-year-not-accepted-parameterized-error", bm, bd, by);
 		} else {
 			bCal.set(by, bm - 1, bd);
 			if (bCal.after(thirteenYearsAgo)){
-				addErrorKey("birthday-age-requirement-error");
+				_addErrorKey("birthday-age-requirement-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validatePasswords(String upass1, String upass2){
+	private boolean _validatePasswords(String upass1, String upass2){
 		boolean hasError = false;
 		if (Validator.isNull(upass1)){
 			hasError = true;
-			addErrorKey("password-required-error");
+			_addErrorKey("password-required-error");
 		} else if (!meetsPasswordRequirements(upass1)){
 			//should not trim
 			hasError = true;
-			addErrorKey("password-requirements-not-met-error");
+			_addErrorKey("password-requirements-not-met-error");
 		}
 		
 		return hasError;
 	}
 	
-	private boolean validatePhones(String homeNum, String mobileNum){
+	private boolean _validatePhones(String homeNum, String mobileNum){
 		boolean hasError = false;
 		if (Validator.isNotNull(homeNum)){
 			if (!Validator.isPhoneNumber(homeNum) || homeNum.length() != 10){
 				hasError = true;
-				addErrorKey("phone-home-invalid-error");
+				_addErrorKey("phone-home-invalid-error");
 			}
 		}
 		if (Validator.isNotNull(mobileNum)){
 			if (!Validator.isPhoneNumber(mobileNum) 
 				|| mobileNum.length() != 10){
 				hasError = true;
-				addErrorKey("phone-mobile-invalid-error");
+				_addErrorKey("phone-mobile-invalid-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateAddressLines(String addr1, String addr2){
+	private boolean _validateAddressLines(String addr1, String addr2){
 		boolean hasError = false;
 		
 		// spaces are accepted in address, so must be taken into account for
@@ -298,12 +300,12 @@ public class SignupValidator {
 		
 		if (Validator.isNull(addr1)){
 			hasError = true;
-			addErrorKey("address-line-one-required-error");
+			_addErrorKey("address-line-one-required-error");
 		} else {
 			if (!MyAmfStringUtil.isAlphaNumericString(addr1.replaceAll(" ", "")) 
 				|| addr1.length() > 255) {
 				hasError = true;
-				addErrorKey("address-line-one-invalid-error");
+				_addErrorKey("address-line-one-invalid-error");
 			}
 		}
 		
@@ -311,86 +313,86 @@ public class SignupValidator {
 			if (!MyAmfStringUtil.isAlphaNumericString(addr2.replaceAll(" ", "")) 
 					|| addr2.length() > 255){
 				hasError = true;
-				addErrorKey("address-line-two-invalid-error");
+				_addErrorKey("address-line-two-invalid-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateCity(String city){
+	private boolean _validateCity(String city){
 		boolean hasError = false;
 		if (Validator.isNull(city)){
 			hasError = true;
-			addErrorKey("city-required-error");
+			_addErrorKey("city-required-error");
 		} else {
 			if (!MyAmfStringUtil.isAlphaNumericString(
 				city.replaceAll(" ", ""))){
 				hasError = true;
-				addErrorKey("city-invalid-characters-error"); 
+				_addErrorKey("city-invalid-characters-error"); 
 			}
 			else if (city.length() > 255){ // spaces are accepted
 				hasError = true;
-				addErrorKey("city-length-error");
+				_addErrorKey("city-length-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateState(String state){
+	private boolean _validateState(String state){
 		boolean hasError = false;
 		if (Validator.isNull(state)){
 			hasError = true;
-			addErrorKey("region-required-error");
+			_addErrorKey("region-required-error");
 		} else {
 			if (!Validator.isNumber(state)){
 				hasError = true;
-				addErrorKey("region-invalid-error");
+				_addErrorKey("region-invalid-error");
 			}
 		}
 		// NOTE: 19 is the country code form Regions table for US
 		return hasError;
 	}
 	
-	private boolean validateZip(String zipCode){
+	private boolean _validateZip(String zipCode){
 		boolean hasError = false;
 		if (Validator.isNull(zipCode)){
 			hasError = true;
-			addErrorKey("zip-required-error");
+			_addErrorKey("zip-required-error");
 		} else {
 			if (!Validator.isNumber(zipCode) || zipCode.length() != 5){
 				hasError = true;
-				addErrorKey("zip-invalid-error");
+				_addErrorKey("zip-invalid-error");
 			}
 		}
 		return hasError;
 	}
 	
-	private boolean validateSecurityAnswer(String secAnswer){
+	private boolean _validateSecurityAnswer(String secAnswer){
 		boolean hasError = false;
 		if (Validator.isNull(secAnswer)){
 			hasError = true;
-			addErrorKey("security-answer-required-error");
+			_addErrorKey("security-answer-required-error");
 		} else {
 			//should not trim
 			if (!MyAmfStringUtil.isAlphaNumericString(
 				secAnswer.replaceAll(" ", ""))){
 				hasError = true;
-				addErrorKey("security-answer-invalid-characters-error");
+				_addErrorKey("security-answer-invalid-characters-error");
 			}
 			if (secAnswer.length() > 255){
 				hasError = true;
-				addErrorKey("security-answer-length-error");
+				_addErrorKey("security-answer-length-error");
 			}
 		}
 		return hasError;
 	}
-	private void addErrorKey(String key, Object ... vars) {
+	private void _addErrorKey(String key, Object ... vars) {
 		String parameterizedString = LanguageUtil.get(_userLocale, key);
 		String injectedString = String.format(parameterizedString, vars);
 		_allErrors.add(injectedString);
 	}
 	
-	private void addErrorKey(String key){
+	private void _addErrorKey(String key){
 		_allErrors.add(LanguageUtil.get(_userLocale, key));
 	}
 	

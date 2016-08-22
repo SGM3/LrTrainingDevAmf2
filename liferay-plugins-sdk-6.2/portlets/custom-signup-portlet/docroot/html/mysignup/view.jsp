@@ -4,12 +4,20 @@
 
 <portlet:actionURL name="processAction" var="processActionURL" />
 
+<%-- 
+This way the 'usRegCodes' String constant is local only to the JSP
+--%>
+
 <c:set var="isSignedIn" value="<%= themeDisplay.isSignedIn() %>" />
+<c:set var="usRegCodes" value="<%= renderRequest.getAttribute(MySignupConstants.US_REG_CODES_ATTR) %>"/>
+<c:set var="maleValue" value="<%= MySignupConstants.MALE_STRING_VALUE %>"/>
+<c:set var="femaleValue" value="<%= MySignupConstants.FEMALE_STRING_VALUE %>"/>
 
 <%-- build the error string --%>
 
 <c:if test="${not isSignedIn}" >
 	<c:if test="${not empty bInfoErrorList}" >
+		<%-- to avoid leading line break --%>
 		<c:set var="builtStr" value="${bInfoErrorList[0]}" />
 		<c:forEach items="${bInfoErrorList}" begin="1" var="curStr">
 			<c:set var="builtStr" value="${builtStr}<br>${curStr}" />
@@ -28,7 +36,7 @@
 		<liferay-ui:error key="basic_error" message="${builtStr}"/>
 	</c:if>
 	
-	<liferay-ui:success key="add_user_success" message="new-user-created-success-message"/>
+	<liferay-ui:success key="user-and-entity-transaction-success" message="user-and-entity-transaction-success"/>
 	
 	<aui:form action="<%= processActionURL%>" method="post">
 	 <aui:fieldset label="New User">
@@ -40,8 +48,8 @@
 	         <aui:input type="text" name="<%=MySignupConstants.EMAIL_PARAM%>" label="email-label" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.UNAME_PARAM%>" label="uname-label" inlineLabel="true"/>
 	         <aui:field-wrapper name="<%=MySignupConstants.GENDER_PARAM%>" label="gender-label">
-	            <aui:input type="radio" name="<%=MySignupConstants.GENDER_PARAM%>" label="gender-male-label" inlineLabel="true" value="male" checked="true"/>
-	            <aui:input type="radio" name="<%=MySignupConstants.GENDER_PARAM%>" label="gender-female-label" inlineLabel="true" value="female" />
+	            <aui:input type="radio" name="<%=MySignupConstants.GENDER_PARAM%>" label="gender-male-label" inlineLabel="true" value="${maleValue}" checked="true"/>
+	            <aui:input type="radio" name="<%=MySignupConstants.GENDER_PARAM%>" label="gender-female-label" inlineLabel="true" value="${femaleValue}" />
 	         </aui:field-wrapper>
 	         <aui:input type="text" name="<%=MySignupConstants.BDAY_PARAM%>" label="birth-day-of-month-label" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.BMONTH_PARAM%>" label="birth-month-label" inlineLabel="true"/>
@@ -57,8 +65,8 @@
 	         <aui:input type="text" name="<%=MySignupConstants.ADDR1_PARAM%>" label="address-line-one-label" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.ADDR2_PARAM%>" label="address-line-two-label" inlineLabel="true"/>
 	         <aui:input type="text" name="<%=MySignupConstants.CITY_PARAM%>" label="city-label" inlineLabel="true"/>
-	         <aui:select label="region-label" name="<%=MySignupConstants.STATE_PARAM%>">
-					<c:forEach items="${ us_reg_codes }"  var="reg">
+	         <aui:select name="<%=MySignupConstants.STATE_PARAM%>" label="region-label" >
+					<c:forEach items="${ usRegCodes }"  var="reg">
 						<aui:option selected="false" value="${reg.regionId}">${reg.regionCode}</aui:option>
 					</c:forEach>
 	    	 </aui:select>

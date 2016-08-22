@@ -60,6 +60,7 @@ public final class MyAmfStringUtil {
 		return RegionServiceUtil.getRegions(countryCode);
 	}
 	
+	//prevent instantiation of utility class
 
 	private MyAmfStringUtil(){}
 }

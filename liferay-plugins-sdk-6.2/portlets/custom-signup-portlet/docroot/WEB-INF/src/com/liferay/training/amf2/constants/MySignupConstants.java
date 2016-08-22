@@ -1,5 +1,12 @@
 package com.liferay.training.amf2.constants;
 
+/**
+ * Centralizes the location of string constants shared between
+ * the jsp and the java classes.
+ * 
+ * @author Shanon Mathai
+ *
+ */
 public interface MySignupConstants {
 	public static final String FIRSTN_PARAM = "first_name";
 	public static final String LASTN_PARAM = "last_name";
@@ -26,4 +33,9 @@ public interface MySignupConstants {
 	public static final String ATOU_PARAM = "accepted_tou";
 	
 	public static final String US_REG_CODES_ATTR = "us_reg_codes";
+	
+	public static final String MALE_STRING_VALUE = "male";
+	public static final String FEMALE_STRING_VALUE = "female";
+	
+//	public static final String 
 }
