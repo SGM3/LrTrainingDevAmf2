@@ -36,9 +36,8 @@ renderRequest.setAttribute("zipCode", 12345);
 	<liferay-ui:search-container-results results="${trackerEntries}">
 	</liferay-ui:search-container-results>
 	<liferay-ui:search-container-row className="com.liferay.portal.model.User" keyProperty="userId" modelVar="entry">
-		<liferay-ui:search-container-column-text name="User ID" value="${entry.fullName}" />
+		<liferay-ui:search-container-column-text name="User ID" value="${entry.firstName} ${fn:substring(entry.lastName, 0, 1)}." />
 		<liferay-ui:search-container-column-text name="User ID" value="${entry.screenName}" />
-		<liferay-ui:search-container-column-text name="User ID" value="${entry.userId}" />
 		<liferay-ui:search-container-column-text name="User ID" value="${entry.emailAddress}" />
 	</liferay-ui:search-container-row>
 	<liferay-ui:search-iterator searchContainer="${searchContainer}" />
