@@ -2,10 +2,10 @@
 
 <portlet:defineObjects />
 
-<portlet:actionURL name="processAction" var="processActionURL" />
+<portlet:actionURL name="triggerZipSearch" var="triggerZipSearchUrl" />
 
-<aui:form action="<%= processActionURL%>" method="post">
-	<aui:fieldset label="Enter US Zip">
+<aui:form action="${triggerZipSearchUrl}" method="post">
+	<aui:fieldset label="enter-us-zip-prompt">
 		<aui:input type="text" name="zip-code" inlineLabel="true"/>
 	</aui:fieldset>
 </aui:form>

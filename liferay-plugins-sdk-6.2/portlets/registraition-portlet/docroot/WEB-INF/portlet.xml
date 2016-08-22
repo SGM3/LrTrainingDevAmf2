@@ -68,7 +68,7 @@
 	<portlet>
 		<portlet-name>amf-search</portlet-name>
 		<display-name>Amf Search</display-name>
-		<portlet-class>com.liferay.training.AmfSearch</portlet-class>
+		<portlet-class>com.liferay.training.search.AmfSearch</portlet-class>
 		<init-param>
 			<name>view-template</name>
 			<value>/html/amfsearch/view.jsp</value>
@@ -101,7 +101,7 @@
 		<portlet-name>amf-search-results</portlet-name>
 		<display-name>Amf Search Results</display-name>
 		<portlet-class>
-			com.liferay.training.AmfSearchResults
+			com.liferay.training.results.AmfSearchResults
 		</portlet-class>
 		<init-param>
 			<name>view-template</name>

@@ -25,7 +25,6 @@ import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.service.permission.PortletPermissionUtil;
 import com.liferay.portal.theme.PortletDisplay;
 import com.liferay.portal.theme.ThemeDisplay;
-import com.liferay.training.AmfMonitorKey;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;

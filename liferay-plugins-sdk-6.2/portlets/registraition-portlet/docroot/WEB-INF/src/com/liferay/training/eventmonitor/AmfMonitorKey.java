@@ -1,4 +1,4 @@
-package com.liferay.training;
+package com.liferay.training.eventmonitor;
 
 public interface AmfMonitorKey {
 	public static final String VIEW_SELF = "VIEW_SELF_ENTRIES";
