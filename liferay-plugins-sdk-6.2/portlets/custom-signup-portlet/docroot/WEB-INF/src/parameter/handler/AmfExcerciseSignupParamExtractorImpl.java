@@ -15,7 +15,8 @@ public class AmfExcerciseSignupParamExtractorImpl
 	
 	public AmfExcerciseSignupParamExtractorImpl(ActionRequest request){
 		try {
-			US_COUNTRY_CODE = CountryServiceUtil.getCountryByA2("US").getCountryId();
+			US_COUNTRY_CODE = 
+				CountryServiceUtil.getCountryByA2("US").getCountryId();
 		} catch (Exception e) {
 			
 			// US country ID in 6.2 is 19

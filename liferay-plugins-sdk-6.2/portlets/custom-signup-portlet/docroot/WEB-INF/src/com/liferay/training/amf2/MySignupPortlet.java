@@ -84,7 +84,8 @@ public class MySignupPortlet extends MVCPortlet {
 					
 					try {
 						boolean isMale = extractor.getGender()
-								.equalsIgnoreCase(MySignupConstants.MALE_STRING_VALUE);
+							.equalsIgnoreCase(
+								MySignupConstants.MALE_STRING_VALUE);
 						int bm = Integer.parseInt(extractor.getBirthdayMonth());
 						int bd = Integer.parseInt(extractor.getBirthdayDay());
 						int by = Integer.parseInt(extractor.getBirthdayYear());

@@ -94,7 +94,7 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 			List<TrackerEntry> curPageRegisEntries;
 
 			if (permissionChecker.hasPermission(
-				groupId, PORTLET_PERM_KEY, groupId, "VIEW_ALL_ENTRIES")){
+				groupId, PORTLET_PERM_KEY, groupId, AmfMonitorKey.VIEW_ALL)){
 
 				allCount = 
 					TrackerEntryLocalServiceUtil.getTrackerEntriesCount();
@@ -118,10 +118,8 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 				curPageRegisEntries = 
 					TrackerEntryLocalServiceUtil.findByEventType(
 						REGIS_EVENT_TYPE, rstart, rend);
-				
-				System.out.println("Has permission to --ALL-- entries");//TODO Remove
 			} else if (permissionChecker.hasPermission(
-				groupId, PORTLET_PERM_KEY, groupId, "VIEW_SELF_ENTRIES")){
+				groupId, PORTLET_PERM_KEY, groupId, AmfMonitorKey.VIEW_SELF)){
 
 				User curUser = themeDisplay.getUser();
 				long userId = -1;
@@ -164,8 +162,6 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 				curPageRegisEntries = 
 					TrackerEntryLocalServiceUtil.findByUserIdAndEventType(
 						userId, REGIS_EVENT_TYPE, rstart, rend);
-
-				System.out.println("Has permission to >>SELF<< entries");
 			}else {
 				allCount = 0;
 				loginCount = 0;
@@ -180,7 +176,6 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 				curPageEntries = new ArrayList<TrackerEntry>();
 				curPageLoginEntries = new ArrayList<TrackerEntry>();
 				curPageRegisEntries = new ArrayList<TrackerEntry>();
-				System.out.println("Has permission to [[NO]] entries");
 			}
 			
 			renderRequest.setAttribute(
