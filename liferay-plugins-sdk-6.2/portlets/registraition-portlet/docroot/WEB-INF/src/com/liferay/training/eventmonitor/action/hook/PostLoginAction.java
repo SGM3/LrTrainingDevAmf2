@@ -1,4 +1,4 @@
-package com.liferay.training;
+package com.liferay.training.eventmonitor.action.hook;
 
 import java.util.Date;
 
@@ -12,6 +12,7 @@ import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.model.User;
+import com.liferay.training.eventmonitor.AmfEventMonitorConstants;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 
@@ -46,7 +47,7 @@ public class PostLoginAction extends com.liferay.portal.kernel.events.Action {
 				tEntry.setTrackerEntryId(tId);
 				tEntry.setEventDate(now);
 				tEntry.setEventType(
-					LoginRegistrationConstants.LOGIN_EVENT_TYPE);
+					AmfEventMonitorConstants.LOGIN_EVENT_TYPE);
 				tEntry.setIpAddress(request.getRemoteAddr());
 				
 				TrackerEntryLocalServiceUtil.addTrackerEntry(

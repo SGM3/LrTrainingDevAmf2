@@ -1,4 +1,4 @@
-package com.liferay.training.listeners;
+package com.liferay.training.eventmonitor.listeners;
 import java.util.Date;
 
 import com.liferay.counter.service.CounterLocalServiceUtil;
@@ -8,7 +8,7 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.model.BaseModelListener;
 import com.liferay.portal.model.User;
-import com.liferay.training.LoginRegistrationConstants;
+import com.liferay.training.eventmonitor.AmfEventMonitorConstants;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 
@@ -29,7 +29,7 @@ public class RegistrationListener extends BaseModelListener<User> {
 			tEntry.setUserId(user.getUserId());
 			tEntry.setTrackerEntryId(tId);
 			tEntry.setEventDate(now);
-			tEntry.setEventType(LoginRegistrationConstants.REGIS_EVENT_TYPE);
+			tEntry.setEventType(AmfEventMonitorConstants.REGIS_EVENT_TYPE);
 			tEntry.setIpAddress("0.0.0.0");
 			TrackerEntryLocalServiceUtil.addTrackerEntry(tEntry);
 		} catch (SystemException e) {
@@ -38,6 +38,6 @@ public class RegistrationListener extends BaseModelListener<User> {
 		}
 	}
 
-	private Log _log = LogFactoryUtil.getLog(
-		RegistrationListener.class.getName());
+	private Log _log = 
+		LogFactoryUtil.getLog(RegistrationListener.class.getName());
 }

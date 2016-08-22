@@ -1,6 +1,6 @@
-package com.liferay.training;
+package com.liferay.training.eventmonitor;
 
-public interface LoginRegistrationConstants {
+public interface AmfEventMonitorConstants {
 	
 	public static final String PORTLET_PERM_KEY =
 			"amfeventmonitor_WAR_registraitionportlet";

@@ -31,7 +31,7 @@
 <%@ page import="com.liferay.portal.theme.ThemeDisplay" %>
 <%@ page import="com.liferay.portal.util.PortalUtil" %>
 
-<%@ page import="com.liferay.training.LoginRegistrationConstants" %>
+<%@ page import="com.liferay.training.eventmonitor.AmfEventMonitorConstants" %>
 <%@ page import="com.liferay.training.service.builder.model.TrackerEntry"%>
 
 <liferay-theme:defineObjects />

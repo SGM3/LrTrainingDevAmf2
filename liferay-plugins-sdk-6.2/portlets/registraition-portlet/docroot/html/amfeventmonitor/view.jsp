@@ -2,7 +2,7 @@
 
 <%
 java.text.DateFormat df = com.liferay.portal.kernel.util.DateFormatFactoryUtil 
-		.getSimpleDateFormat(LoginRegistrationConstants.DATE_FORMAT_STRING);
+		.getSimpleDateFormat(AmfEventMonitorConstants.DATE_FORMAT_STRING);
 %>
 
 <liferay-ui:tabs names="${tabsCsl}" refresh="true" param="curTab" tabsValues="${tabsCsl}"  value="${curTabValue}" url="${tabsUrl}"  >

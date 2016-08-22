@@ -1,4 +1,6 @@
-package com.liferay.training;
+package com.liferay.training.eventmonitor;
+
+import static com.liferay.training.eventmonitor.AmfEventMonitorConstants.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,11 +23,10 @@ import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.User;
 import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.training.AmfMonitorKey;
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
-
-import static com.liferay.training.LoginRegistrationConstants.*;
 
 /**
  * Portlet implementation class AmfEventMonitorPortlet
