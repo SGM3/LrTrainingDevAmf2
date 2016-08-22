@@ -1,4 +1,4 @@
-package parameter.validator;
+package com.liferay.training.amf2.parameter.validator;
 
 
 import java.util.ArrayList;
@@ -15,9 +15,8 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.amf2.constants.MySignupConstants;
+import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
 import com.liferay.training.amf2.util.MyAmfStringUtil;
-
-import parameter.handler.SignupParamExtractor;
 
 public class SignupValidator {
 	

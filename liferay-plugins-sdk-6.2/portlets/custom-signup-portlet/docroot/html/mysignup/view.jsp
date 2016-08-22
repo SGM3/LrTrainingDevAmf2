@@ -1,7 +1,5 @@
 <%@include file="/html/init.jsp"%>
 
-<portlet:defineObjects />
-
 <portlet:actionURL name="processAction" var="processActionURL" />
 
 <%-- 

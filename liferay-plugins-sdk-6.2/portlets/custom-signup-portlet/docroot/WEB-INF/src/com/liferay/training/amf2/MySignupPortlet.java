@@ -29,12 +29,11 @@ import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
 import com.liferay.training.amf2.constants.MySignupConstants;
+import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
+import com.liferay.training.amf2.parameter.handler.impl.AmfExcerciseSignupParamExtractorImpl;
+import com.liferay.training.amf2.parameter.validator.SignupValidator;
 import com.liferay.training.amf2.util.MyAmfStringUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
-
-import parameter.handler.AmfExcerciseSignupParamExtractorImpl;
-import parameter.handler.SignupParamExtractor;
-import parameter.validator.SignupValidator;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
 
@@ -83,13 +82,14 @@ public class MySignupPortlet extends MVCPortlet {
 				try {
 					
 					try {
-						boolean isMale = extractor.getGender()
-							.equalsIgnoreCase(
+						boolean isMale = 
+							extractor.getGender().equalsIgnoreCase(
 								MySignupConstants.MALE_STRING_VALUE);
 						int bm = Integer.parseInt(extractor.getBirthdayMonth());
 						int bd = Integer.parseInt(extractor.getBirthdayDay());
 						int by = Integer.parseInt(extractor.getBirthdayYear());
 						long groupId = themeDisplay.getSiteGroupId();
+						
 						ServiceContext serviceContext = 
 							ServiceContextFactory.getInstance(request);
 						
@@ -110,6 +110,7 @@ public class MySignupPortlet extends MVCPortlet {
 							null, null, null, true, serviceContext);
 						
 						long regionId = Long.parseLong(extractor.getState());
+						
 						AddressLocalServiceUtil.addAddress(
 							themeDisplay.getUserId(), 
 							Address.class.getName(), user.getContactId(), 
@@ -119,8 +120,10 @@ public class MySignupPortlet extends MVCPortlet {
 							regionId, extractor.getCountryId(), 11002,
 							false, true, 
 							ServiceContextFactory.getInstance(request));
+						
 						serviceContext = 
 							ServiceContextFactory.getInstance(request);
+						
 						PhoneLocalServiceUtil.addPhone(
 								themeDisplay.getUserId(), 
 								Phone.class.getName(), user.getContactId(),
@@ -157,7 +160,6 @@ public class MySignupPortlet extends MVCPortlet {
 					request.setAttribute("bInfoErrorList", errorMessages);
 				}
 			}
-			System.out.println(errorMessages);
 			if (!errorMessages.isEmpty()){
 				SessionErrors.add(request,"basic_error");
 				request.setAttribute(

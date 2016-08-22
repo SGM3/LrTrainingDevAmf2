@@ -1,4 +1,4 @@
-package parameter.handler;
+package com.liferay.training.amf2.parameter.handler;
 
 public interface SignupParamExtractor {
 

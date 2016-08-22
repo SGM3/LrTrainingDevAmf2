@@ -1,4 +1,4 @@
-package parameter.handler;
+package com.liferay.training.amf2.parameter.handler.impl;
 
 import javax.portlet.ActionRequest;
 
@@ -7,6 +7,7 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
 
