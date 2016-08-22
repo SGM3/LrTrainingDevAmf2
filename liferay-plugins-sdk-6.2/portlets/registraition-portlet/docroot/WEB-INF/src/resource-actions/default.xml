@@ -19,7 +19,7 @@
             <guest-unsupported>
                 <action-key>VIEW_SELF_ENTRIES</action-key>
                 <action-key>VIEW_ALL_ENTRIES</action-key>
-<!-- 				<action-key>VIEW</action-key> -->
+				<action-key>VIEW</action-key>
             </guest-unsupported>
         </permissions>
 	</portlet-resource>

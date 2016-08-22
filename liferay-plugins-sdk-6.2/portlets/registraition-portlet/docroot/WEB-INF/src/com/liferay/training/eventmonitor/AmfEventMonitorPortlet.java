@@ -22,6 +22,8 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.User;
 import com.liferay.portal.security.permission.PermissionChecker;
+import com.liferay.portal.service.permission.PortletPermissionUtil;
+import com.liferay.portal.theme.PortletDisplay;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.AmfMonitorKey;
 import com.liferay.training.service.builder.model.TrackerEntry;
@@ -44,7 +46,6 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 			
 			loc = loc == null?LocaleUtil.getDefault():loc;
 			
-			long groupId = themeDisplay.getScopeGroupId();
 			String allString = LanguageUtil.get(loc, LAN_KEY_ALL);
 			String regisString = LanguageUtil.get(loc, LAN_KEY_REGIS);
 			String loginString = LanguageUtil.get(loc, LAN_KEY_LOGIN);
@@ -93,9 +94,11 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 			List<TrackerEntry> curPageEntries;
 			List<TrackerEntry> curPageLoginEntries;
 			List<TrackerEntry> curPageRegisEntries;
+			PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
 
-			if (permissionChecker.hasPermission(
-				groupId, PORTLET_PERM_KEY, groupId, AmfMonitorKey.VIEW_ALL)){
+			if (PortletPermissionUtil.contains(
+					permissionChecker, themeDisplay.getPlid(),
+					portletDisplay.getRootPortletId(), AmfMonitorKey.VIEW_ALL)){
 
 				allCount = 
 					TrackerEntryLocalServiceUtil.getTrackerEntriesCount();
@@ -119,8 +122,9 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 				curPageRegisEntries = 
 					TrackerEntryLocalServiceUtil.findByEventType(
 						REGIS_EVENT_TYPE, rstart, rend);
-			} else if (permissionChecker.hasPermission(
-				groupId, PORTLET_PERM_KEY, groupId, AmfMonitorKey.VIEW_SELF)){
+			} else if (PortletPermissionUtil.contains(
+				permissionChecker, themeDisplay.getPlid(),
+				portletDisplay.getRootPortletId(), AmfMonitorKey.VIEW_SELF)){
 
 				User curUser = themeDisplay.getUser();
 				long userId = -1;
@@ -213,6 +217,9 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 		} catch (SystemException e) {
 			throw new PortletException(
 					"Unable to render portet: " + e.getLocalizedMessage());
+		} catch (PortalException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		super.doView(renderRequest, renderResponse);
 	}
