@@ -9,6 +9,8 @@ import javax.portlet.EventResponse;
 import javax.portlet.ProcessEvent;
 
 import com.liferay.portal.model.User;
+import com.liferay.training.service.builder.service.persistence.SearchResultUserFinderImpl;
+import com.liferay.training.service.builder.service.persistence.SearchResultUserFinderUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 /**
@@ -33,25 +35,29 @@ public class AmfSearchResults extends MVCPortlet {
 			EventRequest eventRequest, Integer zipCode) {
 		List<User> listOfUsers = new ArrayList<User>();
 		User newUser;
+		
+		listOfUsers = null;//SearchResultUserFinderUtil
+		SearchResultUserFinderUtil.findUserByZipCode(zipCode, 0, 5);
+		
 
-		newUser = com.liferay.portal.service.UserLocalServiceUtil.createUser(0);
-		newUser.setUserId(12L);
-		newUser.setFirstName("James");
-		newUser.setMiddleName("Henry");
-		newUser.setLastName("Thompson");
-		newUser.setEmailAddress("faker0001@that.com");
-		newUser.setScreenName("jthomp0001");
-		newUser.setUserId(12L);
-		listOfUsers.add(newUser);
-
-		newUser = com.liferay.portal.service.UserLocalServiceUtil.createUser(0);
-		newUser.setUserId(12L);
-		newUser.setFirstName("Ron");
-		newUser.setLastName("Thompson");
-		newUser.setEmailAddress("faker0002@that.com");
-		newUser.setScreenName("rthomp0002");
-		newUser.setUserId(13L);
-		listOfUsers.add(newUser);
+//		newUser = com.liferay.portal.service.UserLocalServiceUtil.createUser(0);
+//		newUser.setUserId(12L);
+//		newUser.setFirstName("James");
+//		newUser.setMiddleName("Henry");
+//		newUser.setLastName("Thompson");
+//		newUser.setEmailAddress("faker0001@that.com");
+//		newUser.setScreenName("jthomp0001");
+//		newUser.setUserId(12L);
+//		listOfUsers.add(newUser);
+//
+//		newUser = com.liferay.portal.service.UserLocalServiceUtil.createUser(0);
+//		newUser.setUserId(12L);
+//		newUser.setFirstName("Ron");
+//		newUser.setLastName("Thompson");
+//		newUser.setEmailAddress("faker0002@that.com");
+//		newUser.setScreenName("rthomp0002");
+//		newUser.setUserId(13L);
+//		listOfUsers.add(newUser);
 		
 		return listOfUsers;
 	}

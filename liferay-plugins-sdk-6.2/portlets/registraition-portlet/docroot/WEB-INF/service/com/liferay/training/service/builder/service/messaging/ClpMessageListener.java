@@ -18,6 +18,7 @@ import com.liferay.portal.kernel.messaging.BaseMessageListener;
 import com.liferay.portal.kernel.messaging.Message;
 
 import com.liferay.training.service.builder.service.ClpSerializer;
+import com.liferay.training.service.builder.service.SearchResultUserLocalServiceUtil;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 import com.liferay.training.service.builder.service.TrackerEntryServiceUtil;
 
@@ -36,6 +37,8 @@ public class ClpMessageListener extends BaseMessageListener {
 
 		if (command.equals("undeploy") &&
 				servletContextName.equals(getServletContextName())) {
+			SearchResultUserLocalServiceUtil.clearService();
+
 			TrackerEntryLocalServiceUtil.clearService();
 
 			TrackerEntryServiceUtil.clearService();

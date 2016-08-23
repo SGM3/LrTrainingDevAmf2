@@ -14,7 +14,7 @@
 
 package com.liferay.training.service.builder.service.base;
 
-import com.liferay.training.service.builder.service.TrackerEntryServiceUtil;
+import com.liferay.training.service.builder.service.SearchResultUserLocalServiceUtil;
 
 import java.util.Arrays;
 
@@ -22,8 +22,8 @@ import java.util.Arrays;
  * @author Shanon Mathai
  * @generated
  */
-public class TrackerEntryServiceClpInvoker {
-	public TrackerEntryServiceClpInvoker() {
+public class SearchResultUserLocalServiceClpInvoker {
+	public SearchResultUserLocalServiceClpInvoker() {
 		_methodName22 = "getBeanIdentifier";
 
 		_methodParameterTypes22 = new String[] {  };
@@ -37,12 +37,12 @@ public class TrackerEntryServiceClpInvoker {
 		Object[] arguments) throws Throwable {
 		if (_methodName22.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes22, parameterTypes)) {
-			return TrackerEntryServiceUtil.getBeanIdentifier();
+			return SearchResultUserLocalServiceUtil.getBeanIdentifier();
 		}
 
 		if (_methodName23.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes23, parameterTypes)) {
-			TrackerEntryServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
+			SearchResultUserLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}

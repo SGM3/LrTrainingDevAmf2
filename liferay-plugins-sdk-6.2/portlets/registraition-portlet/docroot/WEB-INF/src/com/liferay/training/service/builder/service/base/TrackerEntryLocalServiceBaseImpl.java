@@ -33,6 +33,7 @@ import com.liferay.portal.service.persistence.UserPersistence;
 
 import com.liferay.training.service.builder.model.TrackerEntry;
 import com.liferay.training.service.builder.service.TrackerEntryLocalService;
+import com.liferay.training.service.builder.service.persistence.SearchResultUserFinder;
 import com.liferay.training.service.builder.service.persistence.TrackerEntryPersistence;
 
 import java.io.Serializable;
@@ -281,6 +282,44 @@ public abstract class TrackerEntryLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the search result user local service.
+	 *
+	 * @return the search result user local service
+	 */
+	public com.liferay.training.service.builder.service.SearchResultUserLocalService getSearchResultUserLocalService() {
+		return searchResultUserLocalService;
+	}
+
+	/**
+	 * Sets the search result user local service.
+	 *
+	 * @param searchResultUserLocalService the search result user local service
+	 */
+	public void setSearchResultUserLocalService(
+		com.liferay.training.service.builder.service.SearchResultUserLocalService searchResultUserLocalService) {
+		this.searchResultUserLocalService = searchResultUserLocalService;
+	}
+
+	/**
+	 * Returns the search result user finder.
+	 *
+	 * @return the search result user finder
+	 */
+	public SearchResultUserFinder getSearchResultUserFinder() {
+		return searchResultUserFinder;
+	}
+
+	/**
+	 * Sets the search result user finder.
+	 *
+	 * @param searchResultUserFinder the search result user finder
+	 */
+	public void setSearchResultUserFinder(
+		SearchResultUserFinder searchResultUserFinder) {
+		this.searchResultUserFinder = searchResultUserFinder;
+	}
+
+	/**
 	 * Returns the tracker entry local service.
 	 *
 	 * @return the tracker entry local service
@@ -513,6 +552,10 @@ public abstract class TrackerEntryLocalServiceBaseImpl
 		}
 	}
 
+	@BeanReference(type = com.liferay.training.service.builder.service.SearchResultUserLocalService.class)
+	protected com.liferay.training.service.builder.service.SearchResultUserLocalService searchResultUserLocalService;
+	@BeanReference(type = SearchResultUserFinder.class)
+	protected SearchResultUserFinder searchResultUserFinder;
 	@BeanReference(type = com.liferay.training.service.builder.service.TrackerEntryLocalService.class)
 	protected com.liferay.training.service.builder.service.TrackerEntryLocalService trackerEntryLocalService;
 	@BeanReference(type = com.liferay.training.service.builder.service.TrackerEntryService.class)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+    <sql id="com.liferay.training.service.builder.service.persistence.SearchResultUserFinderImpl.findUserByZipCode">
+    <![CDATA[
+	SELECT user_.* 
+	FROM address 
+	INNER JOIN 
+		user_ ON (address.userId = user_.userId)
+	WHERE
+		(address.zip = ?)
+    ]]>
+    </sql>
+</custom-sql>
