@@ -96,6 +96,9 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+        <supported-publishing-event>
+            <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        </supported-publishing-event>
 	</portlet>
 	<portlet>
 		<portlet-name>amf-search-results</portlet-name>
@@ -130,5 +133,18 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+        <supported-processing-event>
+            <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        </supported-processing-event>
+        <supported-public-render-parameter>zipcodeparam</supported-public-render-parameter>
 	</portlet>
+    <event-definition>
+        <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        <value-type>java.lang.Integer</value-type>
+    </event-definition>
+	<public-render-parameter>
+		<identifier>zipcodeparam</identifier>
+		<qname xmlns:x="http://amf.com/search">x:zipcodeparam</qname>
+        <alias xmlns:x="http://amf.com/search">x:zipcodeparam</alias>
+	</public-render-parameter>
 </portlet-app>
