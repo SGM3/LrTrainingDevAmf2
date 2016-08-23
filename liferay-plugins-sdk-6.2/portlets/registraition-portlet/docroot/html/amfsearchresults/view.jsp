@@ -10,9 +10,9 @@
 		<liferay-ui:search-container-results results="${trackerEntries}">
 		</liferay-ui:search-container-results>
 		<liferay-ui:search-container-row className="com.liferay.portal.model.User" keyProperty="userId" modelVar="entry">
-			<liferay-ui:search-container-column-text name="User ID" value="${entry.firstName} ${fn:substring(entry.lastName, 0, 1)}." />
-			<liferay-ui:search-container-column-text name="User ID" value="${entry.screenName}" />
-			<liferay-ui:search-container-column-text name="User ID" value="${entry.emailAddress}" />
+			<liferay-ui:search-container-column-text name="Full Name" value="${entry.firstName} ${fn:substring(entry.lastName, 0, 1)}." />
+			<liferay-ui:search-container-column-text name="Username" value="${entry.screenName}" />
+			<liferay-ui:search-container-column-text name="Email" value="${entry.emailAddress}" />
 		</liferay-ui:search-container-row>
 		<liferay-ui:search-iterator searchContainer="${searchContainer}" />
 	</liferay-ui:search-container>

@@ -18,6 +18,7 @@ import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Address;
+import com.liferay.portal.model.Contact;
 import com.liferay.portal.model.Phone;
 import com.liferay.portal.model.Region;
 import com.liferay.portal.model.User;
@@ -112,8 +113,8 @@ public class MySignupPortlet extends MVCPortlet {
 						long regionId = Long.parseLong(extractor.getState());
 						
 						AddressLocalServiceUtil.addAddress(
-							themeDisplay.getUserId(), 
-							Address.class.getName(), user.getContactId(), 
+							user.getUserId(), 
+							Contact.class.getName(), user.getContactId(), 
 							extractor.getStreetAddress1(),
 							extractor.getStreetAddress2(),
 							"", extractor.getCity(), extractor.getZip(),
@@ -125,15 +126,15 @@ public class MySignupPortlet extends MVCPortlet {
 							ServiceContextFactory.getInstance(request);
 						
 						PhoneLocalServiceUtil.addPhone(
-								themeDisplay.getUserId(), 
-								Phone.class.getName(), user.getContactId(),
+								user.getUserId(), 
+								Contact.class.getName(), user.getContactId(),
 								extractor.getHomePhoneNumber(), 
 								null, 11011, true, serviceContext);
 						serviceContext = 
 								ServiceContextFactory.getInstance(request);
 						PhoneLocalServiceUtil.addPhone(
-								themeDisplay.getUserId(), 
-								Phone.class.getName(), user.getContactId(),
+								user.getUserId(), 
+								Contact.class.getName(), user.getContactId(),
 								extractor.getMobilePhoneNumber(), 
 								null, 11008, true, serviceContext);
 					}
