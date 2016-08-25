@@ -134,11 +134,16 @@ public class AmfSearchResults extends MVCPortlet {
 	}
 
 	private static DynamicQuery _getQueryForUserIdsFromZip(Integer zipCode) {
+		
 		String zeroPaddedZip = String.format("%05d", zipCode);
+		
 		DynamicQuery dq = DynamicQueryFactoryUtil.forClass(Address.class)
-			.add(PropertyFactoryUtil.forName("zip").eq(zeroPaddedZip))
-			.setProjection(ProjectionFactoryUtil.distinct(
-			PropertyFactoryUtil.forName("userId")));
+			.add(PropertyFactoryUtil.forName("zip")
+			.eq(zeroPaddedZip))
+			.setProjection(
+				ProjectionFactoryUtil.distinct(
+					PropertyFactoryUtil.forName("userId")));
+		
 		return dq;
 	}
 
