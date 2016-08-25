@@ -1,7 +1,5 @@
 package com.liferay.training.results;
 
-import static com.liferay.training.eventmonitor.AmfEventMonitorConstants.ITER_OBJ_ATTR;
-import static com.liferay.training.eventmonitor.AmfEventMonitorConstants.URL_STRING_ATTR;
 import static com.liferay.training.results.AmfSearchResultsConstants.*;
 
 import java.io.IOException;
@@ -12,6 +10,8 @@ import javax.portlet.Event;
 import javax.portlet.EventRequest;
 import javax.portlet.EventResponse;
 import javax.portlet.PortletException;
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletResponse;
 import javax.portlet.PortletURL;
 import javax.portlet.ProcessEvent;
 import javax.portlet.RenderRequest;
@@ -19,7 +19,7 @@ import javax.portlet.RenderResponse;
 
 import com.liferay.portal.kernel.dao.orm.DynamicQuery;
 import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
-import com.liferay.portal.kernel.dao.orm.OrderFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.ProjectionFactoryUtil;
 import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.servlet.SessionErrors;
@@ -36,12 +36,21 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 public class AmfSearchResults extends MVCPortlet {
 	
 	@Override
-	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
-			throws IOException, PortletException {
+	public void doView(
+			RenderRequest renderRequest, RenderResponse renderResponse)
+		throws IOException, PortletException {
+		
 		Integer curPage = ParamUtil.getInteger(
 			renderRequest, CUR_PARAM_NAME, 1);
 		Integer curDelta = ParamUtil.getInteger(
 				renderRequest, PAGE_DELTA_PARAM, 5);
+		Integer zipCode = ParamUtil.getInteger(
+				renderRequest, "zipcodeparam", -1);
+		
+		if (zipCode.intValue() != -1) {
+			_populateRenderedTable(renderRequest, renderResponse, zipCode);
+		}
+		
 		PortletURL searchResultUrl = renderResponse.createRenderURL();
 		searchResultUrl.setParameter(CUR_PARAM_NAME, curPage.toString());
 		searchResultUrl.setParameter(PAGE_DELTA_PARAM, curDelta.toString());
@@ -57,41 +66,60 @@ public class AmfSearchResults extends MVCPortlet {
 		EventRequest eventRequest, EventResponse eventResponse) {
 		Event criteriaEvent = eventRequest.getEvent();
 		Integer zipCode = (Integer) criteriaEvent.getValue();
+
+		eventResponse.setRenderParameter("zipcodeparam", zipCode.toString());
+	}
+
+	private void _populateRenderedTable(
+		PortletRequest eventRequest, PortletResponse eventResponse,
+		Integer zipCode) {
+		
+		Integer curPage = ParamUtil.getInteger(
+				eventRequest, CUR_PARAM_NAME, 1);
+		Integer curDelta = ParamUtil.getInteger(
+				eventRequest, PAGE_DELTA_PARAM, 5);
+
+		long maxUserCount;
+
+		try {
+			maxUserCount = 
+				AddressLocalServiceUtil.dynamicQueryCount(
+					_getQueryForUserIdsFromZip(zipCode));
+		} catch (SystemException e1) {
+			maxUserCount = 0; 
+		}
 		
 		List<User> listOfUsers;
 		try {
-			listOfUsers = _getUsersForZip(eventRequest, zipCode, 0, 5);
+			listOfUsers = 
+				_getUsersForZip(zipCode, curPage, curDelta);
 		} catch (SystemException e) {
 			SessionErrors.add(eventRequest, "unable-to-query-error");
 			listOfUsers = new ArrayList<User>();
 		}
 
 		eventRequest.setAttribute("userEntries", listOfUsers);
-		eventRequest.setAttribute("entryCount", listOfUsers.size());
-		
-		eventResponse.setRenderParameter("zipcodeparam", zipCode.toString());
+		eventRequest.setAttribute("entryCount", maxUserCount);
 	}
 
 	@SuppressWarnings("unchecked")
 	private List<User> _getUsersForZip(
-			EventRequest eventRequest, Integer zipCode,
-			int begin, int end) throws SystemException {
-		
-		String zeroPaddedZip = String.format("%05d", zipCode);
+			Integer zipCode, int page, int delta) throws SystemException {
 		
 		try {
-			DynamicQuery addressDynamicQuery = DynamicQueryFactoryUtil
-				.forClass(Address.class)
-				.add(PropertyFactoryUtil.forName("zip").eq(zeroPaddedZip))
-				.setProjection(PropertyFactoryUtil.forName("userId"));
+			
+			// Users potentially may have multiple addresses in 
+			// the same zip code
+			
+			DynamicQuery addressDynamicQuery = 
+					_getQueryForUserIdsFromZip(zipCode);
+				
+			int begin = (page - 1) * delta;
+			int end = begin + delta;
 			
 			List<Long> listOfUserIds = 
 				AddressLocalServiceUtil.dynamicQuery(
 					addressDynamicQuery, begin, end);
-//			List<Long> listOfUserIds = new ArrayList<Long>();
-//			for (Address addr: addrs){
-//				listOfUserIds.add(addr.getUserId());
-//			}
 			
 			// Use of 'in' may have limitations? (query size limits, etc)
 			
@@ -99,11 +127,19 @@ public class AmfSearchResults extends MVCPortlet {
 				.forClass(User.class)
 				.add(PropertyFactoryUtil.forName("userId").in(listOfUserIds));
 			
-			return UserLocalServiceUtil.dynamicQuery(
-				userDynamicQuery, begin, end);
+			return UserLocalServiceUtil.dynamicQuery(userDynamicQuery);
 		} catch (SystemException e) {
 			throw e;
 		}
+	}
+
+	private static DynamicQuery _getQueryForUserIdsFromZip(Integer zipCode) {
+		String zeroPaddedZip = String.format("%05d", zipCode);
+		DynamicQuery dq = DynamicQueryFactoryUtil.forClass(Address.class)
+			.add(PropertyFactoryUtil.forName("zip").eq(zeroPaddedZip))
+			.setProjection(ProjectionFactoryUtil.distinct(
+			PropertyFactoryUtil.forName("userId")));
+		return dq;
 	}
 
 }
