@@ -4,4 +4,6 @@
 	<bean id="com.liferay.training.service.builder.service.TrackerEntryLocalService" class="com.liferay.training.service.builder.service.impl.TrackerEntryLocalServiceImpl" />
 	<bean id="com.liferay.training.service.builder.service.TrackerEntryService" class="com.liferay.training.service.builder.service.impl.TrackerEntryServiceImpl" />
 	<bean id="com.liferay.training.service.builder.service.persistence.TrackerEntryPersistence" class="com.liferay.training.service.builder.service.persistence.TrackerEntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.training.service.builder.service.UserAddressJoinerService" class="com.liferay.training.service.builder.service.impl.UserAddressJoinerServiceImpl" />
+	<bean id="com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinder" class="com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinderImpl" parent="basePersistence" />
 </beans>

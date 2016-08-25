@@ -3,6 +3,7 @@
 
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="com.liferay.training.service.builder.model.TrackerEntry" />
+	<import class="com.liferay.training.service.builder.model.UserAddressJoiner" />
 	<class name="com.liferay.training.service.builder.model.impl.TrackerEntryImpl" table="tracking_TrackerEntry">
 		<cache usage="read-write" />
 		<id name="trackerEntryId" type="long">
