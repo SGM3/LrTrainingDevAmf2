@@ -43,10 +43,10 @@ public class UserAddressJoinerServiceImpl
 	 * Never reference this interface directly. Always use {@link com.liferay.training.service.builder.service.UserAddressJoinerServiceUtil} to access the user address joiner remote service.
 	 */
 	public List<User> findUsersAtZip(String zip, int being, int end){
-		return UserAddressJoinerFinderUtil.findUsersAtZip(zip, being, end);
+		return userAddressJoinerFinder.findUsersAtZip(zip, being, end);
 	}
 	
 	public int countUsersAtZip(String zip){
-		return UserAddressJoinerFinderUtil.countUsersAtZip(zip);
+		return userAddressJoinerFinder.countUsersAtZip(zip);
 	}
 }

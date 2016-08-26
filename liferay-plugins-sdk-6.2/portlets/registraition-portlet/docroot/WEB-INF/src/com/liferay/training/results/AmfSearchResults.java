@@ -28,6 +28,7 @@ import com.liferay.portal.model.Address;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.AddressLocalServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
+import com.liferay.training.service.builder.service.UserAddressJoinerServiceUtil;
 import com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinderUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
@@ -87,7 +88,10 @@ public class AmfSearchResults extends MVCPortlet {
 					// FIXME Unable to use custom sql
 					// FIXME
 					// FIXME
-					System.out.println(UserAddressJoinerFinderUtil.findUsersAtZip("14444", -1, -1));
+					try {
+						System.out.println(UserAddressJoinerServiceUtil.countUsersAtZip("14444"));
+					} catch (Exception e){}
+					System.out.println(UserAddressJoinerServiceUtil.findUsersAtZip("14444", -1, -1));
 				}
 			}
 		}

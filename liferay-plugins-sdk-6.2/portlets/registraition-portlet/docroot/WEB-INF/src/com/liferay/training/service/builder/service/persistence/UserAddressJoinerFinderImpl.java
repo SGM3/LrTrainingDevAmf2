@@ -8,6 +8,7 @@ import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.dao.orm.SQLQuery;
 import com.liferay.portal.kernel.dao.orm.Session;
 import com.liferay.portal.kernel.dao.orm.SessionFactory;
+import com.liferay.portal.kernel.dao.orm.Type;
 import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.persistence.impl.BasePersistenceImpl;
@@ -40,6 +41,7 @@ public class UserAddressJoinerFinderImpl extends BasePersistenceImpl implements 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+//			closeSession(session);
 			sessionFactory.closeSession(session);
 		}
 		return null;
@@ -48,30 +50,31 @@ public class UserAddressJoinerFinderImpl extends BasePersistenceImpl implements 
 	public int countUsersAtZip(String zip){
 		Session session = null;
 		try {
+//			session = openSession();
 			session = sessionFactory.openSession();
 			
 			String sql = CustomSQLUtil.get(_COUNT_USER_ZIP_QUERY_KEY);
 			
-			Class userImplClass = _getUserImplClass();
+//			Class userImplClass = _getUserImplClass();
 			
 			SQLQuery sqlQuery = session.createSQLQuery(sql);
 			sqlQuery.setCacheable(false);
-			sqlQuery.addEntity("User_", userImplClass);
+			sqlQuery.addScalar("COUNT_VALUE", Type.INTEGER);// reference to portal source
 			
 			QueryPos queryPos = QueryPos.getInstance(sqlQuery);
 			queryPos.add(zip);
 			
-			List countValue =
-				QueryUtil.list(
-					sqlQuery, getDialect(), QueryUtil.ALL_POS,
-					QueryUtil.ALL_POS);
+//			List countValue =
+//				QueryUtil.list(
+//					sqlQuery, getDialect(), QueryUtil.ALL_POS,
+//					QueryUtil.ALL_POS);
+			Integer countValue = (Integer) sqlQuery.uniqueResult();
 			
-			int count = Integer.parseInt(countValue.get(0).toString());
-			
-			return count;
+			return countValue;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+//			closeSession(session);
 			sessionFactory.closeSession(session);
 		}
 		return -1;
