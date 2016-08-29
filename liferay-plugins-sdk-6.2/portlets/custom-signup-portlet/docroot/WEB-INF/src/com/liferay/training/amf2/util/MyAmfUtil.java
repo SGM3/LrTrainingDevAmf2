@@ -7,9 +7,9 @@ import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.model.Region;
 import com.liferay.portal.service.RegionServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
-import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.portal.util.PortalUtil;
 
-public final class MyAmfStringUtil {
+public final class MyAmfUtil {
 	
 	public static boolean isPrintableAscii(char ch){
 		
@@ -43,16 +43,21 @@ public final class MyAmfStringUtil {
 				&& !Character.isDigit(ch));
 	}
 	
-	public static boolean isUsernameUnique(
-			ThemeDisplay themeDisplay, String uname) throws SystemException{
-		long companyId = themeDisplay.getCompanyId();
+	public static boolean isUsernameUnique(String uname) throws SystemException{
+		long allComps[] = PortalUtil.getCompanyIds();
 		uname = uname.trim();
-		try {
-			UserLocalServiceUtil.getUserIdByScreenName(companyId, uname);
-		} catch (PortalException e) {
-			return true;
+		for (long companyId : allComps){
+			try {
+				UserLocalServiceUtil.getUserIdByScreenName(companyId, uname);
+				return false;
+			} catch (PortalException e) {
+				
+				// username not found in this company
+				
+				continue;
+			}
 		}
-		return false;
+		return true;
 	}
 	
 	public static List<Region> getCountryRegions(long countryCode)
@@ -62,5 +67,5 @@ public final class MyAmfStringUtil {
 	
 	//prevent instantiation of utility class
 
-	private MyAmfStringUtil(){}
+	private MyAmfUtil(){}
 }

@@ -1,6 +1,6 @@
 package com.liferay.training.amf2.parameter.handler;
 
-public interface SignupParamExtractor {
+public interface SignupParamHolder {
 
 	public boolean isSignedIn();
 

@@ -15,14 +15,19 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.amf2.constants.MySignupConstants;
-import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
-import com.liferay.training.amf2.util.MyAmfStringUtil;
+import com.liferay.training.amf2.parameter.handler.SignupParamHolder;
+import com.liferay.training.amf2.util.MyAmfUtil;
 
 public class SignupValidator {
 	
+	public SignupValidator() {
+		_validatorHasRun = false;
+	}
+	
 	public List<String> validateFormAndListErrors(
-		ThemeDisplay themeDisplay, SignupParamExtractor extractor) 
+		ThemeDisplay themeDisplay, SignupParamHolder extractor) 
 			throws PortletException {
+		_validatorHasRun = true;
 		_allErrors = new ArrayList<String>();
 		
 		if (themeDisplay != null) {
@@ -40,7 +45,7 @@ public class SignupValidator {
 		_validateEmail(extractor.getEmailAddress());
 
 		try {
-			_validateUsername(themeDisplay, extractor.getUsername());
+			_validateUsername(extractor.getUsername());
 		} catch (SystemException e) {
 			throw new PortletException(e);
 		}
@@ -89,6 +94,99 @@ public class SignupValidator {
 		
 		return _allErrors;
 	}
+	/**
+	 * Validate the elements from a form
+	 * 
+	 * @param password1 New user's enter password.
+	 * @param password2 New user's enter password confirmation.
+	 * @param screenName New user's requesting screenname
+	 * @param emailAddress New user's email adress.
+	 * @param locale The locale to use.
+	 * @param firstName New user's first name.
+	 * @param lastName New user's first name.
+	 * @param male True if user is male.
+	 * @param birthdayMonth Month of year (Starting from 1).
+	 * @param birthdayDay Day of month (Starting from 1).
+	 * @param birthdayYear Four digit year.
+	 * @param street1 Street address, line 1.
+	 * @param street2 <code>[NULLABLE]</code> Street address, line 2.
+	 * @param city City
+	 * @param zip Zip
+	 * @param regionId Liferay specific Region code
+	 * @param homeNumber <code>[NULLABLE]</code> 10 digit number (no formatting characters accepted).
+	 * @param mobileNumber <code>[NULLABLE]</code> 10 digit number (no formatting characters accepted).
+	 * @param securityQuestionKey The locale key to the security question.
+	 * @param secuirtyAnswer The raw answer to the question
+	 * @param atou True if accept the the "Terms of use"
+	 * @return
+	 * @throws PortletException
+	 */
+	public List<String> validateFormAndListErrors(String password1,
+			String password2, String screenName, String emailAddress, 
+			Locale locale, String firstName, String lastName, boolean male,
+			int birthdayMonth, int birthdayDay, int birthdayYear,
+			String street1, String street2, String city, String zip,
+			long regionId, String homeNumber, String mobileNumber,
+			String securityQuestionKey, String secuirtyAnswer, boolean atou) 
+		throws PortletException {
+
+		_validatorHasRun = true;
+		_allErrors = new ArrayList<String>();
+		
+		if (locale != null) {
+			_userLocale = locale;
+		} else {
+			_userLocale = LocaleUtil.US;
+		}
+		
+		_validateFirstname(firstName);
+		
+		_validateLastname(lastName);
+
+		_validateEmail(emailAddress);
+
+		try {
+			_validateUsername(screenName);
+		} catch (SystemException e) {
+			throw new PortletException(e);
+		}
+		
+		_validateDateAndAge(birthdayDay, birthdayMonth - 1, birthdayYear);
+		
+		_validatePasswords(password1, password2);
+
+		_validatePhones(homeNumber, mobileNumber);
+
+		_validateAddressLines(street1, street2);
+		
+		_validateCity(city);
+		
+		_validateState(zip);
+		
+		_validateZip(zip);
+		
+		String secQuestion = securityQuestionKey;
+		if (Validator.isNull(secQuestion)){
+			_addErrorKey("security-question-required-error");
+		}
+		
+		String secAnswer = secuirtyAnswer;
+		_validateSecurityAnswer(secAnswer);
+		
+		if (!atou){
+			_addErrorKey("term-of-use-must-accept-error");
+		}
+		
+		return _allErrors;
+	}
+	
+	public List<String> getErrors(){
+		if (!_validatorHasRun){
+			throw new IllegalAccessError(
+				"validatFormAndListErrors must be be run once.");
+		}
+		return _allErrors;
+	}
 	
 	protected boolean meetsPasswordRequirements(String pass){
 		if (pass == null){
@@ -104,7 +202,7 @@ public class SignupValidator {
 						 // 0x111 is all 3 above
 		for (int i = 0; i < pass.length(); i++){
 			char cur = pass.charAt(i);
-			if (MyAmfStringUtil.isSpecialChar(cur)){
+			if (MyAmfUtil.isSpecialChar(cur)){
 				flag |= 0x001;
 			} else if (Character.isDigit(cur)){
 				flag |= 0x010;
@@ -167,14 +265,14 @@ public class SignupValidator {
 		return hasError;
 	}
 	
-	private boolean _validateUsername(ThemeDisplay td, String username) 
+	private boolean _validateUsername(String username) 
 			throws SystemException{
 		boolean hasError = false;
 		if (Validator.isNull(username)){
 			hasError = true;
 			_addErrorKey("username-required-error");
 		} else{
-			if (!MyAmfStringUtil.isAlphaNumericString(username)){
+			if (!MyAmfUtil.isAlphaNumericString(username)){
 				hasError = true;
 				_addErrorKey("username-invalid-characters-error");
 			}
@@ -182,7 +280,7 @@ public class SignupValidator {
 				hasError = true;
 				_addErrorKey("username-length-error");
 			}
-			if (!MyAmfStringUtil.isUsernameUnique(td, username)){
+			if (!MyAmfUtil.isUsernameUnique(username)){
 				hasError = true;
 				_addErrorKey("username-taken-error");
 			}
@@ -234,7 +332,14 @@ public class SignupValidator {
 		}
 		int bm = (!hasError)?Integer.parseInt(bmonthStr):1, 
 				bd = (!hasError)?Integer.parseInt(bdayStr):1, 
-				by = (!hasError)?Integer.parseInt(byearStr):1;			
+				by = (!hasError)?Integer.parseInt(byearStr):1;
+		if (_validateDateAndAge(bd, bm, by)) {
+			return true;
+		}
+		return hasError;
+	}
+
+	private boolean _validateDateAndAge(int bd, int bm, int by) {			
 		Calendar bCal = new GregorianCalendar(by, bm - 1, by);
 		Calendar thirteenYearsAgo = new GregorianCalendar();
 		
@@ -250,13 +355,15 @@ public class SignupValidator {
 		if (!Validator.isDate(bm - 1, bd, by)){
 			_addErrorKey(
 				"birthday-year-not-accepted-parameterized-error", bm, bd, by);
+			return false;
 		} else {
 			bCal.set(by, bm - 1, bd);
 			if (bCal.after(thirteenYearsAgo)){
 				_addErrorKey("birthday-age-requirement-error");
+				return false;
 			}
 		}
-		return hasError;
+		return true;
 	}
 	
 	private boolean _validatePasswords(String upass1, String upass2){
@@ -301,7 +408,7 @@ public class SignupValidator {
 			hasError = true;
 			_addErrorKey("address-line-one-required-error");
 		} else {
-			if (!MyAmfStringUtil.isAlphaNumericString(addr1.replaceAll(" ", "")) 
+			if (!MyAmfUtil.isAlphaNumericString(addr1.replaceAll(" ", "")) 
 				|| addr1.length() > 255) {
 				hasError = true;
 				_addErrorKey("address-line-one-invalid-error");
@@ -309,7 +416,7 @@ public class SignupValidator {
 		}
 		
 		if (Validator.isNotNull(addr2)) {
-			if (!MyAmfStringUtil.isAlphaNumericString(addr2.replaceAll(" ", "")) 
+			if (!MyAmfUtil.isAlphaNumericString(addr2.replaceAll(" ", "")) 
 					|| addr2.length() > 255){
 				hasError = true;
 				_addErrorKey("address-line-two-invalid-error");
@@ -324,7 +431,7 @@ public class SignupValidator {
 			hasError = true;
 			_addErrorKey("city-required-error");
 		} else {
-			if (!MyAmfStringUtil.isAlphaNumericString(
+			if (!MyAmfUtil.isAlphaNumericString(
 				city.replaceAll(" ", ""))){
 				hasError = true;
 				_addErrorKey("city-invalid-characters-error"); 
@@ -373,7 +480,7 @@ public class SignupValidator {
 			_addErrorKey("security-answer-required-error");
 		} else {
 			//should not trim
-			if (!MyAmfStringUtil.isAlphaNumericString(
+			if (!MyAmfUtil.isAlphaNumericString(
 				secAnswer.replaceAll(" ", ""))){
 				hasError = true;
 				_addErrorKey("security-answer-invalid-characters-error");
@@ -397,5 +504,7 @@ public class SignupValidator {
 	
 	private List<String> _allErrors;
 	private Locale _userLocale;	
+	
+	private boolean _validatorHasRun;
 	
 }

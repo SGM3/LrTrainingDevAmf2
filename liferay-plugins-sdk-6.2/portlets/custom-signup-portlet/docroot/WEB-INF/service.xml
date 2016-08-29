@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.liferay.training.amf2.builder">
+	<author>Shanon Mathai</author>
+	<namespace>amf_signup</namespace>
+	
+	<entity name="AmfSignup" local-service="true" remote-service="false">
+		<reference entity="User" package-path="com.liferay.portal" />
+		<reference entity="Address" package-path="com.liferay.portal" />
+		<reference entity="Phone" package-path="com.liferay.portal" />
+	</entity>
+	
+</service-builder>

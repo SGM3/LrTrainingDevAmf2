@@ -7,14 +7,14 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
-import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
+import com.liferay.training.amf2.parameter.handler.SignupParamHolder;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
 
-public class AmfExcerciseSignupParamExtractorImpl 
-	implements SignupParamExtractor{
+public class AmfExcerciseSignupParamHolderImpl 
+	implements SignupParamHolder{
 	
-	public AmfExcerciseSignupParamExtractorImpl(ActionRequest request){
+	public AmfExcerciseSignupParamHolderImpl(ActionRequest request){
 		try {
 			US_COUNTRY_CODE = 
 				CountryServiceUtil.getCountryByA2("US").getCountryId();

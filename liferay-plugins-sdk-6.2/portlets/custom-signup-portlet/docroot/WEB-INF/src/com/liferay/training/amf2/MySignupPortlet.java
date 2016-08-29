@@ -17,23 +17,17 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.WebKeys;
-import com.liferay.portal.model.Address;
-import com.liferay.portal.model.Contact;
-import com.liferay.portal.model.Phone;
 import com.liferay.portal.model.Region;
-import com.liferay.portal.model.User;
-import com.liferay.portal.service.AddressLocalServiceUtil;
-import com.liferay.portal.service.PhoneLocalServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.service.ServiceContextFactory;
-import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import com.liferay.training.amf2.builder.service.AmfSignupLocalServiceUtil;
 import com.liferay.training.amf2.constants.MySignupConstants;
-import com.liferay.training.amf2.parameter.handler.SignupParamExtractor;
-import com.liferay.training.amf2.parameter.handler.impl.AmfExcerciseSignupParamExtractorImpl;
+import com.liferay.training.amf2.parameter.handler.SignupParamHolder;
+import com.liferay.training.amf2.parameter.handler.impl.AmfExcerciseSignupParamHolderImpl;
 import com.liferay.training.amf2.parameter.validator.SignupValidator;
-import com.liferay.training.amf2.util.MyAmfStringUtil;
+import com.liferay.training.amf2.util.MyAmfUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
@@ -48,7 +42,7 @@ public class MySignupPortlet extends MVCPortlet {
 			RenderRequest renderRequest, RenderResponse renderResponse)
 		throws IOException, PortletException {
 		try {
-			List<Region> regs = MyAmfStringUtil.getCountryRegions(19);
+			List<Region> regs = MyAmfUtil.getCountryRegions(19);
 			renderRequest.setAttribute(US_REG_CODES_ATTR, regs.toArray());
 			super.doView(renderRequest, renderResponse);
 		} catch (SystemException e) {
@@ -61,8 +55,8 @@ public class MySignupPortlet extends MVCPortlet {
 	public void processAction(ActionRequest request, ActionResponse response)
 			throws IOException, PortletException {
 
-			SignupParamExtractor extractor =
-				new AmfExcerciseSignupParamExtractorImpl(request);
+			SignupParamHolder extractor =
+				new AmfExcerciseSignupParamHolderImpl(request);
 			
 			if (extractor.isSignedIn()){
 				response.setPortletMode(PortletMode.VIEW);
@@ -75,6 +69,7 @@ public class MySignupPortlet extends MVCPortlet {
 			List<String> errorMessages = 
 				_signupValidator.validateFormAndListErrors(
 					themeDisplay, extractor);
+			
 
 			if (errorMessages.isEmpty()) { 
 				
@@ -89,7 +84,6 @@ public class MySignupPortlet extends MVCPortlet {
 						int bm = Integer.parseInt(extractor.getBirthdayMonth());
 						int bd = Integer.parseInt(extractor.getBirthdayDay());
 						int by = Integer.parseInt(extractor.getBirthdayYear());
-						long groupId = themeDisplay.getSiteGroupId();
 						
 						ServiceContext serviceContext = 
 							ServiceContextFactory.getInstance(request);
@@ -97,46 +91,68 @@ public class MySignupPortlet extends MVCPortlet {
 						// Pass new service context to each call since each call
 						// might dirty the context
 						
-						User user = UserLocalServiceUtil.addUser(
+//						MyAmfUtil
+						long regionCode = 
+							Integer.parseInt(extractor.getState());
+						
+						AmfSignupLocalServiceUtil.addUserWithAddressAndPhones(
 							themeDisplay.getUserId(), 
-							themeDisplay.getCompanyId(), false, 
-							extractor.getPassword1(), 
-							extractor.getPassword2(),
-							false, extractor.getUsername(), 
-							extractor.getEmailAddress(), 0L, null,
-							themeDisplay.getLocale(), 
-							extractor.getFirstName(), null, 
-							extractor.getLastName(), 0, 0, isMale,
-							bm - 1, bd, by, null, new long[]{groupId},
-							null, null, null, true, serviceContext);
+							themeDisplay.getCompanyId(), false,
+							extractor.getPassword1(), extractor.getPassword2(),
+							false, extractor.getUsername(),
+							extractor.getEmailAddress(),
+							themeDisplay.getLocale(), extractor.getFirstName(),
+							extractor.getLastName(), isMale, bm, bd, by,
+							extractor.getStreetAddress1(), 
+							extractor.getStreetAddress2(), extractor.getCity(),
+							extractor.getZip(), regionCode, 
+							extractor.getHomePhoneNumber(), 
+							extractor.getMobilePhoneNumber(),
+							extractor.getSecurityQuestion(), 
+							extractor.getSecurityAnswer(), 
+							extractor.getAcceptedTermsOfUse().equals("true"),
+							serviceContext);
 						
-						long regionId = Long.parseLong(extractor.getState());
-						
-						AddressLocalServiceUtil.addAddress(
-							user.getUserId(), 
-							Contact.class.getName(), user.getContactId(), 
-							extractor.getStreetAddress1(),
-							extractor.getStreetAddress2(),
-							"", extractor.getCity(), extractor.getZip(),
-							regionId, extractor.getCountryId(), 11002,
-							false, true, 
-							ServiceContextFactory.getInstance(request));
-						
-						serviceContext = 
-							ServiceContextFactory.getInstance(request);
-						
-						PhoneLocalServiceUtil.addPhone(
-								user.getUserId(), 
-								Contact.class.getName(), user.getContactId(),
-								extractor.getHomePhoneNumber(), 
-								null, 11011, true, serviceContext);
-						serviceContext = 
-								ServiceContextFactory.getInstance(request);
-						PhoneLocalServiceUtil.addPhone(
-								user.getUserId(), 
-								Contact.class.getName(), user.getContactId(),
-								extractor.getMobilePhoneNumber(), 
-								null, 11008, true, serviceContext);
+//						User user = UserLocalServiceUtil.addUser(
+//							themeDisplay.getUserId(), 
+//							themeDisplay.getCompanyId(), false, 
+//							extractor.getPassword1(), 
+//							extractor.getPassword2(),
+//							false, extractor.getUsername(), 
+//							extractor.getEmailAddress(), 0L, null,
+//							themeDisplay.getLocale(), 
+//							extractor.getFirstName(), null, 
+//							extractor.getLastName(), 0, 0, isMale,
+//							bm - 1, bd, by, null, new long[]{groupId},
+//							null, null, null, true, serviceContext);
+//						
+//						long regionId = Long.parseLong(extractor.getState());
+//						
+//						AddressLocalServiceUtil.addAddress(
+//							user.getUserId(), 
+//							Contact.class.getName(), user.getContactId(), 
+//							extractor.getStreetAddress1(),
+//							extractor.getStreetAddress2(),
+//							"", extractor.getCity(), extractor.getZip(),
+//							regionId, extractor.getCountryId(), 11002,
+//							false, true, 
+//							ServiceContextFactory.getInstance(request));
+//						
+//						serviceContext = 
+//							ServiceContextFactory.getInstance(request);
+//						
+//						PhoneLocalServiceUtil.addPhone(
+//								user.getUserId(), 
+//								Contact.class.getName(), user.getContactId(),
+//								extractor.getHomePhoneNumber(), 
+//								null, 11011, true, serviceContext);
+//						serviceContext = 
+//								ServiceContextFactory.getInstance(request);
+//						PhoneLocalServiceUtil.addPhone(
+//								user.getUserId(), 
+//								Contact.class.getName(), user.getContactId(),
+//								extractor.getMobilePhoneNumber(), 
+//								null, 11008, true, serviceContext);
 					}
 					catch (PortalException e) {
 						String dbRelatedError = 
