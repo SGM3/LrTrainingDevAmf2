@@ -4,7 +4,10 @@ import java.util.List;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.model.ListType;
+import com.liferay.portal.model.ListTypeConstants;
 import com.liferay.portal.model.Region;
+import com.liferay.portal.service.ListTypeServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.portal.util.PortalUtil;
@@ -63,6 +66,44 @@ public final class MyAmfUtil {
 	public static List<Region> getCountryRegions(long countryCode)
 	throws SystemException {
 		return RegionServiceUtil.getRegions(countryCode);
+	}
+	
+	public  static long getUsaCountryCode(){
+		// TODO retrieve dynamically
+		return 19L;
+	}
+	
+	public static int getPersonalAdressTypeId() throws SystemException{
+		
+		// TODO retrieve and make sure this works dynamically
+		// added default value of 11002 for personal for now
+		int addressPersonalTypeId = 11002;
+		
+		try {
+			List<ListType> addrListType = 
+				ListTypeServiceUtil.getListTypes(
+					ListTypeConstants.CONTACT_ADDRESS);
+			for (ListType lt : addrListType){
+				if (lt.getName().equals("personal")){
+					addressPersonalTypeId = lt.getListTypeId();
+					break;
+				}
+			}
+		} catch (SystemException e) {
+			throw e;
+		}
+		
+		return addressPersonalTypeId;
+	}
+	
+	public static int getHomePhoneTypeId() {
+		// TODO retrieve dynamically
+		return 11011; //com.liferay.portal.model.Contact.phone, personal
+	}
+	
+	public static int getMobilePhoneTypeId() {
+		// TODO retrieve dynamically
+		return 11008; //com.liferay.portal.model.Contact.phone, mobile-phone
 	}
 	
 	//prevent instantiation of utility class

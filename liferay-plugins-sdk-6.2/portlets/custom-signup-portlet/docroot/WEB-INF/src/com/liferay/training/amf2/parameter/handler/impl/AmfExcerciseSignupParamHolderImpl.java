@@ -7,6 +7,7 @@ import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
+import com.liferay.training.amf2.constants.MySignupConstants;
 import com.liferay.training.amf2.parameter.handler.SignupParamHolder;
 
 import static com.liferay.training.amf2.constants.MySignupConstants.*;
@@ -39,14 +40,19 @@ public class AmfExcerciseSignupParamHolderImpl
 			_actionRequest, GENDER_PARAM));
 	}
 	
-	public String getBirthdayDay(){
-		return StringUtil.trim(ParamUtil.getString(
-			_actionRequest, BDAY_PARAM));
+	public int getBirthdayDay(){
+		return ParamUtil.getInteger(
+			_actionRequest, BDAY_PARAM, MySignupConstants.BAD_INPUT_FLAG);
 	}
 	
-	public String getBirthdayMonth() {
-		return StringUtil.trim(ParamUtil.getString(
-			_actionRequest, BMONTH_PARAM));
+	public int getBirthdayMonth() {
+		return ParamUtil.getInteger(
+			_actionRequest, BMONTH_PARAM, MySignupConstants.BAD_INPUT_FLAG);
+	}
+	
+	public int getBirthdayYear() {
+		return ParamUtil.getInteger(
+			_actionRequest, BYEAR_PARAM, MySignupConstants.BAD_INPUT_FLAG);
 	}
 	
 	public String getPassword1() {
@@ -61,11 +67,6 @@ public class AmfExcerciseSignupParamHolderImpl
 	public String getEmailAddress() {
 		return StringUtil.trim(ParamUtil.getString(
 			_actionRequest, EMAIL_PARAM));
-	}
-	
-	public String getBirthdayYear() {
-		return StringUtil.trim(ParamUtil.getString(
-			_actionRequest, BYEAR_PARAM));
 	}
 	
 	public String getFirstName() {

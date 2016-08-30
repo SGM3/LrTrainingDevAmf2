@@ -6,17 +6,17 @@ public interface SignupParamHolder {
 
 	public String getGender();
 
-	public String getBirthdayDay();
+	public int getBirthdayDay();
 
-	public String getBirthdayMonth();
+	public int getBirthdayMonth();
+
+	public int getBirthdayYear();
 
 	public String getPassword1();
 
 	public String getUsername();
 
 	public String getEmailAddress();
-
-	public String getBirthdayYear();
 
 	public String getFirstName();
 

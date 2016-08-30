@@ -30,6 +30,7 @@ import com.liferay.portal.service.ListTypeServiceUtil;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.training.amf2.builder.service.base.AmfSignupLocalServiceBaseImpl;
 import com.liferay.training.amf2.parameter.validator.SignupValidator;
+import com.liferay.training.amf2.util.MyAmfUtil;
 
 /**
  * The implementation of the amf signup local service.
@@ -64,25 +65,25 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 			ServiceContext serviceContext) 
 		throws PortalException, SystemException{
 		
-		//TODO Validate
-		// MyAmfUtil
 		SignupValidator validator = new SignupValidator();
+		
 		try {
 			validator.validateFormAndListErrors(password1, password2,
 				screenName, emailAddress, locale, firstName, lastName,
 				male, birthdayMonth, birthdayDay, birthdayYear, street1,
 				street2, city, zip, regionId, homeNumber, mobileNumber,
 				securityQuestionKey, secuirtyAnswer, atou);
+			
 		} catch (PortletException e) {
 			throw new PortalException(e);
 		}
 		
 		List<String> errorsList = validator.getErrors();
+		
 		if (!errorsList.isEmpty()){
 			return errorsList;
 		}
 		
-//		long emptyLongList[] = new long[0];
 		User newUser = userLocalService.addUser(
 			creatorUserId, companyId, autoPassword, password1, password2,
 			false, screenName, emailAddress, 0L, null,
@@ -95,11 +96,13 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 		long classPK = newUser.getContactId();
 		long userId = newUser.getUserId();
 		
-		long countryId = _getUsaCountryCode(); 
+		// Prerequisite is it will be US based
 		
-		int addressPersonalTypeId = _getPersonalAdressTypeId();
-		int homePhoneTypeId = _getHomePhoneTypeId();
-		int mobilePhoneTypeId = _getMobilePhoneTypeId();
+		long countryId = MyAmfUtil.getUsaCountryCode(); 
+		
+		int addressPersonalTypeId = MyAmfUtil.getPersonalAdressTypeId();
+		int homePhoneTypeId = MyAmfUtil.getHomePhoneTypeId();
+		int mobilePhoneTypeId = MyAmfUtil.getMobilePhoneTypeId();
 		
 		// we pass a clone since the service call 
 		// may or may not dirty the context 
@@ -120,45 +123,5 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 				(ServiceContext) serviceContext.clone());
 		}
 		throw new SystemException("Unimplemented service");
-	}
-
-
-	private static long _getUsaCountryCode(){
-		// TODO retrieve dynamically
-		return 19L;
-	}
-	
-	private static int _getPersonalAdressTypeId(){
-		
-		// TODO retrieve and make sure this works dynamically
-		// added default value of 11002 for personal for now
-		int addressPersonalTypeId = 11002;
-		
-		try {
-			List<ListType> addrListType = 
-				ListTypeServiceUtil.getListTypes(
-					ListTypeConstants.CONTACT_ADDRESS);
-			for (ListType lt : addrListType){
-				if (lt.getName().equals("personal")){
-					addressPersonalTypeId = lt.getListTypeId();
-					break;
-				}
-			}
-		} catch (SystemException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return addressPersonalTypeId;
-	}
-	
-	private static int _getHomePhoneTypeId() {
-		// TODO retrieve dynamically
-		return 11011; //com.liferay.portal.model.Contact.phone, personal
-	}
-	
-	private static int _getMobilePhoneTypeId() {
-		// TODO retrieve dynamically
-		return 11008; //com.liferay.portal.model.Contact.phone, mobile-phone
 	}
 }

@@ -37,5 +37,6 @@ public interface MySignupConstants {
 	public static final String MALE_STRING_VALUE = "male";
 	public static final String FEMALE_STRING_VALUE = "female";
 	
-//	public static final String 
+	public static final int BAD_INPUT_FLAG = -1;
+	
 }

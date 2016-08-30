@@ -11,11 +11,8 @@ import javax.portlet.PortletException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
-import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
-import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.training.amf2.constants.MySignupConstants;
-import com.liferay.training.amf2.parameter.handler.SignupParamHolder;
 import com.liferay.training.amf2.util.MyAmfUtil;
 
 public class SignupValidator {
@@ -24,76 +21,6 @@ public class SignupValidator {
 		_validatorHasRun = false;
 	}
 	
-	public List<String> validateFormAndListErrors(
-		ThemeDisplay themeDisplay, SignupParamHolder extractor) 
-			throws PortletException {
-		_validatorHasRun = true;
-		_allErrors = new ArrayList<String>();
-		
-		if (themeDisplay != null) {
-			_userLocale = themeDisplay.getLocale();
-		}
-		
-		if (_userLocale == null){
-			_userLocale = LocaleUtil.US;
-		}
-		
-		_validateFirstname(extractor.getFirstName());
-		
-		_validateLastname(extractor.getLastName());
-
-		_validateEmail(extractor.getEmailAddress());
-
-		try {
-			_validateUsername(extractor.getUsername());
-		} catch (SystemException e) {
-			throw new PortletException(e);
-		}
-		
-		String gender = StringUtil.trim(extractor.getGender());
-		
-		if (Validator.isNull(gender) 
-			&& !gender.equalsIgnoreCase(MySignupConstants.MALE_STRING_VALUE) 
-			&& !gender.equalsIgnoreCase(MySignupConstants.FEMALE_STRING_VALUE)){
-			_addErrorKey("gender-required-error");
-		}
-		String bmonth = extractor.getBirthdayMonth();
-		String bday = extractor.getBirthdayDay();
-		String byear = extractor.getBirthdayYear();
-		
-		_validateDateAndAge(bday, bmonth, byear);
-		
-		_validatePasswords(extractor.getPassword1(), extractor.getPassword2());
-
-		_validatePhones(
-			extractor.getHomePhoneNumber(), extractor.getMobilePhoneNumber());
-
-		_validateAddressLines(
-			extractor.getStreetAddress1(), extractor.getStreetAddress2());
-		
-		_validateCity(extractor.getCity());
-		
-		_validateState(extractor.getState());
-		
-		_validateZip(extractor.getZip());
-		
-		String secQuestion = extractor.getSecurityQuestion();
-		if (Validator.isNull(secQuestion)){
-			_addErrorKey("security-question-required-error");
-		}
-		
-		String secAnswer = extractor.getSecurityAnswer();
-		_validateSecurityAnswer(secAnswer);
-		
-		String acceptedTou = extractor.getAcceptedTermsOfUse();
-		if (Validator.isNull(acceptedTou)){
-			_addErrorKey("term-of-use-must-accept-error");
-		} else if (!acceptedTou.equals("true")){
-			_addErrorKey("term-of-use-must-accept-error");
-		}
-		
-		return _allErrors;
-	}
 	/**
 	 * Validate the elements from a form
 	 * 
@@ -288,60 +215,44 @@ public class SignupValidator {
 		return hasError;
 	}
 	
-	private boolean _validateDateAndAge(
-			String bdayStr, String bmonthStr, String byearStr){
-		boolean hasError = false;
-		if (Validator.isNull(bdayStr)){
-			hasError = true;
-			_addErrorKey("birthday-day-required-error");
-		} else {
-			if (!Validator.isNumber(bdayStr)){
-				hasError = true;
-				_addErrorKey("birthday-day-not-numeric-error");
-			} else {
-				int bday = Integer.parseInt(bdayStr);
-				if (bday < 1 || bday > 31){
-					hasError = true;
-					_addErrorKey("birthday-day-range-error");
-				}
-			}
-		}
-		if (Validator.isNull(bmonthStr)){
-			hasError = true;
-			_addErrorKey("birthday-month-required-error");
-		} else{
-			if (!Validator.isNumber(bmonthStr)){
-				hasError = true;
-				_addErrorKey("birthday-month-not-numeric-error");
-			} else {
-				int bmonth = Integer.parseInt(bmonthStr);
-				if (bmonth < 1 || bmonth > 12){
-					hasError = true;
-					_addErrorKey("birthday-month-range-error");
-				}
-			}
-		}
-		if (Validator.isNull(byearStr)){
-			hasError = true;
-			_addErrorKey("birthday-year-required-error");
-		} else {
-			if (!Validator.isNumber(byearStr)){
-				hasError = true;
-				_addErrorKey("birthday-year-not-numeric-error");
-			}
-		}
-		int bm = (!hasError)?Integer.parseInt(bmonthStr):1, 
-				bd = (!hasError)?Integer.parseInt(bdayStr):1, 
-				by = (!hasError)?Integer.parseInt(byearStr):1;
-		if (_validateDateAndAge(bd, bm, by)) {
-			return true;
-		}
-		return hasError;
-	}
-
 	private boolean _validateDateAndAge(int bd, int bm, int by) {			
 		Calendar bCal = new GregorianCalendar(by, bm - 1, by);
 		Calendar thirteenYearsAgo = new GregorianCalendar();
+		boolean hasDateFormatError = false;
+		
+		// if flagged number is used, we can assume
+		// it was originally a bad formatted number 
+		
+		if (bm == MySignupConstants.BAD_INPUT_FLAG) {
+			hasDateFormatError = true;
+			_addErrorKey("birthday-month-not-numeric-error");
+		}
+		if (bd == MySignupConstants.BAD_INPUT_FLAG) {
+			hasDateFormatError = true;
+			_addErrorKey("birthday-day-not-numeric-error");
+		}
+		if (by == MySignupConstants.BAD_INPUT_FLAG) {
+			hasDateFormatError = true;
+			_addErrorKey("birthday-year-not-numeric-error");
+		}
+		
+		if (hasDateFormatError){
+			return false;
+		}
+		
+		
+		if (bd < 1 || bd > 31){
+			hasDateFormatError = true;
+			_addErrorKey("birthday-day-range-error");
+		}
+		if (bm < 1 || bm > 12){
+			hasDateFormatError = true;
+			_addErrorKey("birthday-month-range-error");
+		}
+		
+		if (hasDateFormatError){
+			return false;
+		}
 		
 		//create a Calendar date equal to 13 yeas before today
 		
@@ -375,6 +286,9 @@ public class SignupValidator {
 			//should not trim
 			hasError = true;
 			_addErrorKey("password-requirements-not-met-error");
+		} else if (!upass1.equals(upass2)){
+			hasError = true;
+			_addErrorKey("password-do-not-match-error");
 		}
 		
 		return hasError;

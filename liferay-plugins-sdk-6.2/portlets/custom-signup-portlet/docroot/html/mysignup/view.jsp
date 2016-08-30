@@ -37,7 +37,7 @@ This way the 'usRegCodes' String constant is local only to the JSP
 	<liferay-ui:success key="user-and-entity-transaction-success" message="user-and-entity-transaction-success"/>
 	
 	<aui:form action="<%= processActionURL%>" method="post">
-	 <aui:fieldset label="New User">
+	 <aui:fieldset label="New User" cssClass="form-horizontal">
 	   <aui:layout>
 	      <aui:column>
 	      	 <h3>Basic Info</h3>
