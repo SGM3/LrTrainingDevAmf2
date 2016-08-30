@@ -4,9 +4,12 @@ import java.util.List;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.model.ListType;
 import com.liferay.portal.model.ListTypeConstants;
 import com.liferay.portal.model.Region;
+import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.service.ListTypeServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
 import com.liferay.portal.service.UserLocalServiceUtil;
@@ -69,15 +72,27 @@ public final class MyAmfUtil {
 	}
 	
 	public  static long getUsaCountryCode(){
-		// TODO retrieve dynamically
+
+		long countryId = -1;
+		try {
+			countryId = 
+				CountryServiceUtil.fetchCountryByA3(
+					_USA_A3_CODE).getCountryId();
+			
+		} catch (Exception e) {}
+		
+		if (countryId == -1){
+			_log.warn(
+				"Unable to retrieve personal address type "
+				+ "from DB, will use 11002");
+			countryId = 19L;
+		}
 		return 19L;
 	}
 	
-	public static int getPersonalAdressTypeId() throws SystemException{
-		
-		// TODO retrieve and make sure this works dynamically
-		// added default value of 11002 for personal for now
-		int addressPersonalTypeId = 11002;
+	public static int getPersonalAdressTypeId() {
+
+		int addressPersonalTypeId = -1;
 		
 		try {
 			List<ListType> addrListType = 
@@ -89,24 +104,75 @@ public final class MyAmfUtil {
 					break;
 				}
 			}
-		} catch (SystemException e) {
-			throw e;
+		} catch (Exception e) {}
+		
+		if (addressPersonalTypeId == -1){
+			_log.warn(
+				"Unable to retrieve personal address type "
+				+ "from DB, will use 11002");
+			addressPersonalTypeId = 11002;
 		}
 		
 		return addressPersonalTypeId;
 	}
 	
 	public static int getHomePhoneTypeId() {
-		// TODO retrieve dynamically
-		return 11011; //com.liferay.portal.model.Contact.phone, personal
+
+		int phoneHomeTypeId = -1;
+		
+		try {
+			List<ListType> addrListType = 
+				ListTypeServiceUtil.getListTypes(
+					ListTypeConstants.CONTACT_PHONE);
+			for (ListType lt : addrListType){
+				if (lt.getName().equals("personal")){
+					phoneHomeTypeId = lt.getListTypeId();
+					break;
+				}
+			}
+		} catch (Exception e) {}
+		
+		if (phoneHomeTypeId == -1){
+			_log.warn(
+				"Unable to retrieve personal phone type "
+				+ "from DB, will use 11011.");
+			phoneHomeTypeId = 11011;
+		}
+		
+		return phoneHomeTypeId;
 	}
 	
 	public static int getMobilePhoneTypeId() {
-		// TODO retrieve dynamically
-		return 11008; //com.liferay.portal.model.Contact.phone, mobile-phone
+
+		int phoneHomeTypeId = -1;
+		
+		try {
+			List<ListType> addrListType = 
+				ListTypeServiceUtil.getListTypes(
+					ListTypeConstants.CONTACT_PHONE);
+			for (ListType lt : addrListType){
+				if (lt.getName().equals("mobile-phone")){
+					phoneHomeTypeId = lt.getListTypeId();
+					break;
+				}
+			}
+		} catch (Exception e) {}
+		
+		if (phoneHomeTypeId == -1){
+			_log.warn(
+				"Unable to retrieve mobile phone type "
+				+ "from DB, will use 11008");
+			phoneHomeTypeId = 11008;
+		}
+		
+		return phoneHomeTypeId;
 	}
 	
 	//prevent instantiation of utility class
 
 	private MyAmfUtil(){}
+	
+	private static final Log _log = LogFactoryUtil.getLog(MyAmfUtil.class);
+	private static final String _USA_A3_CODE = "USA";
+	
 }

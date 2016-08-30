@@ -78,7 +78,7 @@ public class SignupValidator {
 			throw new PortletException(e);
 		}
 		
-		_validateDateAndAge(birthdayDay, birthdayMonth - 1, birthdayYear);
+		_validateDateAndAge(birthdayDay, birthdayMonth, birthdayYear);
 		
 		_validatePasswords(password1, password2);
 

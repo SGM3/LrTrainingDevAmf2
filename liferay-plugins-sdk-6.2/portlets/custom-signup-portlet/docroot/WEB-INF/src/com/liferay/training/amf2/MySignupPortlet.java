@@ -88,18 +88,20 @@ public class MySignupPortlet extends MVCPortlet {
 
 			errorMessages =
 				AmfSignupLocalServiceUtil.addUserWithAddressAndPhones(
-				themeDisplay.getUserId(), themeDisplay.getCompanyId(),
-				false, extractor.getPassword1(), extractor.getPassword2(),
-				false, extractor.getUsername(), extractor.getEmailAddress(),
-				themeDisplay.getLocale(), extractor.getFirstName(),
-				extractor.getLastName(), isMale, bm, bd, by,
-				extractor.getStreetAddress1(), extractor.getStreetAddress2(),
-				extractor.getCity(), extractor.getZip(), regionCode,
-				extractor.getHomePhoneNumber(),
-				extractor.getMobilePhoneNumber(),
-				extractor.getSecurityQuestion(), extractor.getSecurityAnswer(),
-				extractor.getAcceptedTermsOfUse().equals("true"),
-				serviceContext);
+					themeDisplay.getUserId(), themeDisplay.getCompanyId(),
+					false, extractor.getPassword1(), extractor.getPassword2(),
+					false, extractor.getUsername(), extractor.getEmailAddress(),
+					themeDisplay.getLocale(), extractor.getFirstName(),
+					extractor.getLastName(), isMale, bm, bd, by,
+					extractor.getStreetAddress1(), 
+					extractor.getStreetAddress2(),
+					extractor.getCity(), extractor.getZip(), regionCode,
+					extractor.getHomePhoneNumber(),
+					extractor.getMobilePhoneNumber(),
+					extractor.getSecurityQuestion(), 
+					extractor.getSecurityAnswer(),
+					extractor.getAcceptedTermsOfUse().equals("true"),
+					serviceContext);
 			
 		} catch (PortalException e) {
 			
