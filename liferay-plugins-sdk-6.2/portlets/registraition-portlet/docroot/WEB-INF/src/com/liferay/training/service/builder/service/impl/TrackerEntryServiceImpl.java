@@ -14,6 +14,15 @@
 
 package com.liferay.training.service.builder.service.impl;
 
+import java.util.List;
+
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.security.auth.PrincipalException;
+import com.liferay.portal.security.permission.PermissionChecker;
+import com.liferay.training.eventmonitor.AmfMonitorKey;
+import com.liferay.training.service.builder.model.TrackerEntry;
+import com.liferay.training.service.builder.permission.TrackerEntryPermission;
 import com.liferay.training.service.builder.service.base.TrackerEntryServiceBaseImpl;
 
 /**
@@ -36,4 +45,149 @@ public class TrackerEntryServiceImpl extends TrackerEntryServiceBaseImpl {
 	 *
 	 * Never reference this interface directly. Always use {@link com.liferay.training.service.builder.service.TrackerEntryServiceUtil} to access the tracker entry remote service.
 	 */
+	public int getTrackerEntriesCount(
+		long groupId) throws SystemException, PortalException {
+		
+		try {
+			PermissionChecker permissionChecker = getPermissionChecker();
+			TrackerEntryPermission.check(
+				permissionChecker, groupId, AmfMonitorKey.VIEW_ALL);
+			return trackerEntryLocalService.getTrackerEntriesCount();
+		} catch (PrincipalException e) {
+			
+			// Does not have the VIEW_ALL permission
+			
+			try {
+				return trackerEntryLocalService.countByUserId(getUserId());
+			} catch (PrincipalException e1) {
+				System.out.println("unable to get userId");
+				e1.printStackTrace();
+			}
+		}
+		
+		// if this point is reached, the service failed
+
+		throw new PortalException(
+			"Unable to get the entry count for groupId " + groupId);
+	}
+	
+	public int countByEventType(
+			String eventType, long groupId)
+		throws SystemException, PortalException{
+		try {
+			PermissionChecker permissionChecker = getPermissionChecker();
+			TrackerEntryPermission.check(
+				permissionChecker, groupId, AmfMonitorKey.VIEW_ALL);
+		
+			return trackerEntryLocalService.countByEventType(eventType);
+		} catch (PrincipalException e) {
+			// Does not have the VIEW_ALL permission
+			try {
+				return trackerEntryLocalService.countByUserIdAndEventType(
+					getUserId(), eventType);
+			} catch (PrincipalException e1) {
+				System.out.println("unable to get userId");
+				e1.printStackTrace();
+			}
+			
+		}
+		
+		// if this point is reached, the service failed
+
+		throw new PortalException(
+			"Unable to get the entry count for groupId " 
+			+ groupId + " and type " + eventType);
+	}
+
+	public List<TrackerEntry> getTrackerEntries(
+			int start, int end, long groupId) 
+		throws SystemException, PortalException {
+
+		try {
+			PermissionChecker permissionChecker = getPermissionChecker();
+			TrackerEntryPermission.check(
+				permissionChecker, groupId, AmfMonitorKey.VIEW_ALL);
+		
+		return trackerEntryLocalService.getTrackerEntries(start, end);
+
+		} catch (PrincipalException e) {
+			// Does not have the VIEW_ALL permission
+			try {
+				return trackerEntryLocalService.findByUserId(
+					getUserId(), start, end);
+			} catch (PrincipalException e1) {
+				System.out.println("unable to get userId");
+				e1.printStackTrace();
+			}
+
+		}
+		
+		// if this point is reached, the service failed
+
+		throw new PortalException(
+			"Unable to retrieve tracker entries for groupId " 
+			+ groupId);
+
+	}
+	
+	public List<TrackerEntry> findByEventType(
+			String eventType, int start, int end, long groupId)
+		throws SystemException, PortalException{
+
+		try {
+			PermissionChecker permissionChecker = getPermissionChecker();
+			TrackerEntryPermission.check(
+				permissionChecker, groupId, AmfMonitorKey.VIEW_ALL);
+
+			return trackerEntryLocalService.findByEventType(
+				eventType, start, end);
+
+		} catch (PrincipalException e) {
+			// Does not have the VIEW_ALL permission
+			try {
+				return trackerEntryLocalService.findByUserIdAndEventType( 
+					getUserId(), eventType, start, end);
+			} catch (PrincipalException e1) {
+				System.out.println("unable to get userId");
+				e1.printStackTrace();
+			}
+
+		}
+		
+		// if this point is reached, the service failed
+
+		throw new PortalException(
+			"Unable to retrieve tracker entries for groupId " 
+			+ groupId + " and type " + eventType);
+	}
+	
+	public List<TrackerEntry> findByEventType(
+			String eventType, long groupId)
+		throws SystemException, PortalException {
+		
+		try {
+			PermissionChecker permissionChecker = getPermissionChecker();
+			TrackerEntryPermission.check(
+				permissionChecker, groupId, AmfMonitorKey.VIEW_ALL);
+		
+			return trackerEntryLocalService.findByEventType(eventType);
+
+		} catch (PrincipalException e) {
+			// Does not have the VIEW_ALL permission
+			try {
+				return trackerEntryLocalService.findByUserIdAndEventType(
+					getUserId(), eventType);
+			} catch (PrincipalException e1) {
+				System.out.println("unable to get userId");
+				e1.printStackTrace();
+			}
+
+		}
+		
+		// if this point is reached, the service failed
+
+		throw new PortalException(
+			"Unable to retrieve tracker entries for groupId " 
+			+ groupId + " and type " + eventType);
+	}
 }

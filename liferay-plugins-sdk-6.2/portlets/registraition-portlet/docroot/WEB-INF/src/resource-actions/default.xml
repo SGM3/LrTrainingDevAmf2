@@ -3,24 +3,24 @@
 "http://www.liferay.com/dtd/liferay-resource-action- mapping_6_2_0.dtd">
 
 <resource-action-mapping>
-	<portlet-resource>
-		<portlet-name>amf-event-monitor</portlet-name>
+	<model-resource>
+		<model-name>com.liferay.training.service.builder.model.TrackerEntry</model-name>
+		<portlet-ref>
+			<portlet-name>amf-event-monitor</portlet-name>
+		</portlet-ref>
         <permissions>
             <supports>
                 <action-key>VIEW_ALL_ENTRIES</action-key>
-                <action-key>VIEW_SELF_ENTRIES</action-key>
 				<action-key>VIEW</action-key>
             </supports>
             <site-member-defaults>
-                <action-key>VIEW_SELF_ENTRIES</action-key>
                 <action-key>VIEW</action-key>
             </site-member-defaults>
             <guest-defaults />
             <guest-unsupported>
-                <action-key>VIEW_SELF_ENTRIES</action-key>
                 <action-key>VIEW_ALL_ENTRIES</action-key>
 				<action-key>VIEW</action-key>
             </guest-unsupported>
         </permissions>
-	</portlet-resource>
+	</model-resource>
 </resource-action-mapping>

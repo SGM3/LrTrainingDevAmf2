@@ -14,6 +14,13 @@
 
 package com.liferay.training.service.builder.service.http;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import com.liferay.training.service.builder.service.TrackerEntryServiceUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
  * {@link com.liferay.training.service.builder.service.TrackerEntryServiceUtil} service utility. The
@@ -55,4 +62,81 @@ package com.liferay.training.service.builder.service.http;
  * @generated
  */
 public class TrackerEntryServiceSoap {
+	public static int getTrackerEntriesCount(long groupId)
+		throws RemoteException {
+		try {
+			int returnValue = TrackerEntryServiceUtil.getTrackerEntriesCount(groupId);
+
+			return returnValue;
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	public static int countByEventType(java.lang.String eventType, long groupId)
+		throws RemoteException {
+		try {
+			int returnValue = TrackerEntryServiceUtil.countByEventType(eventType,
+					groupId);
+
+			return returnValue;
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	public static com.liferay.training.service.builder.model.TrackerEntrySoap[] getTrackerEntries(
+		int start, int end, long groupId) throws RemoteException {
+		try {
+			java.util.List<com.liferay.training.service.builder.model.TrackerEntry> returnValue =
+				TrackerEntryServiceUtil.getTrackerEntries(start, end, groupId);
+
+			return com.liferay.training.service.builder.model.TrackerEntrySoap.toSoapModels(returnValue);
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	public static com.liferay.training.service.builder.model.TrackerEntrySoap[] findByEventType(
+		java.lang.String eventType, int start, int end, long groupId)
+		throws RemoteException {
+		try {
+			java.util.List<com.liferay.training.service.builder.model.TrackerEntry> returnValue =
+				TrackerEntryServiceUtil.findByEventType(eventType, start, end,
+					groupId);
+
+			return com.liferay.training.service.builder.model.TrackerEntrySoap.toSoapModels(returnValue);
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	public static com.liferay.training.service.builder.model.TrackerEntrySoap[] findByEventType(
+		java.lang.String eventType, long groupId) throws RemoteException {
+		try {
+			java.util.List<com.liferay.training.service.builder.model.TrackerEntry> returnValue =
+				TrackerEntryServiceUtil.findByEventType(eventType, groupId);
+
+			return com.liferay.training.service.builder.model.TrackerEntrySoap.toSoapModels(returnValue);
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+
+			throw new RemoteException(e.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(TrackerEntryServiceSoap.class);
 }

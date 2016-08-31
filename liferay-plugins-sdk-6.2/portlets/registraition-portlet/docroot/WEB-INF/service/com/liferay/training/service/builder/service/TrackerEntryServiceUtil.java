@@ -63,6 +63,39 @@ public class TrackerEntryServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static int getTrackerEntriesCount(long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().getTrackerEntriesCount(groupId);
+	}
+
+	public static int countByEventType(java.lang.String eventType, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().countByEventType(eventType, groupId);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> getTrackerEntries(
+		int start, int end, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().getTrackerEntries(start, end, groupId);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, int start, int end, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByEventType(eventType, start, end, groupId);
+	}
+
+	public static java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().findByEventType(eventType, groupId);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

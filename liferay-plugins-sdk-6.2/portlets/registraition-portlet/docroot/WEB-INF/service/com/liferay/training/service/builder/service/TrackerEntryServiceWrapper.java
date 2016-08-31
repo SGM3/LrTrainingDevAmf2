@@ -56,6 +56,45 @@ public class TrackerEntryServiceWrapper implements TrackerEntryService,
 		return _trackerEntryService.invokeMethod(name, parameterTypes, arguments);
 	}
 
+	@Override
+	public int getTrackerEntriesCount(long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryService.getTrackerEntriesCount(groupId);
+	}
+
+	@Override
+	public int countByEventType(java.lang.String eventType, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryService.countByEventType(eventType, groupId);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> getTrackerEntries(
+		int start, int end, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryService.getTrackerEntries(start, end, groupId);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, int start, int end, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryService.findByEventType(eventType, start, end,
+			groupId);
+	}
+
+	@Override
+	public java.util.List<com.liferay.training.service.builder.model.TrackerEntry> findByEventType(
+		java.lang.String eventType, long groupId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _trackerEntryService.findByEventType(eventType, groupId);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

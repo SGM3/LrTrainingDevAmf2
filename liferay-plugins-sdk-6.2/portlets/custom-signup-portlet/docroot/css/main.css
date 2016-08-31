@@ -1,14 +1,11 @@
-.aui .radio input[type="radio"],
-.aui .checkbox input[type="checkbox"] 
+
+.aui .radio input[name*="mysignup"][type="radio"]
 {
 	float: left;
 	margin-left: 20px;
 }
 
-.aui .form-search .radio, 
-.aui .form-search .checkbox, 
-.aui .form-inline .radio, 
-.aui .form-inline .checkbox 
+.aui .form-inline label[for*="mysignup"].checkbox
 {
     padding-left: 0;
     margin-bottom: 0;
@@ -16,22 +13,4 @@
     margin-left: 50px;
     width: 370px;
 }
-
-.aui .form-horizontal .control-label 
-{
-    float: left;
-    width: 160px;
-    padding-top: 5px;
-    text-align: right;
-    margin-right: 10px;
-}
-
-.aui .form-search .radio input[type="radio"], 
-.aui .form-search .checkbox input[type="checkbox"], 
-.aui .form-inline .radio input[type="radio"], 
-.aui .form-inline .checkbox input[type="checkbox"] 
-{
-    float: left;
-    margin-right: 20px;
-    margin-left: 0;
-}
+	

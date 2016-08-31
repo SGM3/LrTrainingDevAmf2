@@ -14,6 +14,7 @@
 
 package com.liferay.training.amf2.builder.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -84,11 +85,13 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 			return errorsList;
 		}
 		
+		// Birthday month starts at zero for some reason
+		
 		User newUser = userLocalService.addUser(
 			creatorUserId, companyId, autoPassword, password1, password2,
 			false, screenName, emailAddress, 0L, null,
 			locale, firstName, null, lastName, 0, 0,
-			male, birthdayMonth, birthdayDay, birthdayYear, null,
+			male, birthdayMonth - 1, birthdayDay, birthdayYear, null,
 			null, null, null, null, true, serviceContext);
 		
 		String className = Contact.class.getName();
@@ -122,6 +125,7 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 				null, mobilePhoneTypeId, true,
 				(ServiceContext) serviceContext.clone());
 		}
-		throw new SystemException("Unimplemented service");
+		return new ArrayList<String>();
+//		throw new SystemException("Unimplemented service");
 	}
 }
