@@ -5,7 +5,7 @@
 	margin-left: 20px;
 }
 
-.aui .form-inline label[for*="mysignup"].checkbox
+.aui .form-inline label.checkbox[for*="customsignup"]
 {
     padding-left: 0;
     margin-bottom: 0;
