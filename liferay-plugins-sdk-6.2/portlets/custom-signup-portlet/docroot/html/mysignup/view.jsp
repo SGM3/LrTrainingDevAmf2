@@ -75,10 +75,10 @@ This way the 'usRegCodes' String constant is local only to the JSP
 	      	 <h3>Security</h3>
 			 <%-- TODO maybe localize available questions --%>
 	         <aui:select label="security-question-label" name="<%=MySignupConstants.SECQ_PARAM%>">
-	            <aui:option selected="true" value="mom" label="security-question-maiden-name"/>
-	            <aui:option selected="false" value="make" label="security-question-first-car-make"/>
-	            <aui:option selected="false" value="mascot" label="security-question-hs-mascot"/>
-	            <aui:option selected="false" value="actor" label="security-question-favorite-actor"/>
+	            <aui:option selected="true" value="security-question-maiden-name" label="security-question-maiden-name"/>
+	            <aui:option selected="false" value="security-question-first-car-make" label="security-question-first-car-make"/>
+	            <aui:option selected="false" value="security-question-hs-mascot" label="security-question-hs-mascot"/>
+	            <aui:option selected="false" value="security-question-favorite-actor" label="security-question-favorite-actor"/>
 	    	 </aui:select>
 	         <aui:input type="text" name="<%=MySignupConstants.SECA_PARAM%>" label="security-answer-label" inlineLabel="true"/>
 	         <aui:input type="checkbox" name="<%=MySignupConstants.ATOU_PARAM%>" label="atou-terms"/>

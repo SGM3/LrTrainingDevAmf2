@@ -2,6 +2,7 @@ package com.liferay.training.amf2.parameter.handler.impl;
 
 import javax.portlet.ActionRequest;
 
+import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.WebKeys;
@@ -120,6 +121,12 @@ public class AmfExcerciseSignupParamHolderImpl
 	}
 	
 	public String getSecurityQuestion(){
+		String keyValue = ParamUtil.getString(_actionRequest, SECQ_PARAM);
+		ThemeDisplay themeDisplay = (ThemeDisplay) _actionRequest.getAttribute(
+			WebKeys.THEME_DISPLAY);
+		String rawQuestion = 
+			LanguageUtil.get(themeDisplay.getLocale(), keyValue);
+		
 		return ParamUtil.getString(_actionRequest, SECQ_PARAM);
 	}
 	
@@ -133,6 +140,17 @@ public class AmfExcerciseSignupParamHolderImpl
 	
 	public long getCountryId() {
 		return US_COUNTRY_CODE;
+	}
+	
+	private static String _makeReminderQueryQuestionFormat(String question) {
+		StringBuilder formatedStr = new StringBuilder();
+		question.trim().replaceAll(" +", " ");
+		for (String str : question.split("")){
+			if (str.isEmpty()){
+				continue;
+			}
+			if
+		}
 	}
 	
 	private static long US_COUNTRY_CODE;

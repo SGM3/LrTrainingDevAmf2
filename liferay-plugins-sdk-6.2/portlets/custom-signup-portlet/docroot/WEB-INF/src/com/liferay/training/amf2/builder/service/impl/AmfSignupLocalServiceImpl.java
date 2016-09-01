@@ -29,6 +29,7 @@ import com.liferay.portal.model.ListTypeConstants;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.ListTypeServiceUtil;
 import com.liferay.portal.service.ServiceContext;
+import com.liferay.portal.service.UserLocalServiceUtil;
 import com.liferay.training.amf2.builder.service.base.AmfSignupLocalServiceBaseImpl;
 import com.liferay.training.amf2.parameter.validator.SignupValidator;
 import com.liferay.training.amf2.util.MyAmfUtil;
@@ -85,7 +86,7 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 			return errorsList;
 		}
 		
-		// Birthday month starts at zero for some reason
+		// Birthday month starts at zero
 		
 		User newUser = userLocalService.addUser(
 			creatorUserId, companyId, autoPassword, password1, password2,
@@ -93,6 +94,15 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 			locale, firstName, null, lastName, 0, 0,
 			male, birthdayMonth - 1, birthdayDay, birthdayYear, null,
 			null, null, null, null, true, serviceContext);
+		
+		newUser.setAgreedToTermsOfUse(true);
+		newUser.setReminderQueryQuestion(securityQuestionKey);
+		newUser.setReminderQueryAnswer(secuirtyAnswer);
+		
+		// Update user to reflect the already accepted TOU
+		// and to reflect the provided security details.
+		
+		userLocalService.updateUser(newUser);
 		
 		String className = Contact.class.getName();
 
@@ -126,6 +136,5 @@ public class AmfSignupLocalServiceImpl extends AmfSignupLocalServiceBaseImpl {
 				(ServiceContext) serviceContext.clone());
 		}
 		return new ArrayList<String>();
-//		throw new SystemException("Unimplemented service");
 	}
 }
