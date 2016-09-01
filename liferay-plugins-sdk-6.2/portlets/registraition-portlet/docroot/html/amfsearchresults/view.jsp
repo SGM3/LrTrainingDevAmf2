@@ -4,7 +4,9 @@
 	<span>No zip code was requested yet.</span>
 </c:if>
 <c:if test="${not empty param[\"zipcodeparam\"]}" >
-	<liferay-ui:error key="unable-to-query-error" />
+	<liferay-ui:error key="unable-to-query-error" message="unable-to-query-error" />
+	<liferay-ui:error key="tec-authentication-failure" message="tec-authentication-failure" />
+	
 	<h2>Search Results for Zip "${param["zipcodeparam"]}" </h2>
 	
 	<liferay-ui:search-container deltaParam="delta" delta="${pageDeltaVal}" emptyResultsMessage="no-results-available" iteratorURL="${iterUrlObj}" total="${entryCount}" curParam="cur">

@@ -138,12 +138,8 @@ public class AmfEventMonitorPortlet extends MVCPortlet {
 				SEARCH_ENTRY_REGIS_COUNT_ATTR, 
 				TrackerEntryServiceUtil.countByEventType(
 						REGIS_EVENT_TYPE, groupId));
-
-			renderRequest.setAttribute(
-				LOGIN_CUR_PARAM_NAME, lCurPage);
-			renderRequest.setAttribute(
-				REGIS_CUR_PARAM_NAME, rCurPage);
-			
+			renderRequest.setAttribute(LOGIN_CUR_PARAM_NAME, lCurPage);
+			renderRequest.setAttribute(REGIS_CUR_PARAM_NAME, rCurPage);
 			renderRequest.setAttribute(
 				SEARCH_CON_ADELTA_ATTR, allDelta.intValue());
 			renderRequest.setAttribute(

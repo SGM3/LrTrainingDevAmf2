@@ -17,17 +17,14 @@ import javax.portlet.ProcessEvent;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
-import com.liferay.portal.kernel.dao.orm.DynamicQuery;
-import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
-import com.liferay.portal.kernel.dao.orm.ProjectionFactoryUtil;
-import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.util.ParamUtil;
-import com.liferay.portal.model.Address;
 import com.liferay.portal.model.User;
-import com.liferay.portal.service.AddressLocalServiceUtil;
-import com.liferay.portal.service.UserLocalServiceUtil;
+import com.liferay.training.service.builder.service.SearchResultServiceUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 /**
@@ -45,7 +42,7 @@ public class AmfSearchResults extends MVCPortlet {
 		Integer curDelta = ParamUtil.getInteger(
 				renderRequest, PAGE_DELTA_PARAM, 5);
 		Integer zipCode = ParamUtil.getInteger(
-				renderRequest, "zipcodeparam", -1);
+				renderRequest, ZIP_CODE_PARAM, -1);
 		
 		if (zipCode.intValue() != -1) {
 			_populateRenderedTable(renderRequest, renderResponse, zipCode);
@@ -64,30 +61,37 @@ public class AmfSearchResults extends MVCPortlet {
 	@ProcessEvent(qname="{http://liferay.com/search}ipc.search.zip")
 	public void setSearchCriteria(
 		EventRequest eventRequest, EventResponse eventResponse) {
+		
 		Event criteriaEvent = eventRequest.getEvent();
 		Integer zipCode = (Integer) criteriaEvent.getValue();
+		
+		// set the page parameter that is used later in the doView
 
-		eventResponse.setRenderParameter("zipcodeparam", zipCode.toString());
+		eventResponse.setRenderParameter(ZIP_CODE_PARAM, zipCode.toString());
 	}
 
 	private void _populateRenderedTable(
 		PortletRequest eventRequest, PortletResponse eventResponse,
-		Integer zipCode) {
+		Integer zipCode) throws PortletException {
 		
 		Integer curPage = ParamUtil.getInteger(
 				eventRequest, CUR_PARAM_NAME, 1);
 		Integer curDelta = ParamUtil.getInteger(
 				eventRequest, PAGE_DELTA_PARAM, 5);
 
-		long maxUserCount;
+		long maxUserCount = 0;
 
 		try {
-			maxUserCount = 
-				AddressLocalServiceUtil.dynamicQueryCount(
-					_getQueryForUserIdsFromZip(zipCode));
-		} catch (SystemException e1) {
-			maxUserCount = 0; 
+			maxUserCount = SearchResultServiceUtil.countUsersFromZip(zipCode);
+		} catch (SystemException e) {
+			_log.warn("Users by zip query failed");
+			throw new PortletException(e); 
+		} catch (PortalException e) {
+			SessionErrors.add(eventRequest, "tec-authentication-failure");
+			_log.debug("Current user verification failed.");
 		}
+		
+		eventRequest.setAttribute("entryCount", maxUserCount);
 		
 		List<User> listOfUsers;
 		try {
@@ -99,10 +103,8 @@ public class AmfSearchResults extends MVCPortlet {
 		}
 
 		eventRequest.setAttribute("userEntries", listOfUsers);
-		eventRequest.setAttribute("entryCount", maxUserCount);
 	}
 
-	@SuppressWarnings("unchecked")
 	private List<User> _getUsersForZip(
 			Integer zipCode, int page, int delta) throws SystemException {
 		
@@ -111,40 +113,20 @@ public class AmfSearchResults extends MVCPortlet {
 			// Users potentially may have multiple addresses in 
 			// the same zip code
 			
-			DynamicQuery addressDynamicQuery = 
-					_getQueryForUserIdsFromZip(zipCode);
-				
 			int begin = (page - 1) * delta;
 			int end = begin + delta;
 			
-			List<Long> listOfUserIds = 
-				AddressLocalServiceUtil.dynamicQuery(
-					addressDynamicQuery, begin, end);
-			
-			// Use of 'in' may have limitations? (query size limits, etc)
-			
-			DynamicQuery userDynamicQuery = DynamicQueryFactoryUtil
-				.forClass(User.class)
-				.add(PropertyFactoryUtil.forName("userId").in(listOfUserIds));
-			
-			return UserLocalServiceUtil.dynamicQuery(userDynamicQuery);
+			return SearchResultServiceUtil.getUserFromZip(
+				zipCode, begin, end);
 		} catch (SystemException e) {
 			throw e;
+		} catch (PortalException e) {
+			_log.warn("Current user verification failed.");
+			return new ArrayList<User>();
 		}
 	}
-
-	private static DynamicQuery _getQueryForUserIdsFromZip(Integer zipCode) {
-		
-		String zeroPaddedZip = String.format("%05d", zipCode);
-		
-		DynamicQuery dq = DynamicQueryFactoryUtil.forClass(Address.class)
-			.add(PropertyFactoryUtil.forName("zip")
-			.eq(zeroPaddedZip))
-			.setProjection(
-				ProjectionFactoryUtil.distinct(
-					PropertyFactoryUtil.forName("userId")));
-		
-		return dq;
-	}
+	
+	private static final Log _log = 
+		LogFactoryUtil.getLog(AmfSearchResults.class);
 
 }

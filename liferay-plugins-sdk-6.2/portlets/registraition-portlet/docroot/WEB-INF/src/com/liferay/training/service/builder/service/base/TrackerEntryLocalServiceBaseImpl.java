@@ -281,6 +281,44 @@ public abstract class TrackerEntryLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the search result local service.
+	 *
+	 * @return the search result local service
+	 */
+	public com.liferay.training.service.builder.service.SearchResultLocalService getSearchResultLocalService() {
+		return searchResultLocalService;
+	}
+
+	/**
+	 * Sets the search result local service.
+	 *
+	 * @param searchResultLocalService the search result local service
+	 */
+	public void setSearchResultLocalService(
+		com.liferay.training.service.builder.service.SearchResultLocalService searchResultLocalService) {
+		this.searchResultLocalService = searchResultLocalService;
+	}
+
+	/**
+	 * Returns the search result remote service.
+	 *
+	 * @return the search result remote service
+	 */
+	public com.liferay.training.service.builder.service.SearchResultService getSearchResultService() {
+		return searchResultService;
+	}
+
+	/**
+	 * Sets the search result remote service.
+	 *
+	 * @param searchResultService the search result remote service
+	 */
+	public void setSearchResultService(
+		com.liferay.training.service.builder.service.SearchResultService searchResultService) {
+		this.searchResultService = searchResultService;
+	}
+
+	/**
 	 * Returns the tracker entry local service.
 	 *
 	 * @return the tracker entry local service
@@ -513,6 +551,10 @@ public abstract class TrackerEntryLocalServiceBaseImpl
 		}
 	}
 
+	@BeanReference(type = com.liferay.training.service.builder.service.SearchResultLocalService.class)
+	protected com.liferay.training.service.builder.service.SearchResultLocalService searchResultLocalService;
+	@BeanReference(type = com.liferay.training.service.builder.service.SearchResultService.class)
+	protected com.liferay.training.service.builder.service.SearchResultService searchResultService;
 	@BeanReference(type = com.liferay.training.service.builder.service.TrackerEntryLocalService.class)
 	protected com.liferay.training.service.builder.service.TrackerEntryLocalService trackerEntryLocalService;
 	@BeanReference(type = com.liferay.training.service.builder.service.TrackerEntryService.class)

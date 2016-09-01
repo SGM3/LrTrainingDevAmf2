@@ -3,6 +3,10 @@
 <service-builder package-path="com.liferay.training.service.builder">
 	<author>Shanon Mathai</author>
 	<namespace>tracking</namespace>
+	
+	<entity name="SearchResult" local-service="true" remote-service="true">
+		<reference package-path="com.liferay.portal" entity="Address" />
+	</entity>
 
 	<entity name="TrackerEntry" local-service="true" remote-service="true">
 

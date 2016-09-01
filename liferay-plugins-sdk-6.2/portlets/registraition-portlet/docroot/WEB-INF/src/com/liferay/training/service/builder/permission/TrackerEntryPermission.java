@@ -18,8 +18,8 @@ public class TrackerEntryPermission {
     public static boolean contains(PermissionChecker permissionChecker,
         long groupId, String actionId) {
 
-        return permissionChecker.hasPermission(groupId, _RESOURCE_NAME, groupId,
-            actionId);
+        return permissionChecker.hasPermission(
+        	groupId, _RESOURCE_NAME, groupId, actionId);
     }
 
     public static final String _RESOURCE_NAME = TrackerEntry.class.getName();

@@ -16,10 +16,14 @@ public class AmfSearch extends MVCPortlet {
  
 	public void triggerZipSearch(
 		ActionRequest actionRequest, ActionResponse actionResponse){
+		
 		String zipParam = ParamUtil.get(actionRequest, "zip-code", "");
+		
 		if (zipParam.length() == 5 && Validator.isNumber(zipParam)) {
+			
 			Integer zipValue = Integer.parseInt(zipParam);
 			actionResponse.setEvent(_SEARCH_PROCCESS_Q_NAME, zipValue);
+			
 		} else {
 			SessionErrors.add(actionRequest, "invalid-zip");
 		}
