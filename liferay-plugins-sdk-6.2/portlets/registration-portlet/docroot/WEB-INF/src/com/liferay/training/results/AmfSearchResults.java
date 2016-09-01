@@ -66,8 +66,10 @@ public class AmfSearchResults extends MVCPortlet {
 		Integer zipCode = (Integer) criteriaEvent.getValue();
 		
 		// set the page parameter that is used later in the doView
+		
+		String zipLeftPaddedZeros = String.format("%05d", zipCode.intValue());
 
-		eventResponse.setRenderParameter(ZIP_CODE_PARAM, zipCode.toString());
+		eventResponse.setRenderParameter(ZIP_CODE_PARAM, zipLeftPaddedZeros);
 	}
 
 	private void _populateRenderedTable(

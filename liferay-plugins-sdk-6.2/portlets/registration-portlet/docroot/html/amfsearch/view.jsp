@@ -10,6 +10,6 @@
 	<aui:fieldset label="enter-us-zip-prompt">
 		<aui:input type="text" name="zip-code"/>
 	</aui:fieldset>
-	<aui:button name="submit-button" type="submit" />
+	<aui:button name="amf-search-submit-button" value="amf-search-submit-button" type="submit" />
 </aui:form>
 	
