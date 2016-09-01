@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>registration</portlet-name>
+		<display-name>Registration</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Registration</title>
+			<short-title>Registration</short-title>
+			<keywords>Registration</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>amf-event-monitor</portlet-name>
+		<display-name>Amf Event Monitor</display-name>
+		<portlet-class>
+			com.liferay.training.eventmonitor.AmfEventMonitorPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/amfeventmonitor/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Amf Event Monitor</title>
+			<short-title>Amf Event Monitor</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>amf-search</portlet-name>
+		<display-name>Amf Search</display-name>
+		<portlet-class>com.liferay.training.search.AmfSearch</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/amfsearch/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Amf Search</title>
+			<short-title>Amf Search</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-publishing-event>
+            <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        </supported-publishing-event>
+	</portlet>
+	<portlet>
+		<portlet-name>amf-search-results</portlet-name>
+		<display-name>Amf Search Results</display-name>
+		<portlet-class>
+			com.liferay.training.results.AmfSearchResults
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/amfsearchresults/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Amf Search Results</title>
+			<short-title>Amf Search Results</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-processing-event>
+            <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        </supported-processing-event>
+        <supported-public-render-parameter>zipcodeparam</supported-public-render-parameter>
+	</portlet>
+    <event-definition>
+        <qname xmlns:x="http://liferay.com/search">x:ipc.search.zip</qname>
+        <value-type>java.lang.Integer</value-type>
+    </event-definition>
+	<public-render-parameter>
+		<identifier>zipcodeparam</identifier>
+		<qname xmlns:x="http://amf.com/search">x:zipcodeparam</qname>
+        <alias xmlns:x="http://amf.com/search">x:zipcodeparam</alias>
+	</public-render-parameter>
+</portlet-app>
