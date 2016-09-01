@@ -92,8 +92,7 @@ public class SignupValidator {
 		
 		_validateZip(zip);
 		
-		String secQuestion = securityQuestionKey;
-		if (Validator.isNull(secQuestion)){
+		if (Validator.isNull(securityQuestionKey)){
 			_addErrorKey("security-question-required-error");
 		}
 		
