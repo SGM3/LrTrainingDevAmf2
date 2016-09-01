@@ -126,8 +126,6 @@ public class AmfExcerciseSignupParamHolderImpl
 			WebKeys.THEME_DISPLAY);
 		String rawQuestion = 
 			LanguageUtil.get(themeDisplay.getLocale(), keyValue);
-		String questionFormatted = 
-			_makeReminderQueryQuestionFormat(rawQuestion);
 		return rawQuestion;
 	}
 	
@@ -141,25 +139,6 @@ public class AmfExcerciseSignupParamHolderImpl
 	
 	public long getCountryId() {
 		return US_COUNTRY_CODE;
-	}
-	
-	private static String _makeReminderQueryQuestionFormat(String question) {
-		StringBuilder formatedStr = new StringBuilder();
-		question = question.trim().replaceAll(" +", " ").toLowerCase();
-		for (String str : question.split("")){
-			if (str.isEmpty()){
-				continue;
-			}
-			if (str.equals(" ")){
-				formatedStr.append('-');
-			} else if (str.equals("?")){
-				continue;
-			} else {
-				formatedStr.append(str);
-			}
-		}
-		
-		return formatedStr.toString();
 	}
 	
 	private static long US_COUNTRY_CODE;
