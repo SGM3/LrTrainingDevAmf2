@@ -22,6 +22,7 @@ import com.liferay.training.service.builder.service.SearchResultLocalServiceUtil
 import com.liferay.training.service.builder.service.SearchResultServiceUtil;
 import com.liferay.training.service.builder.service.TrackerEntryLocalServiceUtil;
 import com.liferay.training.service.builder.service.TrackerEntryServiceUtil;
+import com.liferay.training.service.builder.service.UserAddressJoinerServiceUtil;
 
 /**
  * @author Shanon Mathai
@@ -44,6 +45,8 @@ public class ClpMessageListener extends BaseMessageListener {
 			TrackerEntryLocalServiceUtil.clearService();
 
 			TrackerEntryServiceUtil.clearService();
+
+			UserAddressJoinerServiceUtil.clearService();
 		}
 	}
 }

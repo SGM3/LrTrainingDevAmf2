@@ -24,79 +24,79 @@ import java.util.Arrays;
  */
 public class TrackerEntryServiceClpInvoker {
 	public TrackerEntryServiceClpInvoker() {
-		_methodName22 = "getBeanIdentifier";
+		_methodName26 = "getBeanIdentifier";
 
-		_methodParameterTypes22 = new String[] {  };
+		_methodParameterTypes26 = new String[] {  };
 
-		_methodName23 = "setBeanIdentifier";
+		_methodName27 = "setBeanIdentifier";
 
-		_methodParameterTypes23 = new String[] { "java.lang.String" };
+		_methodParameterTypes27 = new String[] { "java.lang.String" };
 
-		_methodName28 = "getTrackerEntriesCount";
+		_methodName32 = "getTrackerEntriesCount";
 
-		_methodParameterTypes28 = new String[] { "long" };
+		_methodParameterTypes32 = new String[] { "long" };
 
-		_methodName29 = "countByEventType";
+		_methodName33 = "countByEventType";
 
-		_methodParameterTypes29 = new String[] { "java.lang.String", "long" };
+		_methodParameterTypes33 = new String[] { "java.lang.String", "long" };
 
-		_methodName30 = "getTrackerEntries";
+		_methodName34 = "getTrackerEntries";
 
-		_methodParameterTypes30 = new String[] { "int", "int", "long" };
+		_methodParameterTypes34 = new String[] { "int", "int", "long" };
 
-		_methodName31 = "findByEventType";
+		_methodName35 = "findByEventType";
 
-		_methodParameterTypes31 = new String[] {
+		_methodParameterTypes35 = new String[] {
 				"java.lang.String", "int", "int", "long"
 			};
 
-		_methodName32 = "findByEventType";
+		_methodName36 = "findByEventType";
 
-		_methodParameterTypes32 = new String[] { "java.lang.String", "long" };
+		_methodParameterTypes36 = new String[] { "java.lang.String", "long" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
 		Object[] arguments) throws Throwable {
-		if (_methodName22.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes22, parameterTypes)) {
+		if (_methodName26.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes26, parameterTypes)) {
 			return TrackerEntryServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName23.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes23, parameterTypes)) {
+		if (_methodName27.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes27, parameterTypes)) {
 			TrackerEntryServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName28.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes28, parameterTypes)) {
+		if (_methodName32.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes32, parameterTypes)) {
 			return TrackerEntryServiceUtil.getTrackerEntriesCount(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName29.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes29, parameterTypes)) {
+		if (_methodName33.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes33, parameterTypes)) {
 			return TrackerEntryServiceUtil.countByEventType((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName30.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes30, parameterTypes)) {
+		if (_methodName34.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes34, parameterTypes)) {
 			return TrackerEntryServiceUtil.getTrackerEntries(((Integer)arguments[0]).intValue(),
 				((Integer)arguments[1]).intValue(),
 				((Long)arguments[2]).longValue());
 		}
 
-		if (_methodName31.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes31, parameterTypes)) {
+		if (_methodName35.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes35, parameterTypes)) {
 			return TrackerEntryServiceUtil.findByEventType((java.lang.String)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue(),
 				((Long)arguments[3]).longValue());
 		}
 
-		if (_methodName32.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes32, parameterTypes)) {
+		if (_methodName36.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes36, parameterTypes)) {
 			return TrackerEntryServiceUtil.findByEventType((java.lang.String)arguments[0],
 				((Long)arguments[1]).longValue());
 		}
@@ -104,18 +104,18 @@ public class TrackerEntryServiceClpInvoker {
 		throw new UnsupportedOperationException();
 	}
 
-	private String _methodName22;
-	private String[] _methodParameterTypes22;
-	private String _methodName23;
-	private String[] _methodParameterTypes23;
-	private String _methodName28;
-	private String[] _methodParameterTypes28;
-	private String _methodName29;
-	private String[] _methodParameterTypes29;
-	private String _methodName30;
-	private String[] _methodParameterTypes30;
-	private String _methodName31;
-	private String[] _methodParameterTypes31;
+	private String _methodName26;
+	private String[] _methodParameterTypes26;
+	private String _methodName27;
+	private String[] _methodParameterTypes27;
 	private String _methodName32;
 	private String[] _methodParameterTypes32;
+	private String _methodName33;
+	private String[] _methodParameterTypes33;
+	private String _methodName34;
+	private String[] _methodParameterTypes34;
+	private String _methodName35;
+	private String[] _methodParameterTypes35;
+	private String _methodName36;
+	private String[] _methodParameterTypes36;
 }

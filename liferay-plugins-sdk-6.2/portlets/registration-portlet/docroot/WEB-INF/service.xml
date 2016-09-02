@@ -4,6 +4,8 @@
 	<author>Shanon Mathai</author>
 	<namespace>tracking</namespace>
 	
+	<entity name="UserAddressJoiner" />
+	
 	<entity name="SearchResult" local-service="true" remote-service="true">
 		<reference package-path="com.liferay.portal" entity="Address" />
 	</entity>

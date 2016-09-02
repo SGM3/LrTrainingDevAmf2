@@ -26,6 +26,7 @@ import com.liferay.portal.service.persistence.UserPersistence;
 
 import com.liferay.training.service.builder.service.SearchResultLocalService;
 import com.liferay.training.service.builder.service.persistence.TrackerEntryPersistence;
+import com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinder;
 
 import javax.sql.DataSource;
 
@@ -143,6 +144,44 @@ public abstract class SearchResultLocalServiceBaseImpl
 	public void setTrackerEntryPersistence(
 		TrackerEntryPersistence trackerEntryPersistence) {
 		this.trackerEntryPersistence = trackerEntryPersistence;
+	}
+
+	/**
+	 * Returns the user address joiner remote service.
+	 *
+	 * @return the user address joiner remote service
+	 */
+	public com.liferay.training.service.builder.service.UserAddressJoinerService getUserAddressJoinerService() {
+		return userAddressJoinerService;
+	}
+
+	/**
+	 * Sets the user address joiner remote service.
+	 *
+	 * @param userAddressJoinerService the user address joiner remote service
+	 */
+	public void setUserAddressJoinerService(
+		com.liferay.training.service.builder.service.UserAddressJoinerService userAddressJoinerService) {
+		this.userAddressJoinerService = userAddressJoinerService;
+	}
+
+	/**
+	 * Returns the user address joiner finder.
+	 *
+	 * @return the user address joiner finder
+	 */
+	public UserAddressJoinerFinder getUserAddressJoinerFinder() {
+		return userAddressJoinerFinder;
+	}
+
+	/**
+	 * Sets the user address joiner finder.
+	 *
+	 * @param userAddressJoinerFinder the user address joiner finder
+	 */
+	public void setUserAddressJoinerFinder(
+		UserAddressJoinerFinder userAddressJoinerFinder) {
+		this.userAddressJoinerFinder = userAddressJoinerFinder;
 	}
 
 	/**
@@ -374,6 +413,10 @@ public abstract class SearchResultLocalServiceBaseImpl
 	protected com.liferay.training.service.builder.service.TrackerEntryService trackerEntryService;
 	@BeanReference(type = TrackerEntryPersistence.class)
 	protected TrackerEntryPersistence trackerEntryPersistence;
+	@BeanReference(type = com.liferay.training.service.builder.service.UserAddressJoinerService.class)
+	protected com.liferay.training.service.builder.service.UserAddressJoinerService userAddressJoinerService;
+	@BeanReference(type = UserAddressJoinerFinder.class)
+	protected UserAddressJoinerFinder userAddressJoinerFinder;
 	@BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
 	protected com.liferay.counter.service.CounterLocalService counterLocalService;
 	@BeanReference(type = com.liferay.portal.service.AddressLocalService.class)

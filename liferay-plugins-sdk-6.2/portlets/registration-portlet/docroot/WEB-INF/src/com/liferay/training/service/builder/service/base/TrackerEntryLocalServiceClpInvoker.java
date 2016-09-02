@@ -106,51 +106,51 @@ public class TrackerEntryLocalServiceClpInvoker {
 				"com.liferay.training.service.builder.model.TrackerEntry"
 			};
 
-		_methodName38 = "getBeanIdentifier";
+		_methodName42 = "getBeanIdentifier";
 
-		_methodParameterTypes38 = new String[] {  };
+		_methodParameterTypes42 = new String[] {  };
 
-		_methodName39 = "setBeanIdentifier";
+		_methodName43 = "setBeanIdentifier";
 
-		_methodParameterTypes39 = new String[] { "java.lang.String" };
+		_methodParameterTypes43 = new String[] { "java.lang.String" };
 
-		_methodName44 = "findByEventType";
+		_methodName48 = "findByEventType";
 
-		_methodParameterTypes44 = new String[] { "java.lang.String", "int", "int" };
+		_methodParameterTypes48 = new String[] { "java.lang.String", "int", "int" };
 
-		_methodName45 = "findByEventType";
+		_methodName49 = "findByEventType";
 
-		_methodParameterTypes45 = new String[] { "java.lang.String" };
+		_methodParameterTypes49 = new String[] { "java.lang.String" };
 
-		_methodName46 = "countByEventType";
+		_methodName50 = "countByEventType";
 
-		_methodParameterTypes46 = new String[] { "java.lang.String" };
+		_methodParameterTypes50 = new String[] { "java.lang.String" };
 
-		_methodName47 = "findByUserId";
+		_methodName51 = "findByUserId";
 
-		_methodParameterTypes47 = new String[] { "long", "int", "int" };
+		_methodParameterTypes51 = new String[] { "long", "int", "int" };
 
-		_methodName48 = "findByUserId";
+		_methodName52 = "findByUserId";
 
-		_methodParameterTypes48 = new String[] { "long" };
+		_methodParameterTypes52 = new String[] { "long" };
 
-		_methodName49 = "countByUserId";
+		_methodName53 = "countByUserId";
 
-		_methodParameterTypes49 = new String[] { "long" };
+		_methodParameterTypes53 = new String[] { "long" };
 
-		_methodName50 = "findByUserIdAndEventType";
+		_methodName54 = "findByUserIdAndEventType";
 
-		_methodParameterTypes50 = new String[] {
+		_methodParameterTypes54 = new String[] {
 				"long", "java.lang.String", "int", "int"
 			};
 
-		_methodName51 = "findByUserIdAndEventType";
+		_methodName55 = "findByUserIdAndEventType";
 
-		_methodParameterTypes51 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes55 = new String[] { "long", "java.lang.String" };
 
-		_methodName52 = "countByUserIdAndEventType";
+		_methodName56 = "countByUserIdAndEventType";
 
-		_methodParameterTypes52 = new String[] { "long", "java.lang.String" };
+		_methodParameterTypes56 = new String[] { "long", "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -242,68 +242,68 @@ public class TrackerEntryLocalServiceClpInvoker {
 			return TrackerEntryLocalServiceUtil.updateTrackerEntry((com.liferay.training.service.builder.model.TrackerEntry)arguments[0]);
 		}
 
-		if (_methodName38.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes38, parameterTypes)) {
+		if (_methodName42.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes42, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName39.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes39, parameterTypes)) {
+		if (_methodName43.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes43, parameterTypes)) {
 			TrackerEntryLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName44.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes44, parameterTypes)) {
+		if (_methodName48.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByEventType((java.lang.String)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
-		if (_methodName45.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes45, parameterTypes)) {
+		if (_methodName49.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByEventType((java.lang.String)arguments[0]);
 		}
 
-		if (_methodName46.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+		if (_methodName50.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes50, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.countByEventType((java.lang.String)arguments[0]);
 		}
 
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+		if (_methodName51.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes51, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByUserId(((Long)arguments[0]).longValue(),
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
-		if (_methodName48.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
+		if (_methodName52.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByUserId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName49.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
+		if (_methodName53.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes53, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.countByUserId(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName50.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes50, parameterTypes)) {
+		if (_methodName54.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes54, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByUserIdAndEventType(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1],
 				((Integer)arguments[2]).intValue(),
 				((Integer)arguments[3]).intValue());
 		}
 
-		if (_methodName51.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes51, parameterTypes)) {
+		if (_methodName55.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes55, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.findByUserIdAndEventType(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1]);
 		}
 
-		if (_methodName52.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes52, parameterTypes)) {
+		if (_methodName56.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes56, parameterTypes)) {
 			return TrackerEntryLocalServiceUtil.countByUserIdAndEventType(((Long)arguments[0]).longValue(),
 				(java.lang.String)arguments[1]);
 		}
@@ -343,18 +343,10 @@ public class TrackerEntryLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName38;
-	private String[] _methodParameterTypes38;
-	private String _methodName39;
-	private String[] _methodParameterTypes39;
-	private String _methodName44;
-	private String[] _methodParameterTypes44;
-	private String _methodName45;
-	private String[] _methodParameterTypes45;
-	private String _methodName46;
-	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
+	private String _methodName42;
+	private String[] _methodParameterTypes42;
+	private String _methodName43;
+	private String[] _methodParameterTypes43;
 	private String _methodName48;
 	private String[] _methodParameterTypes48;
 	private String _methodName49;
@@ -365,4 +357,12 @@ public class TrackerEntryLocalServiceClpInvoker {
 	private String[] _methodParameterTypes51;
 	private String _methodName52;
 	private String[] _methodParameterTypes52;
+	private String _methodName53;
+	private String[] _methodParameterTypes53;
+	private String _methodName54;
+	private String[] _methodParameterTypes54;
+	private String _methodName55;
+	private String[] _methodParameterTypes55;
+	private String _methodName56;
+	private String[] _methodParameterTypes56;
 }

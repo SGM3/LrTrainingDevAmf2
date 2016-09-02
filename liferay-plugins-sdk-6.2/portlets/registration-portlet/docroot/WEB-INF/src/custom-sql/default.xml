@@ -1,0 +1,23 @@
+<custom-sql>
+	
+	<sql id="com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinderImpl.findUsersAtZip">
+	<![CDATA[
+	SELECT distinct user_.* FROM
+	address INNER JOIN user_ 
+	ON ( address.userId = user_.userId ) 
+	WHERE  ( zip = ? )
+	ORDER BY user_.userId
+	]]>
+	</sql>
+
+	<sql id="com.liferay.training.service.builder.service.persistence.UserAddressJoinerFinderImpl.countUsersAtZip">
+	<![CDATA[
+	SELECT count( distinct address.userId) as COUNT_VALUE FROM 
+	address INNER JOIN user_ 
+	ON ( address.userId = user_.userId ) 
+	WHERE  ( zip = ? )
+	ORDER BY user_.userId
+	]]>
+	</sql>
+	
+</custom-sql>

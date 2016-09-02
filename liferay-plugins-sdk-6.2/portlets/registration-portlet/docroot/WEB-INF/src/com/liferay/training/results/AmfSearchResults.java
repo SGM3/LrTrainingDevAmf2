@@ -24,7 +24,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.model.User;
-import com.liferay.training.service.builder.service.SearchResultServiceUtil;
+import com.liferay.training.service.builder.service.UserAddressJoinerServiceUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 /**
@@ -84,7 +84,9 @@ public class AmfSearchResults extends MVCPortlet {
 		long maxUserCount = 0;
 
 		try {
-			maxUserCount = SearchResultServiceUtil.countUsersFromZip(zipCode);
+			String zeroPadded = String.format("%05d", zipCode);
+			maxUserCount = 
+				UserAddressJoinerServiceUtil.countUsersAtZip(zeroPadded);
 		} catch (SystemException e) {
 			_log.warn("Users by zip query failed");
 			throw new PortletException(e); 
@@ -118,8 +120,9 @@ public class AmfSearchResults extends MVCPortlet {
 			int begin = (page - 1) * delta;
 			int end = begin + delta;
 			
-			return SearchResultServiceUtil.getUserFromZip(
-				zipCode, begin, end);
+			String zeroPadded = String.format("%05d", zipCode);
+			return UserAddressJoinerServiceUtil.findUsersAtZip(
+				zeroPadded, begin, end);
 		} catch (SystemException e) {
 			throw e;
 		} catch (PortalException e) {
