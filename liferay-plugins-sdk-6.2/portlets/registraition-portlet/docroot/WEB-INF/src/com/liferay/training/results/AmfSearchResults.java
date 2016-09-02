@@ -24,6 +24,8 @@ import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
+import com.liferay.portal.kernel.util.Tuple;
 import com.liferay.portal.model.Address;
 import com.liferay.portal.model.User;
 import com.liferay.portal.service.AddressLocalServiceUtil;
@@ -72,6 +74,7 @@ public class AmfSearchResults extends MVCPortlet {
 		eventResponse.setRenderParameter("zipcodeparam", zipCode.toString());
 	}
 
+	@SuppressWarnings("unchecked")
 	private void _populateRenderedTable(
 		PortletRequest eventRequest, PortletResponse eventResponse,
 		Integer zipCode) {
@@ -82,39 +85,49 @@ public class AmfSearchResults extends MVCPortlet {
 				eventRequest, PAGE_DELTA_PARAM, 5);
 
 		long maxUserCount;
-		{
-			{
-				{
-					// FIXME Unable to use custom sql
-					// FIXME
-					// FIXME
-					try {
-						System.out.println(UserAddressJoinerServiceUtil.countUsersAtZip("14444"));
-					} catch (Exception e){}
-					System.out.println(UserAddressJoinerServiceUtil.findUsersAtZip("14444", -1, -1));
-				}
-			}
-		}
-
-		try {
-			maxUserCount = 
-				AddressLocalServiceUtil.dynamicQueryCount(
-					_getQueryForUserIdsFromZip(zipCode));
-		} catch (SystemException e1) {
-			maxUserCount = 0; 
-		}
-		
 		List<User> listOfUsers;
 		try {
-			listOfUsers = 
-				_getUsersForZip(zipCode, curPage, curDelta);
-		} catch (SystemException e) {
-			SessionErrors.add(eventRequest, "unable-to-query-error");
+			int begin = (curPage - 1) * curDelta;
+			int end = begin + curDelta;
+			String paddedZip = String.format("%05d", zipCode);
+
+			maxUserCount = 
+					UserAddressJoinerServiceUtil.countUsersAtZip(paddedZip);
+			listOfUsers = UserAddressJoinerServiceUtil.findUsersAtZip(
+					paddedZip, begin, end) ;
+		} catch (Exception e){
+			maxUserCount = 0;
 			listOfUsers = new ArrayList<User>();
+			
 		}
+//		try {
+//			listOfUsers = 
+//				_getUsersForZip(zipCode, curPage, curDelta);
+//		} catch (SystemException e) {
+//			SessionErrors.add(eventRequest, "unable-to-query-error");
+//			listOfUsers = new ArrayList<User>();
+//		}
 
 		eventRequest.setAttribute("userEntries", listOfUsers);
 		eventRequest.setAttribute("entryCount", maxUserCount);
+	}
+
+	private Tuple _queryForUsersByZip(int begin, int end, String paddedZip) {
+		Thread currentThread = Thread.currentThread();
+		ClassLoader curContextCL = 
+			currentThread.getContextClassLoader();
+		
+		try {
+//			currentThread.setContextClassLoader(
+//				PortalClassLoaderUtil.getClassLoader());
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}finally {
+//			currentThread.setContextClassLoader(curContextCL);
+		}
+		
+		return new Tuple(new ArrayList<User>(), new Integer(0));
 	}
 
 	@SuppressWarnings("unchecked")
